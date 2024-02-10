@@ -1,5 +1,15 @@
 ---
-title: "jacobknyspel"
+title: "Jacob Knyspel"
+toc: false
+about: 
+  template: trestles
+  image-shape: round
+  image-width: 20em
+  links:
+    - text: GitHub
+      href: https://github.com/samanthacsik
+    - text: Email
+      href: mailto:jacob.knyspel@kcl.ac.uk
 ---
 
 This is a Quarto website.
