@@ -1,5 +1,6 @@
 ---
 title: "Jacob Knyspel"
+subtitle: "🧠🧬"
 image: images/headshot.jpg
 toc: false
 about: 
@@ -8,15 +9,22 @@ about:
   image-width: 20em
   links:
     - text: GitHub
+      icon: github
       href: https://github.com/jacobknyspel
-    - text: Email
-      href: mailto:jacob.knyspel@kcl.ac.uk
+    - text: "{{< ai orcid >}} ORCID"
+      href: https://orcid.org/0000-0001-5600-4826
+    - text: "{{< fa envelope >}} Email"
+      href: mailto::jacob.knyspel@kcl.ac.uk
 ---
 
-This is a Quarto website.
+## Hi!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+I'm currently a PhD student in Behavioural Genetics at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). I'm especially interested in improving phenotypic specificity in behavioural genetics research through the implementation of multivariate statistical methods such as network analysis and structural equation modelling.
 
-```{r}
-1 + 1
-```
+## Education
+
+**MRes/PhD Biomedical Sciences** (2023-) \| King's College London
+
+**MSc Developmental Psychology & Psychology** (2022-23) \| *Distinction* \| King's College London
+
+**BSc Psychology** (2019-22) \| *First Class Honours* \| King's College London

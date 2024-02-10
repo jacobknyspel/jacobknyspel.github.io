@@ -3,18 +3,39 @@ project:
   output-dir: docs
 
 website:
-  title: "jacobknyspel"
+  favicon: images/favicon.png
   navbar:
-    left:
+    title: false
+    logo: images/logo.png
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: Publications
+      - href: https://github.com/jacobknyspel
+        icon: github
+      - href: https://orcid.org/0000-0001-5600-4826
+        text: "{{< ai orcid >}}"
+      - href: mailto::jacob.knyspel@kcl.ac.uk
+        text: "{{< fa envelope >}}"
+  page-footer:
+    background: light
+    left:
+      - "Copyright 2023, Jacob Knyspel"
+    right:
+      - href: https://github.com/jacobknyspel
+        icon: github
+      - href: https://orcid.org/0000-0001-5600-4826
+        text: "{{< ai orcid >}}"
+      - href: mailto::jacob.knyspel@kcl.ac.uk
+        text: "{{< fa envelope >}}"
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - minty
+      - styles.scss
+    mainfont: Nunito
     css: styles.css
     toc: true
-
-
-
+    page-layout: full
