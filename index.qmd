@@ -1,5 +1,6 @@
 ---
 title: "Jacob Knyspel"
+image: images/headshot.jpg
 toc: false
 about: 
   template: trestles
@@ -7,7 +8,7 @@ about:
   image-width: 20em
   links:
     - text: GitHub
-      href: https://github.com/samanthacsik
+      href: https://github.com/jacobknyspel
     - text: Email
       href: mailto:jacob.knyspel@kcl.ac.uk
 ---
