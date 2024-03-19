@@ -21,7 +21,7 @@ website:
   page-footer:
     background: light
     left:
-      - "Copyright 2023, Jacob Knyspel"
+      - "Copyright 2024, Jacob Knyspel"
     right:
       - href: https://github.com/jacobknyspel
         icon: github

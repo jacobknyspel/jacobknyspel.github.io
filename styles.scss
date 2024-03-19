@@ -11,8 +11,17 @@
   width: auto;
 }
 
-div.quarto-about-trestles .about-entity .about-image {
-  object-fit: cover;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
+// Align home page image to center
+.about-image-container {
+  margin-top: 2em;
+  text-align: center;
+}
+
+// Align title to center
+.quarto-title {
+  text-align: center;
+}
+
+.about-links {
+  size: 200%;
 }
