@@ -40,5 +40,12 @@
     "title": "Test blog title",
     "section": "",
     "text": "CitationBibTeX citation:@online{knyspel2024,\n  author = {Knyspel, Jacob},\n  title = {Test Blog Title},\n  date = {2024-01-01},\n  url = {https://jacobknyspel.github.io/posts/YYYY-MM-DD-test-post/},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nKnyspel, Jacob. 2024. “Test Blog Title.” January 1, 2024.\nhttps://jacobknyspel.github.io/posts/YYYY-MM-DD-test-post/."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Blog Posts",
+    "section": "",
+    "text": "Test blog title\n\n\n\n\n\n\n\ntest\n\n\n\n\nTest blog description\n\n\n\n\n\n\nJan 1, 2024\n\n\nJacob Knyspel\n\n\n\n\n\n\nNo matching items"
   }
 ]
