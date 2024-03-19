@@ -4,5 +4,11 @@
     "items": [
       "/posts/YYYY-MM-DD-test-post/index.html"
     ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/YYYY-MM-DD-test-post/index.html"
+    ]
   }
 ]

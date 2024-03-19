@@ -1,5 +1,5 @@
 ---
-title: "Publications"
+title: "Blog Posts"
 listing:
   contents: posts
   categories: true
