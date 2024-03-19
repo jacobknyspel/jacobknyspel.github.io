@@ -1,4 +1,6 @@
 ---
 title: "Publications"
-listing: default
+listing:
+  contents: posts
+  categories: true
 ---

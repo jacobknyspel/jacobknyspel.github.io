@@ -2,8 +2,7 @@
   {
     "listing": "/publications.html",
     "items": [
-      "/about.html",
-      "/index.html"
+      "/posts/YYYY-MM-DD-test-post/index.html"
     ]
   }
 ]
