@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Jacob Knyspel",
     "section": "",
-    "text": "Hi! I’m a PhD student at King’s College London, funded by a studentship from the KCL MRC DTP. My area of research is the genetics of common mental health conditions. I’m especially interested in improving causal inference and phenotypic specificity in psychiatric genetics research through the implementation of multivariate statistical methods such as graphical modelling and structural equation modelling."
+    "text": "Hi! I’m a PhD student at King’s College London, funded by a studentship from the KCL MRC DTP. My area of research is the genetics of PTSD. I’m especially interested in improving phenotypic specificity in genetics research by focusing on specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods."
   },
   {
     "objectID": "index.html#hi",
@@ -18,7 +18,7 @@
     "href": "index.html#education",
     "title": "Jacob Knyspel",
     "section": "Education",
-    "text": "Education\nMRes/PhD Biomedical Sciences (2023-) | King’s College London\nMSc Developmental Psychology & Psychopathology (2022-23) | Distinction | King’s College London\nBSc Psychology (2019-22) | First Class Honours | King’s College London"
+    "text": "Education\nPhD Social, Genetic & Developmental Psychiatry Research (2024-) | King’s College London\nMRes Biomedical & Translational Sciences (2023-2024) | Distinction | King’s College London\nMSc Developmental Psychology & Psychopathology (2022-23) | Distinction | King’s College London\nBSc Psychology (2019-22) | First Class Honours | King’s College London"
   },
   {
     "objectID": "about.html",
@@ -32,7 +32,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Test blog title\n\n\n\n\n\n\n\ntest\n\n\n\n\nTest blog description\n\n\n\n\n\n\nJan 1, 2024\n\n\nJacob Knyspel\n\n\n\n\n\n\nNo matching items"
+    "text": "Updated: 24/09/2024\nUpcoming\n\nProcopio, F., Keser, E., Knyspel, J. , Malanchini, M., Rimfeld, K., Allegrini, A, & Plomin, R. The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. Manuscript submitted for publication.\nKnyspel, J. , Morneau-Vaillancourt, G., & Eley, T. C. Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Manuscript submitted for publication.\n\n2024\n\nKnyspel, J. , & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833\nStantić, M., Knyspel, J. , Gaches, A., Liu, Y., Bird, G., & Catmur, C. (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933"
   },
   {
     "objectID": "posts/YYYY-MM-DD-test-post/index.html",
@@ -47,5 +47,12 @@
     "title": "Blog Posts",
     "section": "",
     "text": "Test blog title\n\n\n\n\n\n\n\ntest\n\n\n\n\nTest blog description\n\n\n\n\n\n\nJan 1, 2024\n\n\nJacob Knyspel\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "publications/2024-knyspel-plomin.html",
+    "href": "publications/2024-knyspel-plomin.html",
+    "title": "Comparing factor and network models of cognitive abilities using twin data",
+    "section": "",
+    "text": "CitationBibTeX citation:@online{jones,\n  author = {Jones, Norah},\n  title = {Comparing Factor and Network Models of Cognitive Abilities\n    Using Twin Data},\n  url = {https://example.com/summarizing-output},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nJones, Norah. n.d. “Comparing Factor and Network Models of\nCognitive Abilities Using Twin Data.” https://example.com/summarizing-output."
   }
 ]

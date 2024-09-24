@@ -11,6 +11,8 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: publications.qmd
+        text: Publications
       - href: posts.qmd
         text: Posts
       - href: https://github.com/jacobknyspel
