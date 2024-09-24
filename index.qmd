@@ -17,11 +17,13 @@ about:
       href: mailto::jacob.knyspel@kcl.ac.uk
 ---
 
-Hi! I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of common mental health conditions. I'm especially interested in improving causal inference and phenotypic specificity in psychiatric genetics research through the implementation of multivariate statistical methods such as graphical modelling and structural equation modelling.
+Hi! I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in improving phenotypic specificity in genomic research on PTSD by focusing on specific traumatic experiences and specific symptoms.
 
 ## Education
 
-**MRes/PhD Biomedical Sciences** (2023-) \| King's College London
+**PhD Social, Genetic & Developmental Psychiatry Research** (2024-) \| King's College London
+
+**MRes Biomedical & Translational Sciences** (2023-2024) \| *Distinction* \| King's College London
 
 **MSc Developmental Psychology & Psychopathology** (2022-23) \| *Distinction* \| King's College London
 
