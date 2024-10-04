@@ -1,22 +1,33 @@
 ---
 title: "Jacob Knyspel"
-subtitle: "King's College London"
-image: images/headshot.jpg
+# subtitle: "King's College London"
+image: images/headshot2.png
 toc: false
 about: 
-  template: marquee
-  # image-shape: round
-  image-width: 16em
-  links:
-    - text: GitHub
-      icon: github
-      href: https://github.com/jacobknyspel
-    - text: "{{< ai google-scholar >}} Scholar"
-      href: https://scholar.google.com/citations?user=w7t7kugAAAAJ&hl
-    - text: "{{< ai orcid >}} ORCID"
-      href: https://orcid.org/0000-0001-5600-4826
+  # template: marquee
+  id: hero-heading
+  template: solana
+  image-shape: round
+  image-width: 28em
+  # links:
+  #   - icon: github
+  #     href: https://github.com/jacobknyspel
+  #   - text: "{{< ai google-scholar >}}"
+  #     href: https://scholar.google.com/citations?user=w7t7kugAAAAJ&hl
+  #   - text: "{{< ai orcid >}}"
+  #     href: https://orcid.org/0000-0001-5600-4826
+header-includes: >
+  <link rel="stylesheet" href="assets/index.css">
+resources:
+  assets/index.css
 ---
 
-Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in improving phenotypic specificity in genetics research by focusing on specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
+<br>
+
+::: {#hero-heading}
+
+Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in exploring the relationship between genetics, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
 
 Alongside my studies I work as a graduate teaching assistant at King's College London and as a tutor for [The Brilliant Club](https://thebrilliantclub.org/).
+
+:::
