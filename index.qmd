@@ -15,22 +15,8 @@ about:
       href: https://scholar.google.com/citations?user=w7t7kugAAAAJ&hl
     - text: "{{< ai orcid >}} ORCID"
       href: https://orcid.org/0000-0001-5600-4826
-    - text: "{{< fa envelope >}} Email"
-      href: mailto::jacob.knyspel@kcl.ac.uk
 ---
 
 Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in improving phenotypic specificity in genetics research by focusing on specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
 
 Alongside my studies I work as a graduate teaching assistant at King's College London and as a tutor for [The Brilliant Club](https://thebrilliantclub.org/).
-
-<br/>
-
-## Education
-
-**PhD Social, Genetic & Developmental Psychiatry Research** (2024-) \| King's College London
-
-**MRes Biomedical & Translational Sciences** (2023-2024) \| Distinction \| King's College London
-
-**MSc Developmental Psychology & Psychopathology** (2022-23) \| Distinction \| King's College London
-
-**BSc Psychology** (2019-22) \| First Class Honours \| King's College London

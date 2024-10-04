@@ -11,10 +11,10 @@ website:
     right:
       - href: index.qmd
         text: Home
+      - href: cv.qmd
+        text: CV
       - href: publications.qmd
         text: Publications
-      - href: posts.qmd
-        text: Posts
       - href: https://github.com/jacobknyspel
         icon: github
       - href: https://orcid.org/0000-0001-5600-4826

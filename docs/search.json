@@ -32,7 +32,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Last updated: 24/09/2024\nUpcoming\n\nProcopio, F., Keser, E., Knyspel, J. , Malanchini, M., Rimfeld, K., Allegrini, A, & Plomin, R. The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. Manuscript submitted for publication.\nKnyspel, J. , Morneau-Vaillancourt, G., & Eley, T. C. Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Manuscript submitted for publication.\n\n2024\n\nKnyspel, J. , & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833\nStantić, M., Knyspel, J. , Gaches, A., Liu, Y., Bird, G., & Catmur, C. (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933"
+    "text": "Last updated: 04/10/2024"
   },
   {
     "objectID": "posts/YYYY-MM-DD-test-post/index.html",
@@ -54,5 +54,33 @@
     "title": "Comparing factor and network models of cognitive abilities using twin data",
     "section": "",
     "text": "CitationBibTeX citation:@online{jones,\n  author = {Jones, Norah},\n  title = {Comparing Factor and Network Models of Cognitive Abilities\n    Using Twin Data},\n  url = {https://example.com/summarizing-output},\n  langid = {en}\n}\nFor attribution, please cite this work as:\nJones, Norah. n.d. “Comparing Factor and Network Models of\nCognitive Abilities Using Twin Data.” https://example.com/summarizing-output."
+  },
+  {
+    "objectID": "publications.html#upcoming",
+    "href": "publications.html#upcoming",
+    "title": "Publications",
+    "section": "Upcoming",
+    "text": "Upcoming\n\nProcopio, F. , Keser, E. , Knyspel, J. , Malanchini, M. , Rimfeld, K. , Allegrini, A. , & Plomin, R.  The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. Manuscript submitted for publication.\nKnyspel, J. , Morneau-Vaillancourt, G. , & Eley, T. C.  Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Manuscript submitted for publication."
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Academic CV",
+    "section": "",
+    "text": "Last updated: 04/10/2024"
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Academic CV",
+    "section": "Education",
+    "text": "Education\n(2024-27) PhD Social, Genetic & Developmental Psychiatry Research | King’s College London\n(2023-24) MRes Biomedical & Translational Science | Distinction | King’s College London\n(2022-23) MSc Developmental Psychology & Psychopathology | Distinction | King’s College London\n(2019-22) BSc Psychology (Hons) | First Class Honours | King’s College London"
+  },
+  {
+    "objectID": "publications.html#section",
+    "href": "publications.html#section",
+    "title": "Publications",
+    "section": "2024",
+    "text": "2024\n\nKnyspel, J. , & Plomin, R.  (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833\nStantić, M. , Knyspel, J. , Gaches, A. , Liu, Y., Bird, G. , & Catmur, C.  (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933"
   }
 ]
