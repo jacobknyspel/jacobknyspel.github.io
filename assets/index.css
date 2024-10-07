@@ -2,7 +2,7 @@
 /* title */
 .title {
   font-family: "Permanent Marker";
-  font-size: 3rem;
+  font-size: 300%;
   text-align: right;
 }
 
@@ -29,7 +29,7 @@
   /* move text up & center */
   .entity-contents {
     order: 2 !important;
-    margin: -4em 0 0 0 !important;
+    margin: -6em 0 0 0 !important;
     padding: 0 0 0 0 !important;
     text-align: center !important;
   }

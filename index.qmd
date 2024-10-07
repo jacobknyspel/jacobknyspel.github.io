@@ -8,13 +8,6 @@ about:
   template: solana
   image-shape: round
   image-width: 28em
-  # links:
-  #   - icon: github
-  #     href: https://github.com/jacobknyspel
-  #   - text: "{{< ai google-scholar >}}"
-  #     href: https://scholar.google.com/citations?user=w7t7kugAAAAJ&hl
-  #   - text: "{{< ai orcid >}}"
-  #     href: https://orcid.org/0000-0001-5600-4826
 header-includes: >
   <link rel="stylesheet" href="assets/index.css">
 resources:
