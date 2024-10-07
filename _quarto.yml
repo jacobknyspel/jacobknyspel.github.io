@@ -4,11 +4,11 @@ project:
 
 website:
   favicon: images/favicon.png
+  search: false
   navbar:
     title: false
     logo: images/logo.png
     pinned: true
-    search: false
     right:
       - href: index.qmd
         text: Home
