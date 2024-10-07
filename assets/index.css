@@ -30,42 +30,24 @@
   .entity-contents {
     order: 2 !important;
     margin: -4em 0 0 0 !important;
-    padding: 0 0 0 0em !important;
+    padding: 0 0 0 0 !important;
     text-align: center !important;
   }
   
   /* title */
   .title {
     text-align: center !important;
-    font-size: 2rem;
   }
-  
-  
-  /* center subtitle */
-  .subtitle {
-    text-align: center !important;
-  }
-  
-  /* social links: block of links */
-  .about-entity .about-links {
-    justify-content: center !important;
-    font-size: 1em !important;
-  }
-  
+
   /* blurb */
   .about-contents {
-    padding: 0 0 0 0em !important;
+    padding: 0 0 0 0 !important;
   }
-  
-  /* center Learn More About Me */
-  .about-links.subtitle {
-    justify-content: center !important;
-  }
-  
+
   /* move image up, adjust padding */
   .about-image {
     order: 1 !important;
-    padding: 0 2em 0 2em !important;
-    margin-top: 0em;
+    margin-top: 0em !important;
+    padding: 0 0 0 0 !important;
   }
 }
