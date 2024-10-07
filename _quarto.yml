@@ -8,6 +8,7 @@ website:
     title: false
     logo: images/logo.png
     pinned: true
+    search: false
     right:
       - href: index.qmd
         text: Home
