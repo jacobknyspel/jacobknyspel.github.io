@@ -39,6 +39,9 @@
     text-align: center !important;
   }
 
+  } */
+>>>>>>> 70bbf7bc91d58897efecfbcc0e5a35253ff893d7
+
   /* blurb */
   .about-contents {
     padding: 0 0 0 0 !important;
@@ -47,7 +50,11 @@
   /* move image up, adjust padding */
   .about-image {
     order: 1 !important;
+<<<<<<< HEAD
     margin-top: 0em !important;
     padding: 0 0 0 0 !important;
+=======
+    padding: 0 2em 0 2em !important;
+>>>>>>> 70bbf7bc91d58897efecfbcc0e5a35253ff893d7
   }
 }
