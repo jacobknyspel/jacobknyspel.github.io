@@ -25,7 +25,7 @@ resources:
 
 ::: {#hero-heading}
 
-Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in exploring the relationship between genes, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
+Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in exploring the relationship between genetics, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
 
 Alongside my studies I work as a graduate teaching assistant at King's College London and as a tutor for [The Brilliant Club](https://thebrilliantclub.org/).
 
