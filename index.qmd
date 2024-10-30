@@ -1,25 +1,23 @@
 ---
 title: "Jacob Knyspel"
-# subtitle: "King's College London"
+subtitle: "King's College London"
 image: images/headshot2.png
 toc: false
 about: 
-  id: hero-heading
-  template: solana
-  image-shape: round
-  image-width: 28em
-header-includes: >
-  <link rel="stylesheet" href="assets/index.css">
-resources:
-  assets/index.css
+  template: trestles
 ---
 
-<br><br>
-
-::: {#hero-heading}
+## About me
 
 Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in exploring the relationship between genetics, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
 
 Alongside my studies I work as a graduate teaching assistant at King's College London and as a tutor for [The Brilliant Club](https://thebrilliantclub.org/).
 
-:::
+## Education
+
+<ul class="fa-ul">
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>PhD Social, Genetic & Developmental Psychiatry Research<br>King's College London<br>2024-2027</li>
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>MRes Biomedical & Translational Sciences<br>King's College London<br>2023-2024</li>
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>MSc Developmental Psychology & Psychopathology<br>King's College London<br>2022-2023</li>
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-graduation-cap"></i></span>BSc Psychology<br>King's College London<br>2019-2022</li>
+</ul>

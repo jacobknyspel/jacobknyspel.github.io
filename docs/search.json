@@ -11,14 +11,14 @@
     "href": "index.html#hi",
     "title": "Jacob Knyspel",
     "section": "",
-    "text": "I’m a PhD student at King’s College London, funded by a studentship from the KCL MRC DTP. My area of research is the genetics of common mental health conditions. I’m especially interested in improving causal inference and phenotypic specificity in psychiatric genetics research through the implementation of multivariate statistical methods such as graphical modelling and structural equation modelling."
+    "text": "I’m a PhD student at King’s College London, funded by a studentship from the KCL MRC DTP. My area of research is the genetics of PTSD. I’m especially interested in exploring the relationship between genetics, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.\nAlongside my studies I work as a graduate teaching assistant at King’s College London and as a tutor for The Brilliant Club."
   },
   {
     "objectID": "index.html#education",
     "href": "index.html#education",
     "title": "Jacob Knyspel",
     "section": "Education",
-    "text": "Education\nPhD Social, Genetic & Developmental Psychiatry Research (2024-) | King’s College London\nMRes Biomedical & Translational Sciences (2023-2024) | Distinction | King’s College London\nMSc Developmental Psychology & Psychopathology (2022-23) | Distinction | King’s College London\nBSc Psychology (2019-22) | First Class Honours | King’s College London"
+    "text": "Education\n\n\nPhD Social, Genetic & Developmental Psychiatry ResearchKing’s College London2024-2027\n\n\nMRes Biomedical & Translational SciencesKing’s College London2023-2024\n\n\nMSc Developmental Psychology & PsychopathologyKing’s College London2022-2023\n\n\nBSc PsychologyKing’s College London2019-2022"
   },
   {
     "objectID": "about.html",
@@ -60,7 +60,7 @@
     "href": "publications.html#upcoming",
     "title": "Publications",
     "section": "Upcoming",
-    "text": "Upcoming\n\nProcopio, F. , Keser, E. , Knyspel, J. , Malanchini, M. , Rimfeld, K. , Allegrini, A. , & Plomin, R.  The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. Manuscript submitted for publication.\nKnyspel, J. , Morneau-Vaillancourt, G. , & Eley, T. C.  Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Manuscript submitted for publication."
+    "text": "Upcoming\n\n\n Procopio, F., Keser, E., Knyspel, J., Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2024). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. Manuscript submitted for publication."
   },
   {
     "objectID": "cv.html",
@@ -81,6 +81,13 @@
     "href": "publications.html#section",
     "title": "Publications",
     "section": "2024",
-    "text": "2024\n\nKnyspel, J. , & Plomin, R.  (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833\nStantić, M. , Knyspel, J. , Gaches, A. , Liu, Y., Bird, G. , & Catmur, C.  (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933"
+    "text": "2024\n\n\n Knyspel, J., Morneau-Vaillancourt, G., & Eley, T. C. (2024). Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Behavior Genetics. https://doi.org/10.1007/s10519-024-10204-y Journal Article Open Access \n\n\n Knyspel, J. & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833 Journal Article Open Access \n\n\n Stantić, M., Knyspel, J., Gaches, A., Liu, Y., Bird, G., & Catmur, C. (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933 Journal Article Open Access"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Jacob Knyspel",
+    "section": "",
+    "text": "Hi! 👋 I’m a PhD student at King’s College London, funded by a studentship from the KCL MRC DTP. My area of research is the genetics of PTSD. I’m especially interested in exploring the relationship between genetics, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.\nAlongside my studies I work as a graduate teaching assistant at King’s College London and as a tutor for The Brilliant Club."
   }
 ]

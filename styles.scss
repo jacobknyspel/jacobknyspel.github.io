@@ -13,10 +13,6 @@
 }
 
 // Align home page image to center
-.about-image-container {
-  margin-top: 2em;
-  text-align: center;
-}
 
 // Align title to center
 .quarto-title {
@@ -25,4 +21,9 @@
 
 .quarto-header {
   max-width: 100%;
+}
+
+// Add padding to list items
+.li-pad {
+  margin: 0 0 10px 0;
 }

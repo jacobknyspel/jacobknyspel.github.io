@@ -8,12 +8,34 @@ title: "Publications"
 
 ## Upcoming
 
--   Procopio, F. [{{< ai orcid >}}](https://orcid.org/0000-0001-9750-3947), Keser, E. [{{< ai orcid >}}](https://orcid.org/0009-0001-8100-688X), **Knyspel, J.** [{{< ai orcid >}}](https://orcid.org/0000-0001-5600-4826), Malanchini, M. [{{< ai orcid >}}](https://orcid.org/0000-0002-7257-6119), Rimfeld, K. [{{< ai orcid >}}](https://orcid.org/0000-0001-5139-065X), Allegrini, A. [{{< ai orcid >}}](https://orcid.org/0000-0003-4048-4292), & Plomin, R. [{{< ai orcid >}}](https://orcid.org/0000-0002-0756-3629) The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. *Manuscript submitted for publication*.
+<ul class="fa-ul">
 
--   **Knyspel, J.** [{{< ai orcid >}}](https://orcid.org/0000-0001-5600-4826), Morneau-Vaillancourt, G. [{{< ai orcid >}}](https://orcid.org/0000-0002-5322-6252), & Eley, T. C. [{{< ai orcid >}}](https://orcid.org/0000-0001-6458-0700) Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. *Manuscript submitted for publication*.
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
+    Procopio, F., Keser, E., **Knyspel, J.**, Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2024). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. *Manuscript submitted for publication*.
+  </li>
+  
+</ul>
 
 ## 2024
 
--   **Knyspel, J.** [{{< ai orcid >}}](https://orcid.org/0000-0001-5600-4826), & Plomin, R. [{{< ai orcid >}}](https://orcid.org/0000-0002-0756-3629) (2024). Comparing factor and network models of cognitive abilities using twin data. *Intelligence*, *104*, 101833. <https://doi.org/10.1016/j.intell.2024.101833>
+<ul class="fa-ul">
 
--   Stantić, M. [{{< ai orcid >}}](https://orcid.org/0000-0002-7368-8681), **Knyspel, J.** [{{< ai orcid >}}](https://orcid.org/0000-0001-5600-4826), Gaches, A. [{{< ai orcid >}}](https://orcid.org/0009-0005-5738-5874), Liu, Y., Bird, G. [{{< ai orcid >}}](https://orcid.org/0009-0005-5738-5874), & Catmur, C. [{{< ai orcid >}}](https://orcid.org/0009-0005-5738-5874) (2024). The Oxford Face Matching Test: Short-form alternative. *Quarterly Journal of Experimental Psychology*, *77*(4), 893-897. <https://doi.org/10.1177/17470218231182933>
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
+    **Knyspel, J.**, Morneau-Vaillancourt, G., & Eley, T. C. (2024). Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. *Behavior Genetics*. <https://doi.org/10.1007/s10519-024-10204-y><br>
+    <span class="badge bg-secondary">Journal Article</span>
+    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
+  </li>
+  
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
+    **Knyspel, J.** & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. *Intelligence*, *104*, 101833. <https://doi.org/10.1016/j.intell.2024.101833><br>
+    <span class="badge bg-secondary">Journal Article</span>
+    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
+  </li>
+    
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
+    Stantić, M., **Knyspel, J.**, Gaches, A., Liu, Y., Bird, G., & Catmur, C. (2024). The Oxford Face Matching Test: Short-form alternative. *Quarterly Journal of Experimental Psychology*, *77*(4), 893-897. <https://doi.org/10.1177/17470218231182933><br>
+    <span class="badge bg-secondary">Journal Article</span>
+    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
+  </li>
+    
+</ul>

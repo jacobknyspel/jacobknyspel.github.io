@@ -8,12 +8,10 @@ website:
   navbar:
     title: false
     logo: images/logo.png
-    pinned: true
+    pinned: false
     right:
       - href: index.qmd
         text: Home
-      - href: cv.qmd
-        text: CV
       - href: publications.qmd
         text: Publications
       - href: https://github.com/jacobknyspel
