@@ -12,11 +12,15 @@
   width: auto;
 }
 
-// Align home page image to center
-
 // Align title to center
-.quarto-title {
+.title {
+  font-family: Permanent Marker;
+  font-size: 2.5rem;
   text-align: center;
+}
+
+.about-image {
+  margin-top: 1em;
 }
 
 .quarto-header {

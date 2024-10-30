@@ -4,7 +4,7 @@ project:
 
 website:
   favicon: images/favicon.png
-  search: false
+  search: true
   navbar:
     title: false
     logo: images/logo.png
