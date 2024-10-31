@@ -15,12 +15,11 @@
 // Align title to center
 .title {
   font-family: Permanent Marker;
-  font-size: 2.5rem;
   text-align: center;
 }
 
 .about-image {
-  margin-top: 1em;
+  margin-top: 1.5em;
 }
 
 .quarto-header {
@@ -30,4 +29,8 @@
 // Add padding to list items
 .li-pad {
   margin: 0 0 10px 0;
+}
+
+.bg-link:hover {
+  color: black;
 }
