@@ -8,7 +8,7 @@ website:
   navbar:
     title: false
     logo: images/logo.png
-    pinned: false
+    pinned: true
     right:
       - href: index.qmd
         text: Home
@@ -41,3 +41,10 @@ format:
     css: styles.css
     toc: true
     page-layout: full
+    # keywords: genetics, mental health, psychology
+    pagetitle: "Jacob Knyspel"
+    description-meta: "Jacob Knyspel"
+    author-meta: "Jacob Knyspel"
+    search: true
+    license: CC BY
+    copyright: "Jacob Knyspel, 2024"
