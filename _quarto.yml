@@ -4,6 +4,8 @@ project:
 
 website:
   favicon: images/favicon.png
+  site-url: https://jacobknyspel.github.io/
+  title: Jacob Knyspel
   search: true
   navbar:
     title: false
@@ -45,6 +47,6 @@ format:
     pagetitle: "Jacob Knyspel"
     description-meta: "Jacob Knyspel"
     author-meta: "Jacob Knyspel"
-    search: true
     license: CC BY
     copyright: "Jacob Knyspel, 2024"
+    site-url: https://jacobknyspel.github.io/
