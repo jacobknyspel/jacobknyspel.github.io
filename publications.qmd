@@ -11,7 +11,7 @@ title: "Publications"
 <ul class="fa-ul">
 
   <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
-    Procopio, F., Keser, E., **Knyspel, J.**, Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2024). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. *Manuscript submitted for publication*.<br>
+    Procopio, F., Keser, E., **Knyspel, J.**, Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2025). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. *Manuscript submitted for publication*.<br>
     [<span class="badge bg-info bg-link">View Preregistration {{<ai osf>}}</span>](https://osf.io/5qb4m)
   </li>
   

@@ -1,0 +1,3402 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Jacob Knyspel">
+<meta name="dcterms.date" content="2025-01-13">
+<meta name="description" content="Jacob Knyspel">
+
+<title>Jacob Knyspel</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../images/logo.png" alt="" class="navbar-logo">
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publications.html"> 
+<span class="menu-text">Publications</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jacobknyspel"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-5600-4826"> 
+<span class="menu-text"><i class="ai  ai-orcid"></i></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="mailto::jacob.knyspel@kcl.ac.uk"> 
+<span class="menu-text"><i class="fa-solid fa-envelope" aria-label="envelope"></i></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#background" id="toc-background" class="nav-link active" data-scroll-target="#background">Background</a></li>
+  <li><a href="#data-management" id="toc-data-management" class="nav-link" data-scroll-target="#data-management">Data management</a>
+  <ul class="collapse">
+  <li><a href="#quality-control" id="toc-quality-control" class="nav-link" data-scroll-target="#quality-control">Quality control</a></li>
+  <li><a href="#reconstruction" id="toc-reconstruction" class="nav-link" data-scroll-target="#reconstruction">Reconstruction</a></li>
+  <li><a href="#imputation" id="toc-imputation" class="nav-link" data-scroll-target="#imputation">Imputation</a></li>
+  </ul></li>
+  <li><a href="#single-trait-analysis" id="toc-single-trait-analysis" class="nav-link" data-scroll-target="#single-trait-analysis">Single trait analysis</a>
+  <ul class="collapse">
+  <li><a href="#meta-analysis" id="toc-meta-analysis" class="nav-link" data-scroll-target="#meta-analysis">Meta-analysis</a></li>
+  <li><a href="#heritability" id="toc-heritability" class="nav-link" data-scroll-target="#heritability">Heritability</a></li>
+  <li><a href="#gene-based-tests" id="toc-gene-based-tests" class="nav-link" data-scroll-target="#gene-based-tests">Gene-based tests</a></li>
+  <li><a href="#gene-set-analysis" id="toc-gene-set-analysis" class="nav-link" data-scroll-target="#gene-set-analysis">Gene set analysis</a></li>
+  <li><a href="#fine-mapping" id="toc-fine-mapping" class="nav-link" data-scroll-target="#fine-mapping">Fine-mapping</a></li>
+  </ul></li>
+  <li><a href="#multiple-trait-analysis" id="toc-multiple-trait-analysis" class="nav-link" data-scroll-target="#multiple-trait-analysis">Multiple trait analysis</a>
+  <ul class="collapse">
+  <li><a href="#genetic-correlation" id="toc-genetic-correlation" class="nav-link" data-scroll-target="#genetic-correlation">Genetic correlation</a></li>
+  <li><a href="#pleiotropy" id="toc-pleiotropy" class="nav-link" data-scroll-target="#pleiotropy">Pleiotropy</a></li>
+  <li><a href="#mendelian-randomization" id="toc-mendelian-randomization" class="nav-link" data-scroll-target="#mendelian-randomization">Mendelian randomization</a></li>
+  <li><a href="#colocalization" id="toc-colocalization" class="nav-link" data-scroll-target="#colocalization">Colocalization</a></li>
+  <li><a href="#twas" id="toc-twas" class="nav-link" data-scroll-target="#twas">TWAS</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content column-page-left" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">GWAS SumStats Software</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">software</div>
+    <div class="quarto-category">genetics</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta column-page-left">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 13, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>Researchers use summary statistics generated by Genome-Wide Association Studies (GWAS) for a broad range of subsequent analyses. In recent years, available software for handling and using GWAS summary statistics has proliferated exponentially, making it increasingly difficult to keep track of this software and to make decisions about which software to use. Panagiota Kontou and Pantelis Bagos recently conducted a systematic review of GWAS summary statistic software published or in pre-print as of December 2023 (<a href="https://doi.org/10.1186/s13040-024-00385-x">see here</a>). Here I provide an overview of the software found in this systematic review, with brief descriptions of each software taken from the supplementary materials.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The systematic review did not include software for calculating polygenic scores (e.g.&nbsp;LDpred2, PRS-CS) and so I might add this in the future.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+If there are any errors or important omissions, let me know.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
+</div>
+</div>
+</section>
+<section id="data-management" class="level2">
+<h2 class="anchored" data-anchor-id="data-management">Data management</h2>
+<section id="quality-control" class="level3">
+<h3 class="anchored" data-anchor-id="quality-control">Quality control</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>GWAS-SSF</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1101/2022.07.15.500230">Paper</a></p>
+<p><a href="https://github.com/EBISPOT/gwas-summary-statistics-standard">GitHub</a></p></td>
+<td>Specifications for the first version of the GWAS-SSF format, which was developed to meet the requirements discussed with the community. GWAS-SSF consists of a tab-separated data file with well-defined fields and an accompanying metadata file.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>GWASlab</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.51094/jxiv.370">Paper</a></p>
+<p><a href="https://cloufield.github.io/gwaslab/">GitHub</a></p></td>
+<td>A toolkit for handling GWAS summary statistics. Offers functionalities for converting most formats, standardization, normalization, harmonization, filtering and visualization.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>GQS</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btad004">Paper</a></p>
+<p><a href="https://github.com/Xswapnil/GQS/">GitHub</a></p></td>
+<td>Identifies suspicious regions and prevents erroneous interpretations. Assesses all measured SNPs in LD and compares the significance of trait association of each SNP to its LD value.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>EXTminus23andMe</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1007/s10519-023-10152-z">Paper</a></p>
+<p><a href="https://github.com/Camzcamz/EXTminus23andMe">GitHub</a></p></td>
+<td>A tool to evaluate the quality of summary statistics after data removal and the suitability of these downsampled summary statistics for typical follow-up genetic analyses.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>SumStatsRehab</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1186/s12859-022-04920-7">Paper</a></p>
+<p><a href="https://github.com/Kukuster/SumStatsRehab">GitHub</a></p></td>
+<td>A tool for data validation, restoration of missing data, correction and formatting.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>MungeSumstats</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btab665">Paper</a></p>
+<p><a href="https://github.com/neurogenomics/MungeSumstats">GitHub</a></p></td>
+<td>A tool for the standardization and quality control of GWAS summary statistics. It can handle the most common summary statistic formats.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GWASinspector</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btaa1084">Paper</a></p>
+<p><a href="https://gwasinspector.com/">Webpage</a></p></td>
+<td>Developed to facilitate and streamline this process and provide the user with a comprehensive report. It will also generate cleaned, harmonized GWAS files ready for meta-analysis.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>VCF</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1186/s13059-020-02248-0">Paper</a></p>
+<p><a href="https://github.com/MRCIEU/gwas-vcf-specification">GitHub</a></p></td>
+<td>The variant call format is used to store GWAS summary statistics along with open-source tools to be uses in downstream analyses.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>DENTIST</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41467-021-27438-7">Paper</a></p>
+<p><a href="https://github.com/Yves-CHEN/DENTIST">GitHub</a></p></td>
+<td>Leverages LD among SNPs to detect and eliminate errors in GWAS or LD reference and heterogeneity between the two.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>GEAR</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1038/ejhg.2016.106">Paper</a></p>
+<p><a href="https://github.com/syntheke/GEAR">GitHub</a></p></td>
+<td>A tool that contains functions to identify significant sample overlap or heterogeneity between pairs of cohorts.</td>
+<td>Java</td>
+</tr>
+<tr class="odd">
+<td>PLINK (1.9)</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1186/s13742-015-0047-8">Paper</a></p>
+<p><a href="https://www.cog-genomics.org/plink/1.9/">Webpage</a></p></td>
+<td>A versatile program which supports data management, quality control, and common statistical computations.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>EasyQC</td>
+<td>2014</td>
+<td><p><a href="https://doi.org/10.1038/nprot.2014.071">Paper</a></p>
+<p><a href="https://www.uni-regensburg.de/medizin/epidemiologie-praeventivmedizin/genetische-epidemiologie/software/index.html">Webpage</a></p></td>
+<td>A general protocol for conducting meta-analysis and carrying out QC to minimize errors and to guarantee maximum use of data.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>QCGWAS</td>
+<td>2014</td>
+<td><p><a href="10.1093/bioinformatics/btt745">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/QCGWAS/index.html">CRAN</a></p></td>
+<td>Automates the quality control of GWAS result files. Its main purpose is to facilitate the quality control of a large number of such files before meta-analysis.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GWAtoolbox</td>
+<td>2012</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btr679">Paper</a></p>
+<p><a href="https://github.com/cran/GWAtoolbox">GitHub</a></p></td>
+<td>Contains three particular data quality aspects: data formatting, quality of the GWAS results and data consistency across studies. It was removed from CRAN in 2014 due to attribution issues.</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reconstruction" class="level3">
+<h3 class="anchored" data-anchor-id="reconstruction">Reconstruction</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>spkmt</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1186/s13104-023-06438-4">Paper</a></p>
+<p><a href="https://osf.io/spkmt/">OSF</a></p></td>
+<td>Method to derive GWAS summary statistics for one parent when observations have only been made on the offspring and another parent.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>ReACt</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1038/s41598-022-12185-6">Paper</a></p>
+<p><a href="https://github.com/Paschou-Lab/ReACt">GitHub</a></p></td>
+<td>Performs genotype reconstruction for case-control GWAS summary statistics. It includes three modules: meta-analysis, group PRS and case-case GWAS.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>Metasubtract</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btaa570">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/MetaSubtract/">CRAN</a></p></td>
+<td>Subtracts the results of a validation cohort from meta-GWAS summary statistics analytically.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>simGWAS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty898">Paper</a></p>
+<p><a href="https://chr1swallace.github.io/simGWAS/index.html">GitHub</a></p></td>
+<td>Simulates GWAS summary data without individual data as an intermediate step.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>LMOR</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1534/genetics.117.300360">Paper</a></p>
+<p><a href="https://github.com/lukelloydjones/ORShiny">GitHub</a></p></td>
+<td>Performs transformations from genetic effects estimated under a linear mixed model to odds ratios that only rely on summary statistics.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>OATH</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1534/g3.116.038877">Paper</a></p>
+<p><a href="https://github.com/gc5k/GEAR">GitHub</a></p></td>
+<td>Reproduces reported results from a GWAS and recovers under-reported results from other alternative models with a different combination of nuisance parameters.</td>
+<td>Java</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="imputation" class="level3">
+<h3 class="anchored" data-anchor-id="imputation">Imputation</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LS-META</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/hmg/ddad097">Paper</a></p>
+<p><a href="https://github.com/ren328/LS-Meta">GitHub</a></p></td>
+<td>Imputes both genetic and environmental components of a trait using both SNP-trait and omics-trait association summary data.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>LSimputing</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.xhgg.2023.100197">Paper</a></p>
+<p><a href="https://github.com/ren328/LSimputing">GitHub</a></p></td>
+<td>A nonparametric method for large-scale imputation of the genotype effects. If a sample of IPD is available the method allows for nonlinear SNP-trait associations and predictions.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>RAISS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btz466">Paper</a></p>
+<p><a href="https://gitlab.pasteur.fr/statistical-genetics/raiss">GitLab</a></p></td>
+<td>Uses LD and the multivariate normal distriburion along with several optimizations.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>SSimp</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1007371">Paper</a></p>
+<p><a href="https://github.com/zkutalik/ssimp_software">GitHub</a></p></td>
+<td>Uses the multivariate normal distribution and LD from an external source.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>ARDISS</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty596">Paper</a></p>
+<p><a href="https://github.com/BorgwardtLab/ARDISS">GitHub</a></p></td>
+<td>Imputes missing summary statistics in mixed-ethnicity cohorts through Gaussian process regression and automatic relevance determination.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>FAPI</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1038/ejhg.2015.190">Paper</a></p>
+<p><a href="https://pmglab.top/fapi/">Webpage</a></p></td>
+<td>Fast and accurate p-value imputation method that utilizes summary statistics of common variants. Its computational cost is linear with the number of untyped variants.</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>DIST/DISTMIX</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btv348">Paper</a></p>
+<p><a href="https://dleelab.github.io/distmix/">GitHub</a></p></td>
+<td>Uses the multivariate normal distribution and the correlation structure from a relevant reference population. DISTMIX is the extension to mixed ethnicity cohorts.</td>
+<td>Exe</td>
+</tr>
+<tr class="even">
+<td>DISSCO</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btv168">Paper</a></p>
+<p><a href="https://yunliweb.its.unc.edu/DISSCO/">Webpage</a></p></td>
+<td>Uses the multivariate normal distribution and LD, and allows for covariates.</td>
+<td>Java</td>
+</tr>
+<tr class="odd">
+<td>Adapt-Mix</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btv230">Paper</a></p>
+<p><a href="https://github.com/dpark27/adapt_mix">GitHub</a></p></td>
+<td>Combines information across all available reference panels to produce estimates of local genetic correlation structure for summary statistics-based methods in arbitrary populations.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>impG</td>
+<td>2014</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btu416">Paper</a></p>
+<p><a href="https://bogdan.dgsom.ucla.edu/pages/impg/">Webpage</a></p></td>
+<td>Uses the multivariate normal distribution and LD from an external source.</td>
+<td>C/C++</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="single-trait-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="single-trait-analysis">Single trait analysis</h2>
+<section id="meta-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="meta-analysis">Meta-analysis</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>MAJAR</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1177/09622802231188519">Paper</a></p>
+<p><a href="https://github.com/JustinaXie/MAJAR">GitHub</a></p></td>
+<td>Method to jointly test prognostic and predictive effects in meta-analysis without the need of using an independent cohort for replication of the detected biomarkers.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>sPLINK</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1186/s13059-021-02562-1">Paper</a></p>
+<p><a href="https://exbio.wzw.tum.de/splink/">Webpage</a></p></td>
+<td>Performs privacy-aware GWAS on distributed datasets while preserving accuracy.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>GWASmeta</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1009948">Paper</a></p>
+<p><a href="https://github.com/sjl-sjtu/GWAS_meta">GitHub</a></p></td>
+<td>A method for the optimal ABF in the GWAS meta-analysis, SMetABF. Uses shotgun stochastic search to improve the Bayesian GWAS meta-analysis framework.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GCPBayes</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1002/sim.8855">Paper</a></p>
+<p><a href="https://github.com/tbaghfalaki/GCPBayes">GitHub</a></p></td>
+<td>Bayesian meta-analysis methods for pleiotropy that extend CPBayes to the gene or pathway level.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>nGWAMA</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41588-018-0320-8">Paper</a></p>
+<p><a href="https://github.com/baselmans/multivariate_GWAMA">GitHub</a></p></td>
+<td>Performs multivariate meta-analysis correcting for sample overlap.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MetABF</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22202">Paper</a></p>
+<p><a href="https://github.com/trochet/metabf">GitHub</a></p></td>
+<td>A simple Bayesian framework for performing integrative meta-analysis across multiple GWAS.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>CPBayes</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1007139">Paper</a></p>
+<p><a href="https://github.com/ArunabhaCodes/CPBayes">GitHub</a></p></td>
+<td>Bayesian method for studying cross-phenotype genetic associations.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>metaUSAT</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22105">Paper</a></p>
+<p><a href="https://github.com/RayDebashree/metaUSAT">GitHub</a></p></td>
+<td>A method for multiple traits. It is robust to the association structure of correlated traits. It can also be used to analyze a single trait over multiple studies, accounting for overlapping samples.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>rareMETALS</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1007452">Paper</a></p>
+<p><a href="https://genome.sph.umich.edu/wiki/RareMETALS">Webpage</a></p></td>
+<td>Works even when the data contain large amounts of missing values. Uses a score statistic called PCBS (partial correlation based score statistic) for conditional analysis of single-variant and gene-level associations.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>meta-simulation</td>
+<td>2018</td>
+<td><a href="https://doi.org/10.1016/j.mgene.2018.02.004">Paper</a></td>
+<td>A tool to implement an alternate strategy for the additive model based on simulating data for the individual studies.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>rfdr</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1177/0962280216687168">Paper</a></p>
+<p><a href="https://bioinformatics.hkust.edu.hk/RFdr.html">Webpage</a></p></td>
+<td>A method for replication of GWAS. Provides the most powerful significance levels when controlling the FDR in the two-stage study.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GWAR</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btx008">Paper</a></p>
+<p><a href="https://www.compgen.org/tools/GWAR">Webpage</a></p></td>
+<td>Analysis and meta-analysis of GWAS using standard as well as robust methods (MAX, MIN2, MERT).</td>
+<td>Stata/web</td>
+</tr>
+<tr class="odd">
+<td>metaGAP</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1006495">Paper</a></p>
+<p><a href="https://www.devlaming.eu/metagap.html">Webpage</a></p></td>
+<td>A versatile tool for calculating the statistical power of a meta-analysis of GWAS results and of the polygenic-score R² in a hold-out sample.</td>
+<td>Web</td>
+</tr>
+<tr class="even">
+<td>jlfdr</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw690">Paper</a></p>
+<p><a href="https://bioinformatics.hkust.edu.hk/Jlfdr.html">Webpage</a></p></td>
+<td>A joint analysis method based on controlling the joint local false discovery rate.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>RRate</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbw091">Paper</a></p>
+<p><a href="https://bioinformatics.hkust.edu.hk/RRate.html">Webpage</a></p></td>
+<td>A Bayesian probabilistic measure of the replication rate with which we can determine the sample size of the replication study and to check the consistency between the primary and the replication study.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>metaCCA</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw052">Paper</a></p>
+<p><a href="https://bioconductor.org/packages/release/bioc/html/metaCCA.html">Bioconductor</a></p></td>
+<td>Multivariate analysis and meta-anaysis of GWAS. It uses canonical correlation analysis and employs a covariance shrinkage algorithm to achieve robustness.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PLINK (1.9)</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1186/s13742-015-0047-8">Paper</a></p>
+<p><a href="https://www.cog-genomics.org/plink/1.9/">Webpage</a></p></td>
+<td>A versatile program which supports data management, quality control, and common statistical computations including meta-analysis.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>XPEB</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2015.03.008">Paper</a></p>
+<p><a href="https://med.stanford.edu/tanglab/software/XPEB.html">Webpage</a></p></td>
+<td>An empirical Bayes approach to improve the power of GWAS in a minority population by exploiting information from another ethnic population.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>CPASSOC</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2014.11.011">Paper</a></p>
+<p><a href="https://hal.case.edu/~xxz10/zhu-web/">Webpage</a></p></td>
+<td>Method applicable to a multivariate phenotype containing any type of components including continuous, categorical and survival phenotypes, as well as to samples consisting of families or unrelated samples.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>metaSKAT</td>
+<td>2013</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2013.05.010">Paper</a></p>
+<p><a href="https://github.com/lin-lab/MetaSKAT">GitHub</a></p></td>
+<td>Extensions of the Burden Test, SKAT and Optimal SKAT (SKAT-O) for multiple studies.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>METACARPA</td>
+<td>2013</td>
+<td><p><a href="https://doi.org/10.1142/9789814447973_0023">Paper</a></p>
+<p><a href="https://github.com/hmgu-itg/metacarpa">GitHub</a></p></td>
+<td>Meta-analysis of GWAS with overlapping or related samples, when details of the overlap or relatedness are unknown.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>YAMAS</td>
+<td>2012</td>
+<td><p><a href="https://doi.org/10.1186/1471-2105-13-231">Paper</a></p>
+<p><a href="https://github.com/cmeesters/yamas">GitHub</a></p></td>
+<td>Meta-analysis including missing SNPs identified with LD (proxy SNPs).</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>METAL</td>
+<td>2010</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btq340">Paper</a></p>
+<p><a href="https://csg.sph.umich.edu/abecasis/Metal/">Webpage</a></p></td>
+<td>A versatile and efficient tool for meta-analysis of GWAS. It can combine test statistics and standard errors, or p-values across studies.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>MAGENTA</td>
+<td>2010</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1001058">Paper</a></p>
+<p><a href="https://software.broadinstitute.org/mpg/magenta/">Webpage</a></p></td>
+<td>Meta-analysis with gene set enrichment analysis (GSEA).</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>GWAMA</td>
+<td>2010</td>
+<td><p><a href="https://doi.org/10.1186/1471-2105-11-288">Paper</a></p>
+<p><a href="https://genomics.ut.ee/en/tools">Webpage</a></p></td>
+<td>A flexible, open-source tool for meta-analysis of GWAS. It incorporates a variety of error trapping facilities, and provides a range of meta-analysis summary statistics.</td>
+<td>Exe</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="heritability" class="level3">
+<h3 class="anchored" data-anchor-id="heritability">Heritability</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>HEELS</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1038/s41467-023-43565-9">Paper</a></p>
+<p><a href="https://github.com/huilisabrina/HEELS">GitHub</a></p></td>
+<td>Uses REML to produce accurate and precise local heritability estimates.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>HAMSTA</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2023.09.012">Paper</a></p>
+<p><a href="https://tszfungc.github.io/HAMSTA/">GitHub</a></p></td>
+<td>Estimates the heritability explained by local ancestry in admixture mapping studies. It also quantifies inflation in test statistics that is not contributed by local ancestry effects, and determines significance threshold for admixture mapping.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>LDER</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2022.03.013">Paper</a></p>
+<p><a href="https://github.com/shuangsong0110/LDER">GitHub</a></p></td>
+<td>Extends the LDSC method making full use of the information from the LD matrix and provides more accurate estimates of heritability and confounding inflation.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GCSC</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2022.01.005">Paper</a></p>
+<p><a href="https://github.com/ksiewert/GCSC">GCSC</a></p></td>
+<td>Uses TWAS results in a gene co-regulation score regression, to identify gene sets that are enriched for disease heritability explained by predicted expression.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>GxEsum</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1186/s13059-021-02403-1">Paper</a></p>
+<p><a href="https://github.com/honglee0707/GxEsum">GitHub</a></p></td>
+<td>A method for estimating the phenotypic variance explained by genome-wide GxE.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>FMR</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41588-021-00901-3">Paper</a></p>
+<p><a href="https://github.com/lukejoconnor/FMR">GitHub</a></p></td>
+<td>A method-of-moments estimator of the effect-size distribution. The coefficients quantify the heritability explained by components of a mixture model for the effect-size distribution.</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>MESC</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41588-020-0625-2">Paper</a></p>
+<p><a href="https://github.com/douglasyao/mesc">GitHub</a></p></td>
+<td>Estimates the proportion of heritability mediated by assayed gene expression levels using linkage disequilibrium scores and eQTL.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>GWAS-causal-effects-model</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1008612">Paper</a></p>
+<p><a href="https://github.com/dominicholland/GWAS-Causal-Effects-Model">GitHub</a></p></td>
+<td>Random effects model for estimating the causal variants and their effect size distribution from a dense panel.</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>SumHer</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41588-018-0279-5">Paper</a></p>
+<p><a href="https://dougspeed.com/sumher/">Webpage</a></p></td>
+<td>Estimates the SNP heritability of a trait, heritability enrichments and genetic correlations between traits. Part of the LDAK family.</td>
+<td>Exe</td>
+</tr>
+<tr class="even">
+<td>GWEHS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.3390/genes10080558">Paper</a></p>
+<p><a href="https://gitlab.com/elcortegano/GWEHS">GitLab</a></p></td>
+<td>Calculates the distribution of effect sizes of SNPs affecting traits, as well as their contribution to heritability. It also allows for predictions as new loci are found.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GWIZ</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1371/journal.pone.0220215">Paper</a></p>
+<p><a href="https://github.com/jonaspatronjp/GWIZ-Rscript/">GitHub</a></p></td>
+<td>A method to generate ROC curves and calculate the AUROC.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>SummaryAUC</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btz176">Paper</a></p>
+<p><a href="https://github.com/lsncibb/SummaryAUC">GitHub</a></p></td>
+<td>A method for approximating the AUC and its variance of a PRS when only the summary level data of the validation dataset are available.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GENESIS</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41588-018-0193-x">Paper</a></p>
+<p><a href="https://github.com/yandorazhang/GENESIS">GitHub</a></p></td>
+<td>Uses LD information and a likelihood-based approach to estimate variants effect-size distributions. It also allows users to make predictions regarding yield of future GWAS.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>VarExp</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty379">Paper</a></p>
+<p><a href="https://gitlab.pasteur.fr/statistical-genetics/VarExp">GitLab</a></p></td>
+<td>A method that allows for the estimation of the proportion of phenotypic variance explained. It allows for a range of models to be evaluated, including marginal genetic effects, GxE interaction effects and both effects jointly.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>S-PCGC</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2018.06.002">Paper</a></p>
+<p><a href="https://github.com/omerwe/S-PCGC">GitHub</a></p></td>
+<td>An adaptation of stratified LD score regression (S-LDSC) for case-control studies. It can estimate genetic heritability, genetic correlation and functional enrichment.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>HESS</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2016.05.013">Paper</a></p>
+<p><a href="https://github.com/huwenboshi/hess">GitHub</a></p></td>
+<td>Provides utilities for estimating and analyzing local SNP-heritability and genetic covariance.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>S-LDSC</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1038/ng.3404">Paper</a></p>
+<p><a href="https://github.com/bulik/ldsc">GitHub</a></p></td>
+<td>An extension of LDSC for partitioning heritability.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>LDSC</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1038/ng.3211">Paper</a></p>
+<p><a href="https://github.com/bulik/ldsc">GitHub</a></p></td>
+<td>Distinguishes polygenicity from bias by examining the relationship between test statistics and LD score. Used also for estimating heritability and genetic correlation.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>AVENGEME</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2015.06.005">Paper</a></p>
+<p><a href="https://github.com/DudbridgeLab/avengeme">GitHub</a></p></td>
+<td>A method to estimate the variance in disease liability explained by large sets of genetic markers. Uses polygenic scores, based on the formula for the non-centrality parameter of the association test of the score.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>SumVG</td>
+<td>2011</td>
+<td><p><a href="https://doi.org/10.1002/gepi.20593">Paper</a></p>
+<p><a href="https://github.com/lab-hcso/SumVg">GitHub</a></p></td>
+<td>Provides estimates of the sum of heritability explained by all true susceptibility variants in GWAS. It also estimates the standard error based on re-sampling approaches.</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gene-based-tests" class="level3">
+<h3 class="anchored" data-anchor-id="gene-based-tests">Gene-based tests</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LDAK-GBAT</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2022.11.010">Paper</a></p>
+<p><a href="https://dougspeed.com/ldak-gbat/">Webpage</a></p></td>
+<td>A computationally efficient method for gene-based association testing. Produces well-calibrated p-values and is significantly more powerful than existing tools. Part of the LDAK family.</td>
+<td>Exe</td>
+</tr>
+<tr class="even">
+<td>OWC</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1186/s12859-022-05114-x">Paper</a></p>
+<p><a href="https://github.com/Xuexia-Wang/OWC-R-package">GitHub</a></p></td>
+<td>A gene-based test that incorporates different weighting schemes and includes several popular methods as its special cases (burden test, weighted sum of squared score test [SSU], weighted sum statistic [WSS], SNP-set Kernel Association Test [SKAT], and score test).</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PascalX</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btad296">Paper</a></p>
+<p><a href="https://github.com/BergmannLab/PascalX">GitHub</a></p></td>
+<td>Provides fast and accurate mapping of SNP-wise GWAS data. It allows for scoring genes and annotated gene sets for enrichment signals based on data from, both, single GWAS and pairs of GWAS.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>H-MAGMA</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1038/s41596-022-00745-z">Paper</a></p>
+<p><a href="https://github.com/thewonlab/H-MAGMA">GitHub</a></p></td>
+<td>Extends MAGMA by incorporating 3D chromatin configuration in assigning variants to their putative target genes.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MCA</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1186/s12859-022-04897-3">Paper</a></p>
+<p><a href="https://github.com/biostatpzeng/MCA">GitHub</a></p></td>
+<td>Implements 22 different gene-based methods, including linear regression, higher criticism tests, Berk-Jones tests, burden test; SKAT and SKAT-O, Simes and GATES, aggregated Cauchy association test and more.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>EPIC</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1010251">Paper</a></p>
+<p><a href="https://github.com/rujinwang/EPIC">GitHub</a></p></td>
+<td>A method that relates large-scale GWAS summary statistics to cell-type-specific gene expression measurements from single-cell RNA sequencing.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>sumFREGAT</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1010172">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/sumFREGAT/index.html">CRAN</a></p></td>
+<td>Offers a wide range of gene-based methods to combine. It allows the user to arbitrarily define a set of these methods, weighting functions and probabilities of genetic variants being causal.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>chromMAGMA</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.26508/lsa.202201446">Paper</a></p>
+<p><a href="https://github.com/lawrenson-lab/chromMAGMA-public">GitHub</a></p></td>
+<td>A method to identify candidate risk genes based on the presence of risk variants within noncoding regulatory elements.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>oTFisher</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.3389/fgene.2022.1009428">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/TFisher/index.html">CRAN</a></p></td>
+<td>The omnibus thresholding Fisher’s method for performing SNP-set and gene-based tests.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>HSVS-M</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22437">Paper</a></p>
+<p><a href="https://github.com/yiyangphd/HSVSM">GitHub</a></p></td>
+<td>A multivariate hierarchically structured variable selection model, a flexible Bayesian model that tests the association of a gene with multiple correlated traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>eMAGMA</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btab115">Paper</a></p>
+<p><a href="https://github.com/eskederks/eMAGMA-tutorial">GitHub</a></p></td>
+<td>A gene-based approach with a modification of MAGMA, leverages significant tissue-specific cis-eQTL information to assign SNPs to putative genes.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>nMAGMA</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbaa298">Paper</a></p>
+<p><a href="https://github.com/sldrcyang/nMAGMA">GitHub</a></p></td>
+<td>An extension of MAGMA which extends the lists of genes that can be annotated to SNPs by integrating local signals, long-range regulation signals, and tissue-specific gene networks. It also provides tissue-specific risk signals, which are useful for understanding disorders with multitissue origins.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MARS</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1186/s13059-021-02353-8">Paper</a></p>
+<p><a href="https://github.com/junghyunJJ/marsR">GitHub</a></p></td>
+<td>Finds associations between variants in risk loci and a phenotype, considering the causal status of variants.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>AgglomerativLD</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbab329">Paper</a></p>
+<p><a href="https://github.com/ryurko/Agglomerative-LD-loci-testing">GitHub</a></p></td>
+<td>Captures LD of SNPs falling in nearby genes, which induces correlation of gene-based test statistics.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GAMBIT</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009060">Paper</a></p>
+<p><a href="https://github.com/corbinq/GAMBIT">GitHub</a></p></td>
+<td>Integrates heterogeneous annotations with GWAS summary statistics for gene-based analysis, using various coding and tissue-specific regulatory annotations. Allows various tests like SKAT, minP, ACAT, and HMP.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>DOT</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1007819">Paper</a></p>
+<p><a href="https://github.com/dmitri-zaykin/Total_Decor">GitHub</a></p></td>
+<td>Decorrelation-based approach (DOT) for combining SNP-level summary statistics (or, equivalently, p-values).</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GBJ</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1080/01621459.2019.1660170">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/GBJ/index.html">CRAN</a></p></td>
+<td>Generalized Berk-Jones test for the association between a SNP-set and outcome by accounting for LD. Includes also tests for Berk-Jones (BJ), Higher Criticism (HC), Generalized Higher Criticism (GHC), Minimum p-value (minP), and an an omnibus test (OMNI).</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>TS</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1186/s12859-020-3511-0">Paper</a></p>
+<p><a href="https://github.com/Jianjun-CN/c-code-for-TS">GitHub</a></p></td>
+<td>Uses a truncated method to find the genes that have a true contribution to the genetic association.</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>gene-<em>ε</em></td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1008855">Paper</a></p>
+<p><a href="https://github.com/ramachandran-lab/genee">GitHub</a></p></td>
+<td>A gene-based test using an empirical Bayesian approach and a mixture of normal distributions over the (regularized) effect size estimates.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GPA</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22251">Paper</a></p>
+<p><a href="https://github.com/Biocomputing-Research-Group/GPA">GitHub</a></p></td>
+<td>A general gene-based p-value adaptive combination approach (GPA) which can integrate association evidence of multiple SNPs. It is applicable to both continuous and binary traits and also to multiple studies.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>ACAT</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2019.01.002">Paper</a></p>
+<p><a href="https://github.com/yaowuliu/ACAT">GitHub</a></p></td>
+<td>A gene-based method using the Cauchy Combination Test. Includes also an omnibus procefure combining SKAT, BT and ACAT.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>KGG</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty682">Paper</a></p>
+<p><a href="https://pmglab.top/kggsee/#/">Webpage</a></p></td>
+<td>Conditional test that uses a sequential analysis with a linear combination of chi-square statistics. Inherited to KGGSEE.</td>
+<td>Java</td>
+</tr>
+<tr class="odd">
+<td>MKATR</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1016/j.compbiolchem.2018.02.016">Paper</a></p>
+<p><a href="https://github.com/baolinwu/mkatr">GitHub</a></p></td>
+<td>Calculates the correlation of the the test Z-statistics across variants using LD from a population reference panel. Incorporates various tests (sum test, SKAT, adaptive test).</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>FUMA</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1038/s41467-017-01261-5">Paper</a></p>
+<p><a href="https://fuma.ctglab.nl/">Webpage</a></p></td>
+<td>An integrative web-based platform using information from multiple biological resources to facilitate functional annotation of GWAS results, gene prioritization and interactive visualization. It accommodates positional, expression quantitative trait loci (eQTL) and chromatin interaction mappings, and provides gene-based, pathway and tissue enrichment results.</td>
+<td>web</td>
+</tr>
+<tr class="odd">
+<td>aSPU</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw577">Paper</a></p>
+<p><a href="https://github.com/ikwak2/aSPU">GitHub</a></p></td>
+<td>Performs adaptive gene-based test and pathway-based test for association analysis of multiple traits. The tests are adaptive at both the SNP- and trait-levels, thus maintaining high power across a wide range of situations. The methods can be applied to mixed types of traits, and to z-statistics or p-values.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>COMBAT</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1534/genetics.117.300257">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/COMBAT/">CRAN</a></p></td>
+<td>A combined association test for genes, which incorporates strengths from existing gene-based tests and shows higher overall performance than individual tests.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>FSTpackage</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2017.07.011">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/FSTpackage/index.html">CRAN</a></p></td>
+<td>Combines dispersion and burden tests and an efficient perturbation method for individual gene/large gene-set/genome wide analysis.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>snpGeneSets</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1534/g3.116.034694">Paper</a></p>
+<p><a href="https://www.umc.edu/SoPH/Departments-and-Faculty/Data-Science/Research/Services/Software.html">Webpage</a></p></td>
+<td>Integrates local genomic annotation databases and provides genome-wide annotation for SNP, Gene and gene sets. Aims to support interpretation of GWAS results and performing post-analysis.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PASCAL</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1004714">Paper</a></p>
+<p><a href="https://www2.unil.ch/cbg/index.php?title=Pascal">Webpage</a></p></td>
+<td>Computes gene and pathway scores from SNP-phenotype associations. For gene score computation, implements analytic and efficient numerical solutions to calculate test statistics. For pathway scoring, uses a modified Fisher method.</td>
+<td>Java</td>
+</tr>
+<tr class="even">
+<td>JEPEGMIX</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btv567">Paper</a></p>
+<p><a href="https://dleelab.github.io/jepegmix/">GitHub</a></p></td>
+<td>Extends JEPEG to better model mixed ethnicity cohorts.</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>PEGASUS</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1534/genetics.116.188391">Paper</a></p>
+<p><a href="https://github.com/ramachandran-lab/PEGASUS">GitHub</a></p></td>
+<td>A gene-based method that uses an analytical approach to compute gene-level p-values of observed gene scores according to a null distribution modeling LD.</td>
+<td>Perl</td>
+</tr>
+<tr class="even">
+<td>fastBAT</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1038/srep32894">Paper</a></p>
+<p><a href="https://yanglab.westlake.edu.cn/software/gcta/#fastBAT">Webpage</a></p></td>
+<td>Performs a fast set-based association analysis for human complex traits using summary-level data from GWAS and LD. Part of the GCTA family.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>MAGMA</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1004219">Paper</a></p>
+<p><a href="https://cncr.nl/research/magma/">Webpage</a></p></td>
+<td>Uses p-values and performs gene-based and gene-set analysis as well as meta-analysis.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>JEPEG</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btu816">Paper</a></p>
+<p><a href="http://dleelab.github.io/jepeg/">GitHub</a></p></td>
+<td>A gene-based method for testing the joint effects on trait for SNPs functionally associated with a gene (eQTLs).</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>GCTA-COJO</td>
+<td>2012</td>
+<td><p><a href="https://doi.org/10.1038/ng.2213">Paper</a></p>
+<p><a href="https://yanglab.westlake.edu.cn/software/gcta/#COJO">Webpage</a></p></td>
+<td>An approximate conditional and joint association analysis that uses LD from a reference sample. Part of the GCTA family.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>GATES</td>
+<td>2011</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2011.01.019">Paper</a></p>
+<p><a href="https://pmglab.top/kggsee/#/">Webpage</a></p></td>
+<td>An extended Sime’s test that integrates functional information and association evidence to combine the p-values of the SNP within a gene to obtain an overall p-value. Inherited to KGGSEE.</td>
+<td>Java</td>
+</tr>
+<tr class="odd">
+<td>VEGAS</td>
+<td>2010</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2010.06.009">Paper</a></p>
+<p><a href="https://github.com/HimesGroup/snpsettest">GitHub</a></p></td>
+<td>One of the first multivariate methods. Takes account of LD between markers in a gene by using simulation based on the LD of a reference panel.</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="gene-set-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="gene-set-analysis">Gene set analysis</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>PascalX</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btad296">Paper</a></p>
+<p><a href="https://github.com/BergmannLab/PascalX">GitHub</a></p></td>
+<td>Provides fast and accurate mapping of SNP-wise GWAS data. It allows for scoring genes and annotated gene sets for enrichment signals based on data from, both, single GWAS and pairs of GWAS.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>g:Profiler</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkad347">Paper</a></p>
+<p><a href="https://biit.cs.ut.ee/gprofiler/gost">Webpage</a></p></td>
+<td>Integrates many databases, including Gene Ontology, KEGG and TRANSFAC, to provide a comprehensive and in-depth analysis of gene lists. It also provides interactive and intuitive user interfaces and supports ordered queries and custom statistical backgrounds, among other settings.</td>
+<td>R/web</td>
+</tr>
+<tr class="odd">
+<td>DAVID</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkac194">Paper</a></p>
+<p><a href="https://davidbioinformatics.nih.gov/">Webpage</a></p></td>
+<td>An enrichment tool with functionalities for different types of omics data including GWAS. It accepts gene or SNP-list as input and provide API ensuring interoperability. For analysis it uses ORA and GSEA.</td>
+<td>R/web</td>
+</tr>
+<tr class="even">
+<td>chromMAGMA</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.26508/lsa.202201446">Paper</a></p>
+<p><a href="https://github.com/lawrenson-lab/chromMAGMA-public">GitHub</a></p></td>
+<td>A method to identify candidate risk genes based on the presence of risk variants within noncoding regulatory elements.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PANTHER (16)</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkaa1106">Paper</a></p>
+<p><a href="https://www.pantherdb.org/">Webpage</a></p></td>
+<td>An enrichment tool with functionalities for different types of omics data including GWAS. It accepts gene or SNP-list as input and provide API ensuring interoperability. For analysis it uses ORA and GSEA.</td>
+<td>web</td>
+</tr>
+<tr class="even">
+<td>Mergeomics (2.0)</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkab405">Paper</a></p>
+<p><a href="https://mergeomics.research.idre.ucla.edu/">Webpage</a></p></td>
+<td>A web server which uses summary statistics of multi-omics association studies (GWAS, EWAS, TWAS, PWAS, etc) and performs correction for LD, GSEA, meta-analysis and identification of essential regulators of disease-associated pathways and networks.</td>
+<td>R/web</td>
+</tr>
+<tr class="odd">
+<td>GAUSS</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2021.02.016">Paper</a></p>
+<p><a href="https://github.com/diptavo/GAUSS">GitHub</a></p></td>
+<td>Tests for any self-contained association between a phenotype and a gene-set and produces a p-value for the association.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GEMB</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/gigascience/giaa091">Paper</a></p>
+<p><a href="https://github.com/cochran4/GEMB">GitHub</a></p></td>
+<td>A method that combines gene weights from model predictions and gene ranks from genome-wide association studies into a weighted gene-set test.</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>GIGSEA</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty529">Paper</a></p>
+<p><a href="https://github.com/zhushijia/GIGSEA">GitHub</a></p></td>
+<td>Uses GWAS and eQTL to infer differential gene expression and interrogate gene set enrichment for the trait-associated SNPs. By incorporating expression data it naturally accounts for factors such as gene size, gene boundary, SNP distal regulation and multiple-marker regulation.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>WebGestalt</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkz401">Paper</a></p>
+<p><a href="https://www.webgestalt.org/">Webpage</a></p></td>
+<td>An enrichment tool with functionalities for different types of omics data including GWAS. It accepts gene or SNP-list as input and provide API ensuring interoperability. For analysis it uses ORA, GSEA and Network Topology-based Analysis.</td>
+<td>R/web</td>
+</tr>
+<tr class="odd">
+<td>deTS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btz138">Paper</a></p>
+<p><a href="https://github.com/bsml320/deTS">GitHub</a></p></td>
+<td>Performs tissue-specific enrichment analysis (TSEA) for detecting tissue-specific genes and for enrichment test of different forms of query data.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>DESE</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1186/s13059-019-1801-5">Paper</a></p>
+<p><a href="https://pmglab.top/pcga/#/">Webpage</a></p></td>
+<td>Detects the causal tissues of complex traits according to selective expression of disease-associated genes.</td>
+<td>web</td>
+</tr>
+<tr class="odd">
+<td>INFERNO</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/nar/gky686">Paper</a></p>
+<p><a href="http://inferno.lisanwanglab.org/index.php">Webpage</a></p></td>
+<td>A method which integrates diverse functional genomics data sources to identify causal noncoding variants. Characterizes the relevant tissue contexts, target genes, and downstream biological processes affected by functional variants. Uses COLOC, WebGestalt, LDSC and MetaXcan.</td>
+<td>Python/web</td>
+</tr>
+<tr class="even">
+<td>aSPUpath2</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22110">Paper</a></p>
+<p><a href="https://wuchong.org/aspupath2.html">Webpage</a></p></td>
+<td>Integrates gene expression reference weights, GWAS summary data, LD information, and candidate pathways to identify pathways whose expression is associated with complex traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GSA-SNP2</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/nar/gky175">Paper</a></p>
+<p><a href="https://sourceforge.net/projects/gsasnp2/">Forge</a></p></td>
+<td>A method for pathway enrichment analysis of GWAS P-value data. It accepts also gene-wise p-values (obtained from other methods) and outputs pathway gene sets ‘enriched’ with genes associated with the given phenotype.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>FUMA</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1038/s41467-017-01261-5">Paper</a></p>
+<p><a href="https://fuma.ctglab.nl/">Webpage</a></p></td>
+<td>An integrative web-based platform using information from multiple biological resources to facilitate functional annotation of GWAS results, gene prioritization and interactive visualization. It accommodates positional, expression quantitative trait loci (eQTL) and chromatin interaction mappings, and provides gene-based, pathway and tissue enrichment results.</td>
+<td>web</td>
+</tr>
+<tr class="odd">
+<td>GWAB</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkx284">Paper</a></p>
+<p><a href="https://www.inetbio.org/gwab/">Webpage</a></p></td>
+<td>Trait-associated genes with sub-threshold significance score can be rescued by network connections to other significant candidates.</td>
+<td>web</td>
+</tr>
+<tr class="even">
+<td>aSPU</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw577">Paper</a></p>
+<p><a href="https://github.com/ikwak2/aSPU">GitHub</a></p></td>
+<td>Performs adaptive gene-based test and pathway-based test for association analysis of multiple traits. The tests are adaptive at both the SNP- and trait-levels, thus maintaining high power across a wide range of situations. The methods can be applied to mixed types of traits, and to z-statistics or p-values.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>snpGeneSets</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1534/g3.116.034694">Paper</a></p>
+<p><a href="https://www.umc.edu/SoPH/Departments-and-Faculty/Data-Science/Research/Services/Software.html">Webpage</a></p></td>
+<td>Integrates local genomic annotation databases and provides genome-wide annotation for SNP, Gene and gene sets. Aims to support interpretation of GWAS results and performing post-analysis.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>PASCAL</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1004714">Paper</a></p>
+<p><a href="https://www2.unil.ch/cbg/index.php?title=Pascal">Webpage</a></p></td>
+<td>Computes gene and pathway scores from SNP-phenotype associations. For gene score computation, implements analytic and efficient numerical solutions to calculate test statistics. For pathway scoring, uses a modified Fisher method.</td>
+<td>Java</td>
+</tr>
+<tr class="odd">
+<td>Enrichr</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkw377">Paper</a></p>
+<p><a href="https://maayanlab.cloud/Enrichr/">Webpage</a></p></td>
+<td>A gene set search engine that enables the querying of hundreds of thousands of annotated gene sets. Enrichr uniquely integrates knowledge from many high-profile projects to provide synthesized information about mammalian genes and gene sets.</td>
+<td>web</td>
+</tr>
+<tr class="even">
+<td>PAPA</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btv668">Paper</a></p>
+<p><a href="https://sourceforge.net/projects/papav1/files/">Forge</a></p></td>
+<td>A flexible tool for pleiotropic pathway analysis utilizing GWAS summary results.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>GenToS</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1371/journal.pone.0162466">Paper</a></p>
+<p><a href="https://github.com/genepi-freiburg/gentos">GitHub</a></p></td>
+<td>Calculates an appropriate statistical significance threshold and then searches for trait-associated variants in summary statistics from human GWAS.</td>
+<td>Java</td>
+</tr>
+<tr class="even">
+<td>MAGMA</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1004219">Paper</a></p>
+<p><a href="https://cncr.nl/research/magma/">Webpage</a></p></td>
+<td>Uses p-values and performs gene-based and gene-set analysis as well as meta-analysis.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>VSEAMS</td>
+<td>2014</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btu571">Paper</a></p>
+<p><a href="https://github.com/ollyburren/vseams">GitHub</a></p></td>
+<td>A non-parametric SNP set enrichment method to test for enrichment of GWAS signals in functionally defined loci using p-values.</td>
+<td>E</td>
+</tr>
+<tr class="even">
+<td>GENOMICper</td>
+<td>2012</td>
+<td><p><a href="https://doi.org/10.1534/g3.112.002618">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/genomicper/index.html">CRAN</a></p></td>
+<td>Uses SNP association p-values and permutes them by rotation with respect to the genomic locations. The joint gene p-values are calculated using Fisher’s combination test and pathways’ association tested using the hypergeometric test.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>dmGWAS</td>
+<td>2011</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btq615">Paper</a></p>
+<p><a href="https://bioinfo.uth.edu/dmGWAS/">Webpage</a></p></td>
+<td>A dense module searching method to identify candidate subnetworks or genes for complex diseases by integrating PPI network. Extensively searches for subnetworks enriched with low p-value genes.</td>
+<td>Exe</td>
+</tr>
+<tr class="even">
+<td>i-GSEA4GWAS</td>
+<td>2010</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkq324">Paper</a></p>
+<p><a href="http://gsea4gwas.psych.ac.cn/GSEA4GWAS/">Webpage</a></p></td>
+<td>Detects pathways associated with traits by applying an improved gene set enrichment analysis. Implements also a follow-up functional analysis for SNPs in trait-associated pathways identified. Uses LD and putative functional annotation from Ensembl,ENCODE and eQTLs.</td>
+<td>web</td>
+</tr>
+<tr class="odd">
+<td>SNPratio test</td>
+<td>2009</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btp448">Paper</a></p>
+<p><a href="https://sourceforge.net/projects/snpratiotest/">Forge</a></p></td>
+<td>Compares the proportion of significant to all SNPs within genes that are part of a pathway and computes an empirical p-value based on comparisons to ratios in datasets where the assignment of case/control status has been randomized.</td>
+<td>Perl</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="fine-mapping" class="level3">
+<h3 class="anchored" data-anchor-id="fine-mapping">Fine-mapping</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BEATRICE</td>
+<td>Preprint</td>
+<td><p><a href="https://doi.org/10.1101/2023.03.24.534116">Paper</a></p>
+<p><a href="https://github.com/sayangsep/Beatrice-Finemapping">GitHub</a></p></td>
+<td>Combines a hierarchical Bayesian model with a deep learning-based inference procedure.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>XMAP</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1038/s41467-023-42614-7">Paper</a></p>
+<p><a href="https://github.com/YangLabHKUST/XMAP">GitHub</a></p></td>
+<td>A variational EM method for cross-population fine-mapping by leveraging genetic diversity and accounting for confounding bias.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>finiMOM</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btad396">Paper</a></p>
+<p><a href="https://vkarhune.github.io/finimom/">GitHub</a></p></td>
+<td>A Bayesian method that allows for multiple causal variants using product inverse-moment prior which is a natural prior distribution to model non-null effects in finite samples.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>CARMA</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1038/s41588-023-01392-0">Paper</a></p>
+<p><a href="https://github.com/Iuliana-Ionita-Laza/CARMA">GitHub</a></p></td>
+<td>Bayesian model that allows flexible specification of the prior distribution, joint modeling of summary statistics and functional annotations, and accounting for discrepancies between summary statistics and external LD.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>SusieR</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1010299">Paper</a></p>
+<p><a href="https://github.com/stephenslab/susieR">GitHub</a></p></td>
+<td>Performs variable selection in multiple regression using a Bayesian version of stepwise selection approach, and is particularly well-suited to settings where some of the variables are highly correlated.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>echocolatoR</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btab658">Paper</a></p>
+<p><a href="https://rajlabmssm.github.io/echolocatoR/">GitHub</a></p></td>
+<td>Integrates a diverse suite of statistical and functional fine-mapping tools to identify, test enrichment in, and visualize high-confidence causal consensus variants in any phenotype. Part of the echoverse family.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PICS2</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btab122">Paper</a></p>
+<p><a href="https://pics2.ucsf.edu/">Webpage</a></p></td>
+<td>A fine-mapping tool for determining the likelihood that each SNP in LD with a reported index SNP is a true causal polymorphism.</td>
+<td>web</td>
+</tr>
+<tr class="even">
+<td>ANNORE</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/hmg/ddab210">Paper</a></p>
+<p><a href="https://github.com/vafisher/AnnoRE">GitHub</a></p></td>
+<td>Uses local LD structure and functional annotation, accross many categories, to prioritize the most plausible causal SNPs. It is based on multiple regression with differential shrinkage via random effects.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>flashfm</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41467-021-26364-y">Paper</a></p>
+<p><a href="https://jennasimit.github.io/flashfm/">GitHub</a></p></td>
+<td>Uses summary statistics to jointly fine-map genetic associations for several related quantitative traits in a Bayesian framework that leverages information between the traits.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MsCAVIAR</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009733">Paper</a></p>
+<p><a href="https://github.com/nlapier2/MsCAVIAR">GitHub</a></p></td>
+<td>A method for fine-mapping by leveraging information from multiple studies. One important application area is trans-ethnic fine mapping.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>JOINTSUM</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1007778">Paper</a></p>
+<p><a href="https://github.com/yangq001/conditional">GitHub</a></p></td>
+<td>A simple and general approach based on conditional analysis of a locus on multiple traits, overcoming the shortcomings of other methods.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>GSR</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pone.0237657">Paper</a></p>
+<p><a href="https://github.com/li-lab-mcgill/GSR">GitHub</a></p></td>
+<td>Detects causal gene sets for complex traits using gene score regression while accounting for gene-to-gene correlations. It can operate either on GWAS summary statistics or gene expression.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>PolyFun/PolyLoc</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41588-020-00735-5">Paper</a></p>
+<p><a href="https://github.com/omerwe/polyfun">GitHub</a></p></td>
+<td>Estimates prior causal probabilities for SNPs, which can then be used by fine-mapping methods like SuSiE or FINEMAP. It can aggregate polygenic data from across the entire genome and hundreds of functional annotations.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>AHIUT</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1534/genetics.118.301111">Paper</a></p>
+<p><a href="https://figshare.com/articles/dataset/AHIUT/6615470?file=12108314">Figshare</a></p></td>
+<td>An intersection-union test based on a joint/conditional regression model with all the SNPs in a locus to infer AH.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PAINTOR</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw615">Paper</a></p>
+<p><a href="https://github.com/gkichaev/PAINTOR_V3.0">GitHub</a></p></td>
+<td>Integrates functional genomic data with association strength from potentially multiple populations (or traits) to prioritize variants for follow-up analysis.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>SOJO</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2017.09.027">Paper</a></p>
+<p><a href="https://github.com/zhenin/sojo">GitHub</a></p></td>
+<td>Penalized selection operator for jointly analyzing multiple variants (SOJO) within each mapped locus on the basis of LASSO regression derived from summary association statistics.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>HAPRAP</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw565">Paper</a></p>
+<p><a href="http://apps.biocompute.org.uk/haprap/">Biocompute</a></p></td>
+<td>An empirical iterative method, that enables fine mapping using haplotype information from an individual-level reference panel.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>RSS</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1214/17-aoas1046">Paper</a></p>
+<p><a href="https://stephenslab.github.io/rss/">GitHub</a></p></td>
+<td>Uses a “Regression with Summary Statistics” (RSS) likelihood, which relates the multiple regression coefficients to univariate regression results.</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>BVS-PICA</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1111/biom.12620">Paper</a></p>
+<p><a href="https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fbiom.12620&amp;file=biom12620-sup-0001-SuppData.zip">Download</a></p></td>
+<td>Bayesian variable selection for classifying genomic class level associations.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>FINEMAP</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw018">Paper</a></p>
+<p><a href="http://www.christianbenner.com/">Webpage</a></p></td>
+<td>Applies a shotgun stochastic search algorithm and can identify causal SNPs, estimate their effect sizes and the heritability contribution of causal SNPs in genomic regions associated with complex traits.</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>RiVERIA-beta</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkw627">Paper</a></p>
+<p><a href="https://yueli-compbio.github.io/RiVIERA-beta/">GitHub</a></p></td>
+<td>Bayesian fine-mapping using Epigenomic Reference Annotation.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>DAP</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2016.03.029">Paper</a></p>
+<p><a href="https://github.com/xqwen/dap">GitHub</a></p></td>
+<td>Deterministic approximation of posteriors enables highly efficient and accurate joint enrichment analysis and identification of multiple causal variants.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>JAM</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1002/gepi.21953">Paper</a></p>
+<p><a href="https://github.com/pjnewcombe/R2BGLiMS">GitHub</a></p></td>
+<td>Bayesian penalized regression that accounts for SNP correlation and finds SNPs that best explain the complete joint pattern of marginal effects.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>CAVIARBF</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1534/genetics.115.176107">Paper</a></p>
+<p><a href="https://bitbucket.org/Wenan/caviarbf/src/master/">Bitbucket</a></p></td>
+<td>A fine-mapping method that combines CAVIAR with Bayesian inference using marginal test statistics.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>fgwas</td>
+<td>2014</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2014.03.004">Paper</a></p>
+<p><a href="https://github.com/joepickrell/fgwas">GitHub</a></p></td>
+<td>Integrates functional genomic information into a GWAS.</td>
+<td>C/C++</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="multiple-trait-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="multiple-trait-analysis">Multiple trait analysis</h2>
+<section id="genetic-correlation" class="level3">
+<h3 class="anchored" data-anchor-id="genetic-correlation">Genetic correlation</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>LAVA</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1038/s41588-022-01017-y">Paper</a></p>
+<p><a href="https://github.com/josefin-werme/LAVA">GitHub</a></p></td>
+<td>An integrated framework for local genetic correlation analysis that can also evaluate local heritabilities and analyze conditional genetic relations between several phenotypes using partial correlation and multiple regression.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>LOGOdetect</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41467-021-22334-6">Paper</a></p>
+<p><a href="https://github.com/ghm17/LOGODetect">GitHub</a></p></td>
+<td>A tool to identify small segments that harbor local genetic correlation between two traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>CC-GWAS</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41588-021-00787-1">Paper</a></p>
+<p><a href="https://github.com/wouterpeyrot/CCGWAS">GitHub</a></p></td>
+<td>A tool for case-case association testing of two different disorders.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>DONUTS</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1073/pnas.2023184118">Paper</a></p>
+<p><a href="https://github.com/qlu-lab/DONUTS">GitHub</a></p></td>
+<td>A statistical framework that can estimate direct and indirect genetic effects at the SNP level and calculate genetic correlation between traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>SUPERGNOVA</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1186/s13059-021-02478-w">Paper</a></p>
+<p><a href="https://github.com/qlu-lab/SUPERGNOVA">GitHub</a></p></td>
+<td>Extends GNOVA to identify global and local genetic correlations that could provide new insights into the shared genetic basis of many phenotypes.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>GECKO</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009293">Paper</a></p>
+<p><a href="https://github.com/borangao/GECKO">GitHub</a></p></td>
+<td>A method based on composite likelihood for estimating genetic and environmental covariances.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>LPM</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btz947">Paper</a></p>
+<p><a href="https://github.com/mingjingsi/LPM">GitHub</a></p></td>
+<td>A latent probit model that can integrate functional annotations. It is scalable to hundreds of annotations and phenotypes.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>HDL</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41588-020-0653-y">Paper</a></p>
+<p><a href="https://github.com/zhenin/HDL">GitHub</a></p></td>
+<td>A likelihood-based method for estimating genetic correlation. Compared to LDSC, It reduces the variance of a genetic correlation estimate by about 60%.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>SumHer</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41588-018-0279-5">Paper</a></p>
+<p><a href="https://dougspeed.com/sumher/">Webpage</a></p></td>
+<td>Estimates the SNP heritability of a trait, heritability enrichments and genetic correlations between traits. Part of the LDAK family.</td>
+<td>Exe</td>
+</tr>
+<tr class="even">
+<td>S-PCGC</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2018.06.002">Paper</a></p>
+<p><a href="https://github.com/omerwe/S-PCGC">GitHub</a></p></td>
+<td>An adaptation of stratified LD score regression (S-LDSC) for case-control studies. It can estimate genetic heritability, genetic correlation and functional enrichment.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>PhenoSpD</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/gigascience/giy090">Paper</a></p>
+<p><a href="https://github.com/MRCIEU/PhenoSpD">GitHub</a></p></td>
+<td>Uses LDSC to estimate phenotypic correlations and then performs correction of multiple testing using the spectral decomposition of matrices.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>RHOGE</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2017.01.031">Paper</a></p>
+<p><a href="https://github.com/bogdanlab/RHOGE">GitHub</a></p></td>
+<td>Estimates the genetic correlation between two complex traits as a function of predicted gene expression effect.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GNOVA</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2017.11.001">Paper</a></p>
+<p><a href="https://github.com/xtonyjiang/GNOVA">GitHub</a></p></td>
+<td>A method that calculates annotation-stratified covariance between arbitrary number of traits and enables researchers to dissect both the shared and distinct genetic architecture across traits.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>HESS</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2017.09.022">Paper</a></p>
+<p><a href="https://github.com/huwenboshi/hess">GitHub</a></p></td>
+<td>Provides utilities for estimating and analyzing local SNP-heritability and genetic covariance.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>Popcorn</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2016.05.001">Paper</a></p>
+<p><a href="https://github.com/brielin/Popcorn">GitHub</a></p></td>
+<td>A method for estimating the transethnic genetic correlation: the correlation of causal-variant effect sizes at SNPs common in populations.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>LDSC</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1038/ng.3406">Paper</a></p>
+<p><a href="https://github.com/bulik/ldsc">GitHub</a></p></td>
+<td>Distinguishes polygenicity from bias by examining the relationship between test statistics and LD score. Used also for estimating heritability and genetic correlation.</td>
+<td>Python</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="pleiotropy" class="level3">
+<h3 class="anchored" data-anchor-id="pleiotropy">Pleiotropy</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>sumDAG</td>
+<td>2024</td>
+<td><p><a href="https://doi.org/10.1093/biomtc/ujad039">Paper</a></p>
+<p><a href="https://github.com/chunlinli/sumdag">GitHub</a></p></td>
+<td>Constructs a phenotype network by assuming a Gaussian linear structure model embedding a directed acyclic graph.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>graph-GPA (2.0)</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.3389/fgene.2023.1079198">Paper</a></p>
+<p><a href="https://dongjunchung.github.io/GGPA2/">GitHub</a></p></td>
+<td>Bayesian graphical model which allows to integrate functional annotations with GWAS datasets for multiple phenotypes within a unified framework.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>GCPBayes</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/nargab/lqad065">Paper</a></p>
+<p><a href="https://github.com/CESP-ExpHer/GCPBayes-Pipeline">GitHub</a></p></td>
+<td>A pipeline to perform cross-phenotype gene-set analysis between two traits using GCPBayes.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>FactorGo</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2023.09.015">Paper</a></p>
+<p><a href="https://github.com/mancusolab/FactorGo">GitHub</a></p></td>
+<td>A scalable variational factor analysis model used to identify and characterize pleiotropic components. Works well in capturing latent pleiotropic factors across phenotypes while at the same time being computationally efficient.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>MTAFS</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1038/s41431-023-01389-7">Paper</a></p>
+<p><a href="https://github.com/Qiaolan/MTAFS">GitHub</a></p></td>
+<td>An efficient and robust adaptive method for multi-trait analysis of GWAS.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>TWT</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btad182">Paper</a></p>
+<p><a href="https://github.com/bschilder/ThreeWayTest">GitHub</a></p></td>
+<td>Uses the correlation coefficients between Wald statistics obtained from linear regression with covariates. Then, a test is applied by integrating three-level information including the intrinsic genetic structure, pleiotropy, and the potential information combinations.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>SHAHER</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.3390/genes13101694">Paper</a></p>
+<p><a href="https://github.com/Sodbo/shared_heredity">GitHub</a></p></td>
+<td>It is based on the construction of a linear combination of traits by maximizing the proportion of its genetic variance explained by the shared genetic factors.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>PAT</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1010447">Paper</a></p>
+<p><a href="https://github.com/koditaraszka/pat">GitHub</a></p></td>
+<td>The pleiotropic association test (PAT) is used for joint analysis of multiple traits. Uses the decomposition of phenotypic covariation into genetic and environmental components to create a likelihood ratio test statistic for each genetic variant.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>EBMMT</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22439">Paper</a></p>
+<p><a href="https://github.com/Vivian-Liu-Wei64/EBMMT">GitHub</a></p></td>
+<td>Uses the eigen higher criticism and the eigen Berk-Jones testing procedures to test the association between SNPs and multiple correlated traits. Then uses the aggregated Cauchy association test.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>PDR</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2022.04.003">Paper</a></p>
+<p><a href="https://github.com/jballard28/PDR">GitHub</a></p></td>
+<td>Pleiotropic decomposition regression using method of moments to identify shared components and their underlying genetic variants.</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>MAIUP</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbab389">Paper</a></p>
+<p><a href="https://github.com/biostatpzeng/MAIUP">GitHub</a></p></td>
+<td>Test constructed based on the traditional intersection–union test with two sets of independent p-values as input and follows a novel idea that was originally proposed under the high-dimensional mediation analysis framework.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>PolarMorphism</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btac228">Paper</a></p>
+<p><a href="https://github.com/UMCUGenetics/PolarMorphism">GitHub</a></p></td>
+<td>A method based on a transform from Cartesian to polar coordinates. Analyzes multiple related phenotypes and reports (per SNP) the degree of ‘sharedness’ across them, its overall effect size, as well as p-values.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>PLEIO</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2020.11.017">Paper</a></p>
+<p><a href="https://github.com/cuelee/pleio">GitHub</a></p></td>
+<td>A framework to map and interpret pleiotropic loci in a joint analysis of multiple diseases and complex traits. It maximizes power by systematically accounting for genetic correlations and heritability of the traits using LDSC.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>ACA</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41598-021-82000-1">Paper</a></p>
+<p><a href="https://sites.bu.edu/fhspl/publications/approximate-conditional-analysis/">Webpage</a></p></td>
+<td>Relies on an approximate conditional phenotype analysis. The traits covariance may be estimated either from a subset of the phenotypic data; or from published studies.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>combGWAS</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btab417">Paper</a></p>
+<p><a href="https://github.com/LiangyingYin/CombGWAS">GitHub</a></p></td>
+<td>A statistical framework to uncover susceptibility variants for comorbid disorders and calculate genetic correlations.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>jaSPU</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/hmg/ddab126">Paper</a></p>
+<p><a href="https://github.com/kaskarn/JaSPU">GitHub</a></p></td>
+<td>Evaluates the effect of SNPs across k traits using z-scores from previous regression analyses. It performs simulations to produce p-values, using the empirical multivariate-normal distribution of null z-scores.</td>
+<td>Julia</td>
+</tr>
+<tr class="odd">
+<td>MTAR</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41467-020-16591-0">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/MTAR/">CRAN</a></p></td>
+<td>Joint analysis of association summary statistics between multiple rare variants and different traits. Leverages the genome-wide genetic correlation to inform the degree of gene-level effect heterogeneity across traits.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>JASS</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/nargab/lqaa003">Paper</a></p>
+<p><a href="https://gitlab.pasteur.fr/statistical-genetics/jass">GitLab</a></p></td>
+<td>Incorporates various joint tests such as the omnibus approach and weighted sum of Z-score tests while offering data cleaning and harmonization, fast derivation of joint statistics, and optimized data management process.</td>
+<td>Python/web</td>
+</tr>
+<tr class="odd">
+<td>PLACO</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009218">Paper</a></p>
+<p><a href="https://github.com/RayDebashree/PLACO">GitHub</a></p></td>
+<td>Implements a variant-level formal statistical test of pleiotropy of two traits inspired from mediation analysis.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>HOPS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1186/s13059-019-1844-7">Paper</a></p>
+<p><a href="https://github.com/rondolab/HOPS">GitHub</a></p></td>
+<td>Allows to compute the horizontal pleiotropy score by removing correlations between traits caused by vertical pleiotropy and normalizing effect sizes across all traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MSKAT</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty811">Paper</a></p>
+<p><a href="https://github.com/baolinwu/MSKAT">GitHub</a></p></td>
+<td>Various types of multi-trait SNP-set association tests (variance component test, burden test and adaptive test), and efficient numerical calculation of p-values.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>multiSKAT</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22156">Paper</a></p>
+<p><a href="https://github.com/diptavo/MultiSKAT">GitHub</a></p></td>
+<td>A general framework for testing pleiotropic effects of rare variants on multiple continuous phenotypes using multivariate kernel regression. Many existing tests are equivalent to specific choices of parameters within this framework.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>bmass</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1008431">Paper</a></p>
+<p><a href="https://github.com/mturchin20/bmass">GitHub</a></p></td>
+<td>Bayesian multivariate analysis of GWAS data using univariate association summary statistics.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MTAR</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty961">Paper</a></p>
+<p><a href="https://github.com/baolinwu/MTAR">GitHub</a></p></td>
+<td>Uses principal component (PC)-based association test which has optimal power when the underlying multi-trait signal can be captured by the first PC. Performs an adaptive test by optimally weighting the PC-based test and the omnibus chi-square test to achieve robust performance.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>HIPO</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1007549">Paper</a></p>
+<p><a href="https://github.com/gqi/hipo">GitHub</a></p></td>
+<td>Performs heritability informed power optimization for conducting multi-trait association analysis.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MTAG</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41588-017-0009-4">Paper</a></p>
+<p><a href="https://github.com/JonJala/mtag">GitHub</a></p></td>
+<td>A method for joint analysis of GWAS of different traits, using a weigthed sum and LDSC.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>UNITY</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty254">Paper</a></p>
+<p><a href="https://github.com/bogdanlab/UNITY">GitHub</a></p></td>
+<td>A Bayesian framework for estimating the proportion of causal variants shared between a pair of complex traits.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>CONFIT</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty249">Paper</a></p>
+<p><a href="https://github.com/lgai/CONFIT">GitHub</a></p></td>
+<td>The method estimates the degree of shared effects between traits from the data. The test statistic is a sum of the relative likelihoods for each alternate configuration.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>iMAP</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty204">Paper</a></p>
+<p><a href="https://github.com/biostatpzeng/iMAP">GitHub</a></p></td>
+<td>Performs integrative mapping of pleiotropic association and functional annotations using penalized Gaussian mixture models. Uses a multinomial logistic regression model.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>Plei</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1534/genetics.117.300347">Paper</a></p>
+<p><a href="https://github.com/yangq001/Plei">GitHub</a></p></td>
+<td>A procedure that can be applied for both marginal analysis and conditional analysis. Uses the union-intersection testing methods, but in addition to the likelihood ratio test, it also applies generalized estimating equations under the working independence model.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>EPS</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btw081">Paper</a></p>
+<p><a href="https://github.com/gordonliu810822/EPS">GitHub</a></p></td>
+<td>An Empirical Bayes approach to integrating Pleiotropy and Tissue-Specific information (EPS) for prioritizing risk genes.</td>
+<td>Matlab</td>
+</tr>
+<tr class="even">
+<td>USAT</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1002/gepi.21937">Paper</a></p>
+<p><a href="https://github.com/RayDebashree/USAT">GitHub</a></p></td>
+<td>Uses a data-adaptive weighted score-based test statistic for testing association of multiple continuous phenotypes with a single SNP.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>gwas-pw</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1038/ng.3570">Paper</a></p>
+<p><a href="https://github.com/joepickrell/gwas-pw">GitHub</a></p></td>
+<td>A tool for jointly analysing two GWAS to identify loci that influence both traits. Instead of using two P-value thresholds to identify variants that influence both traits, the algorithm learns reasonable thresholds from the data.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>cFDR</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1004926">Paper</a></p>
+<p><a href="https://github.com/jamesliley/cFDR-common-controls">GitHub</a></p></td>
+<td>Calculates an upper bound on the expected false discovery rate (FDR) across a set of SNPs whose p-values for two diseases are both less than two disease-specific threshold.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MGAS</td>
+<td>2015</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btu783">Paper</a></p>
+<p><a href="https://pmglab.top/kgg/">Webpage</a></p></td>
+<td>A multivariate gene-based association test by extended Simes procedure (MGAS), that allows gene-based testing of multivariate phenotypes.</td>
+<td>Java</td>
+</tr>
+<tr class="even">
+<td>GPA</td>
+<td>2014</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1004787">Paper</a></p>
+<p><a href="https://github.com/dongjunchung/GPA">GitHub</a></p></td>
+<td>Uses the EM algorithm to integrate pleiotropy and functional annotation (eQTL etc).</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>TATES</td>
+<td>2013</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1003235">Paper</a></p>
+<p><a href="https://cncr.nl/research/tates/">Webpage</a></p></td>
+<td>Trait-based Association Test that uses Extended Simes procedure combines the p-values obtained in standard univariate GWAS to acquire one trait-based p-value, while correcting for correlations between components.</td>
+<td>Fortran</td>
+</tr>
+<tr class="even">
+<td>p_ACT</td>
+<td>2007</td>
+<td><p><a href="https://doi.org/10.1086/522036">Paper</a></p>
+<p><a href="https://csg.sph.umich.edu/boehnke/p_act.php">Webpage</a></p></td>
+<td>A method of computing p-values adjusted for correlated tests that attains the accuracy of permutation or simulation-based tests in much less computation time.</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mendelian-randomization" class="level3">
+<h3 class="anchored" data-anchor-id="mendelian-randomization">Mendelian randomization</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TS_LMM</td>
+<td>Preprint</td>
+<td><p><a href="https://doi.org/10.1101/2023.04.25.23289099">Paper</a></p>
+<p><a href="https://github.com/mingding-hsph/LMM_MEC">GitHub</a></p></td>
+<td>Performs two-stage linear mixed model for MVMR that accounts for variance of summary statistics not only in outcome, but also in all of the risk factors.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MRBEE</td>
+<td>2024</td>
+<td><p><a href="https://doi.org/10.1016/j.xhgg.2024.100290">Paper</a></p>
+<p><a href="https://github.com/noahlorinczcomi/MRBEE">GitHub</a></p></td>
+<td>A multivariable MR method capable of simultaneously removing measurement error bias and identifying horizontal pleiotropy.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MVMR-cML</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2023.02.014">Paper</a></p>
+<p><a href="https://github.com/ZhaotongL/MVMR-cML">GitHub</a></p></td>
+<td>An efficient and robust MVMR method based on constrained maximum likelihood (cML).</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MRlap</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22522">Paper</a></p>
+<p><a href="https://github.com/n-mounier/MRlap">GitHub</a></p></td>
+<td>Simultaneously considers weak instrument bias and winner’s curse while accounting for potential sample overlap and corrects IVW-MR.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MRCI</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1038/s41467-023-36490-4">Paper</a></p>
+<p><a href="https://github.com/zpliu/MRCI">GitHub</a></p></td>
+<td>Estimates reciprocal causation between two phenotypes simultaneously using reference LD information.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MR²</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2023.06.005">Paper</a></p>
+<p><a href="https://github.com/lb664/MR2/">GitHub</a></p></td>
+<td>Performs MR for multiple outcomes to identify exposures that cause more than one outcome or, conversely, exposures that exert their effect on distinct responses.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>pIVW</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1111/biom.13732">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/mr.pivw/index.html">CRAN</a></p></td>
+<td>An extension to IVW that accounts for weak instruments and balanced horizontal pleiotropy simultaneously.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>BiDirectCausal</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1010205">Paper</a></p>
+<p><a href="https://github.com/xue-hr/BiDirectCausal">GitHub</a></p></td>
+<td>Infers possible bi-directional causal effects between two traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MR-Corr2</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btab646">Paper</a></p>
+<p><a href="https://github.com/QingCheng0218/MR.Corr2">GitHub</a></p></td>
+<td>A Bayesian approach that uses the orthogonal projection to reparameterize the bivariate normal distribution for effects of variants on exposure and horizontal pleiotropy.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MR.CUE</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1038/s41467-022-34164-1">Paper</a></p>
+<p><a href="https://github.com/QingCheng0218/MR.CUE">GitHub</a></p></td>
+<td>Estimates causal effect while identifying IVs with correlated horizontal pleiotropy and accounting for estimation uncertainty.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>adOMICs</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbac376">Paper</a></p>
+<p><a href="https://github.com/lshen/adomics">GitHub</a></p></td>
+<td>Used to investigate the causal effects of multiple omics biomarkers on an outcome. The method first tests the effect of each omics biomarker on the outcome separately using an MR method and then combines the p-values using various methods.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>MRLocus</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009455">Paper</a></p>
+<p><a href="https://thelovelab.github.io/mrlocus/">GitHub</a></p></td>
+<td>A method for Bayesian estimation of the gene-to-trait effect from eQTL and GWAS data for loci with evidence of allelic heterogeneity. Makes use of a colocalization step applied to each nearly-LD-independent eQTL, followed by an MR analysis step across eQTLs.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>OMR</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbab322">Paper</a></p>
+<p><a href="https://github.com/wanglu205/OMR">GitHub</a></p></td>
+<td>MR method that uses all GWAS SNPs for causal inference. The method accommodates the commonly encountered horizontal pleiotropy effects and relies on a composite likelihood framework for scalable computation.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>JAM-MR</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1002/sim.9109">Paper</a></p>
+<p><a href="https://github.com/pjnewcombe/R2BGLiMS">GitHub</a></p></td>
+<td>Performs variable selection and causal effect estimation in MR as an extension of the JAM algorithm.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>hJAM</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/aje/kwaa287">Paper</a></p>
+<p><a href="https://github.com/USCbiostats/hJAM">GitHub</a></p></td>
+<td>A two-stage hierarchical model that unifies the framework of MR and TWAS and can be applied to correlated instruments and multiple intermediates.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>IMRP</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btaa985">Paper</a></p>
+<p><a href="https://github.com/XiaofengZhuCase/IMRP">GitHub</a></p></td>
+<td>Performs Iterative MR and Pleiotropy analysis to simultaneously search for horizontal pleiotropic variants and estimate causal effect.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MRcML</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2021.05.014">Paper</a></p>
+<p><a href="https://github.com/xue-hr/MRcML">GitHub</a></p></td>
+<td>Uses constrained maximum likelihood and model averaging that is robust to invalid IVs with uncorrelated or correlated pleiotropic effects.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>LHC-MR</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41467-021-26970-w">Paper</a></p>
+<p><a href="https://github.com/LizaDarrous/lhcMR">GitHub</a></p></td>
+<td>Estimates bi-directional causal effects, direct heritabilities, and confounder effects while accounting for sample overlap.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>Mr.MtRobin</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22380">Paper</a></p>
+<p><a href="https://github.com/kjgleason/Mr.MtRobin">GitHub</a></p></td>
+<td>Multi-tissue transcriptome-wide MR method that uses multi-tissue eQTL analyses as input and a reverse regression random slope mixed model to infer whether a gene is associated with a complex trait.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MR-LDP</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/nargab/lqaa028">Paper</a></p>
+<p><a href="https://github.com/QingCheng0218/MR.LDP">GitHub</a></p></td>
+<td>A probabilistic model for MR in the presence of LD and to account for horizontal pleiotropy.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>BWMR</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btz749">Paper</a></p>
+<p><a href="https://github.com/jiazhao97/BWMR">GitHub</a></p></td>
+<td>Bayesian methods for MR.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MRCD</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009105">Paper</a></p>
+<p><a href="https://github.com/xue-hr/MRCD">GitHub</a></p></td>
+<td>Infers causal direction between two traits in the presence of horizontal pleiotropy.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MR-BMA</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41467-019-13870-3">Paper</a></p>
+<p><a href="https://github.com/verena-zuber/demo_AMD">GitHub</a></p></td>
+<td>Bayesian algorithm to perform risk factor selection in multivariable MR.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>PMR</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41467-020-17668-6">Paper</a></p>
+<p><a href="https://github.com/yuanzhongshang/PMR">GitHub</a></p></td>
+<td>Efficient inference of 2SMR in TWAS. It can account for correlated instruments and horizontal pleiotropy, and provides accurate estimates of causal effect and horizontal pleiotropy effect. It can be applied in single traits as well as multiple correlated outcome traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MR</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41467-019-14156-4">Paper</a></p>
+<p><a href="https://cran.r-project.org/web/packages/MendelianRandomization/index.html">CRAN</a></p></td>
+<td>Several standard methods (simple and weighted median, IVW, and MR-Egger) for performing MR analyses with summary data.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MRMix</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41467-019-09432-2">Paper</a></p>
+<p><a href="https://github.com/gqi/MRMix">GitHub</a></p></td>
+<td>MR analysis using an underlying mixture model incorporating a fraction of the genetic instruments to have direct effect on the outcome (horizontal pleiotropy).</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>TWMR</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41467-019-10936-0">Paper</a></p>
+<p><a href="https://github.com/eleporcu/TWMR">GitHub</a></p></td>
+<td>MR integrating GWAS and eQTL data reveals genetic determinants of complex and clinical traits.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MVMR</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/ije/dyy262">Paper</a></p>
+<p><a href="https://wspiller.github.io/MVMR/">GitHub</a></p></td>
+<td>Performs multivariable MR analyses, including heterogeneity statistics for assessing instrument strength and validity.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MR.RAPS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1093/ije/dyz142">Paper</a></p>
+<p><a href="https://github.com/qingyuanzhao/mr.raps">GitHub</a></p></td>
+<td>A three-sample genome-wide design with many independent genetic instruments across the whole genome. The method is efficient with many weak genetic instruments and robust to balanced and/or sparse pleiotropy.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MR-PRESSO</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41588-018-0099-7">Paper</a></p>
+<p><a href="https://github.com/rondolab/MR-PRESSO">GitHub</a></p></td>
+<td>Allows for the evaluation of horizontal pleiotropy in multi-instrument MR.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MR-Base</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.7554/elife.34408">Paper</a></p>
+<p><a href="https://www.mrbase.org/">Webpage</a></p></td>
+<td>A database and web-based analytical platform for Mendelian randomization. It is coupled to TwoSampleMR and to MRC IEU OpenGWAS database.</td>
+<td>R/web</td>
+</tr>
+<tr class="even">
+<td>LCV</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41588-018-0255-0">Paper</a></p>
+<p><a href="https://github.com/lukejoconnor/LCV">GitHub</a></p></td>
+<td>Estimates causal associations between traits avoiding confounding by genetic correlation, using LDSC.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MRPEA</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bib/bbx025">Paper</a></p>
+<p><a href="https://sourceforge.net/projects/mrpea/">Forge</a></p></td>
+<td>A pathway association MR analysis approach, which was capable of correcting the genetic confounding effects of environmental exposures, using data of environmental exposures.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>TwoSampleMR</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1007081">Paper</a></p>
+<p><a href="https://mrcieu.github.io/TwoSampleMR/">GitHub</a></p></td>
+<td>Standard methods for performing MR. It uses the IEU GWAS database and to the MRBase web app.</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="colocalization" class="level3">
+<h3 class="anchored" data-anchor-id="colocalization">Colocalization</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>SharePro</td>
+<td>2024</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btae295">Paper</a></p>
+<p><a href="https://github.com/zhwm/SharePro_coloc">GitHub</a></p></td>
+<td>Takes an effect group-level approach to integrate LD modelling and colocalization assessment to account for multiple causal variants in colocalization analysis.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>SS2</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2021.12.012">Paper</a></p>
+<p><a href="https://github.com/FanWang0216/SimpleSum2Colocalization">GitHub</a></p></td>
+<td>Integrates GWAS summary statistics with eQTL summary statistics across any number of gene-by-tissue pairs, is applicable when there are overlapping participants in the two studies.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>ColocQuiaL</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btac512">Paper</a></p>
+<p><a href="https://github.com/bvoightlab/ColocQuiaL">GitHub</a></p></td>
+<td>A pipeline that provides a framework to perform eQTL and sQTL colocalization analyses at scale across the genome with COLOC.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>MSG</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009814">Paper</a></p>
+<p><a href="https://github.com/yingji15/MSG_public">GitHub</a></p></td>
+<td>A multidimensional splicing gene approach.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>ezQTL</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1016/j.gpb.2022.05.004">Paper</a></p>
+<p><a href="https://analysistools.cancer.gov/ezqtl/#/home">Webpage</a></p></td>
+<td>Performs data quality control for variants matched between different datasets, LD visualization, and two-trait colocalization analyses using two state-of-the-art methodologies (eCAVIAR and HyPrColoc).</td>
+<td>R/web</td>
+</tr>
+<tr class="even">
+<td>COLOC</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1009440">Paper</a></p>
+<p><a href="https://github.com/chr1swallace/coloc">GitHub</a></p></td>
+<td>Allows evidence for association at multiple causal variants to be evaluated simultaneously, whilst separating the statistical support for each variant conditional on the causal signal being considered.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>POEMColoc</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1186/s12859-021-04170-z">Paper</a></p>
+<p><a href="https://github.com/AbbVie-ComputationalGenomics/POEMColoc">GitHub</a></p></td>
+<td>An approximation to the coloc method that can be applied when limited summary statistics are available.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>HyPrColoc</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1038/s41467-020-20885-8">Paper</a></p>
+<p><a href="https://github.com/cnfoley/hyprcoloc">GitHub</a></p></td>
+<td>An efficient deterministic Bayesian algorithm that can detect colocalization across vast numbers of traits simultaneously.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>LocusFocus</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1008336">Paper</a></p>
+<p><a href="https://locusfocus.research.sickkids.ca/">Webpage</a></p></td>
+<td>A web-based tool that tests colocalization using the Simple Sum method to identify the most relevant genes and tissues for a particular locus in the presence of high LD and/or allelic heterogeneity.</td>
+<td>web</td>
+</tr>
+<tr class="even">
+<td>SparkINFERNO</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btaa246">Paper</a></p>
+<p><a href="https://bitbucket.org/wanglab-upenn/sparkinferno/src/master/">Bitbucket</a></p></td>
+<td>A scalable bioinformatics pipeline characterizing non-coding GWAS. It prioritizes causal variants underlying association signals and reports relevant regulatory elements, tissue contexts and plausible target genes.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>pwCoCo</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41588-020-0682-6">Paper</a></p>
+<p><a href="https://github.com/jwr-git/pwcoco">GitHub</a></p></td>
+<td>A fast tool that integrates methods from GCTA-COJO and the coloc R package.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>PESCA</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2020.04.012">Paper</a></p>
+<p><a href="https://huwenboshi.github.io/pesca/">GitHub</a></p></td>
+<td>Uses ancestry-matched estimates of LD to infer genome-wide proportions of population-specific and shared causal variants for a single trait in two populations. These estimates are then used as priors in an empirical Bayes framework to localize and test for enrichment of population-specific/shared causal variants in regions of interest.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>moloc</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/bty147">Paper</a></p>
+<p><a href="https://github.com/clagiamba/moloc">GitHub</a></p></td>
+<td>Multiple-trait-coloc, a Bayesian statistical framework that integrates GWAS summary data with multiple molecular QTL data to identify regulatory effects at GWAS risk loci.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>LLR</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1093/bioinformatics/btx512">Paper</a></p>
+<p><a href="https://github.com/gordonliu810822/LLR">GitHub</a></p></td>
+<td>A latent low-rank approach to colocalizing genetic risk variants in multiple GWAS and phenotypes.</td>
+<td>Matlab</td>
+</tr>
+<tr class="odd">
+<td>eCAVIAR</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2016.10.003">Paper</a></p>
+<p><a href="https://github.com/fhormoz/caviar">GitHub</a></p></td>
+<td>Colocalization of GWAS and eQTL with a probabilistic method that accounts for more than one causal variant in any given locus.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>Sherlock</td>
+<td>2013</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2013.03.022">Paper</a></p>
+<p><a href="http://sherlock.ucsf.edu/">Webpage</a></p></td>
+<td>Uses a database of eQTL n different tissues to identify patterns in GWAS that match those for specific genes. information from both cis- and trans- eQTL SNPs.</td>
+<td>web</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="twas" class="level3">
+<h3 class="anchored" data-anchor-id="twas">TWAS</h3>
+<table class="table-striped caption-top table">
+<caption>Software are sorted by most to least recent</caption>
+<colgroup>
+<col style="width: 20%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 50%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Year</th>
+<th>Links</th>
+<th>Description</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>OPERA</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1016/j.xgen.2023.100344">Paper</a></p>
+<p><a href="https://github.com/wuyangf7/OPERA">GitHub</a></p></td>
+<td>A method that jointly analyzes GWAS and multi-omics xQTL data to enhance the identification of molecular phenotypes associated with complex traits through shared causal variants.</td>
+<td>C/C++</td>
+</tr>
+<tr class="even">
+<td>TScML</td>
+<td>2023</td>
+<td><p><a href="https://doi.org/10.1080/01621459.2023.2183127">Paper</a></p>
+<p><a href="https://github.com/xue-hr/TScML">GitHub</a></p></td>
+<td>A robust and efficient inferential method to account for both hidden confounding and some invalid IVs via two-stage constrained maximum likelihood, an extension of 2SLS.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>SUMMIT</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1038/s41467-022-34016-y">Paper</a></p>
+<p><a href="https://github.com/ChongWuLab/SUMMIT">GitHub</a></p></td>
+<td>Improves the expression prediction model accuracy and the power of TWAS by using a large eQTL summary-level dataset, penalized regression and Cauchy Combination Test.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>ARCHIE</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1038/s41467-022-31845-9">Paper</a></p>
+<p><a href="https://github.com/diptavo/ARCHIE">GitHub</a></p></td>
+<td>A summary statistic based sparse canonical correlation analysis method to identify sets of gene-expressions trans-regulated by sets of known trait-related genetic variants.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>MA-FOCUS</td>
+<td>2022</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2022.07.002">Paper</a></p>
+<p><a href="https://github.com/mancusolab/ma-focus">GitHub</a></p></td>
+<td>An extension of FOCUS that leverages summary GWAS data with eQTL weights from multiple ancestries to increase the precision of credible sets for causal genes.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>CoMM-S⁴</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.3389/fgene.2021.704538">Paper</a></p>
+<p><a href="https://github.com/gordonliu810822/CoMM">GitHub</a></p></td>
+<td>Uses variational Bayesian EM algorithm and a likelihood ratio test to integrate GWAS data with eQTL to assess expression-trait association.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>sCCA</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1008973">Paper</a></p>
+<p><a href="https://github.com/fenghelian/sCCA-ACAT_TWAS">GitHub</a></p></td>
+<td>Integrates multiple tissues in the TWAS using sparse canonical correlation analysis and an aggregate Cauchy association test.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>Mr.MtRobin</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22380">Paper</a></p>
+<p><a href="https://github.com/kjgleason/Mr.MtRobin">GitHub</a></p></td>
+<td>Multi-tissue transcriptome-wide MR method that uses multi-tissue eQTL analyses as input and a reverse regression random slope mixed model to infer whether a gene is associated with a complex trait.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>HMAT</td>
+<td>2021</td>
+<td><p><a href="https://doi.org/10.1093/hmg/ddab056">Paper</a></p>
+<p><a href="https://github.com/biostatpzeng/HMAT">GitHub</a></p></td>
+<td>A method which aggregates TWAS association evidence obtained across multiple gene expression prediction models by leveraging the harmonic mean p-value combination.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>BGW-TWAS</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2020.08.022">Paper</a></p>
+<p><a href="https://github.com/yanglab-emory/BGW-TWAS">GitHub</a></p></td>
+<td>A Bayesian TWAS method that leverages both cis- and trans-eQTL based on Bayesian variable selection regression.</td>
+<td>C/C++</td>
+</tr>
+<tr class="odd">
+<td>BAGEA</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pcbi.1007770">Paper</a></p>
+<p><a href="https://github.com/dlampart/bagea">GitHub</a></p></td>
+<td>A variational Bayes framework to model cis-eQTLs using directed and undirected genomic annotations.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>TisCoMM</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1093/nar/gkaa767">Paper</a></p>
+<p><a href="https://github.com/XingjieShi/TisCoMM">GitHub</a></p></td>
+<td>Leverages the co-regulation of genetic variations across different tissues explicitly via a probabilistic model. Apart from prioritizing gene-trait associations, it also detects the tissue-specific role of candidate target genes in complex traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>Primo</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1186/s13059-020-02125-w">Paper</a></p>
+<p><a href="https://github.com/kjgleason/Primo">GitHub</a></p></td>
+<td>A method for integrative analysis of multiple sets of xQTL data (eQTL, pQTL etc) from different cellular conditions or studies. It examines association patterns of SNPs to complex and omics traits accounting for LD, heterogeneity and sample correlations.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>PMR</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1038/s41467-020-17668-6">Paper</a></p>
+<p><a href="https://github.com/yuanzhongshang/PMR">GitHub</a></p></td>
+<td>Efficient inference of 2SMR in TWAS. It can account for correlated instruments and horizontal pleiotropy, and provides accurate estimates of causal effect and horizontal pleiotropy effect. It can be applied in single traits as well as multiple correlated outcome traits.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>JEPEGMIX2‐P</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1002/ajmg.b.32823">Paper</a></p>
+<p><a href="https://github.com/Chatzinakos/JEPEGMIX2-P">GitHub</a></p></td>
+<td>A fast TWAS pathway method that has uses a large and diverse reference panel and is applicable to ethnically mixed-cohorts.</td>
+<td>Exe</td>
+</tr>
+<tr class="even">
+<td>PTWAS</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1186/s13059-020-02026-y">Paper</a></p>
+<p><a href="https://github.com/xqwen/ptwas">GitHub</a></p></td>
+<td>A probabilistic TWAS method which applies principles from instrumental variables analysis and takes advantage of probabilistic eQTL annotations.</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>sMiST</td>
+<td>2020</td>
+<td><p><a href="https://doi.org/10.1371/journal.pgen.1008947">Paper</a></p>
+<p><a href="https://research.fredhutch.org/hsu/en/software.html">Webpage</a></p></td>
+<td>Mixed effects score test that tests for the total effect of both the effect of the mediator by imputing genetically predicted gene expression.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>iFunMed</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1002/gepi.22217">Paper</a></p>
+<p><a href="https://github.com/mcrojo/iFunMed">GitHub</a></p></td>
+<td>A mediation model that utilizes functional annotation and statistics from GWAS and eQTL. It enables identification of SNPs that are associated with phenotypical changes through direct phenotype-genotype and/or indirect phenotype-genotype through gene expression effect.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>UTMOST</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41588-019-0345-7">Paper</a></p>
+<p><a href="https://github.com/Joker-Jerome/UTMOST">GitHub</a></p></td>
+<td>A framework that combines multiple single-tissue associations into a powerful metric to quantify the overall gene-trait association.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>TIGAR</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1016/j.ajhg.2019.05.018">Paper</a></p>
+<p><a href="https://github.com/yanglab-emory/TIGAR">GitHub</a></p></td>
+<td>Transcriptome-Wide Association Studies (TWAS) by training gene expression imputation models by nonparametric Bayesian Dirichlet Process Regression (DPR) and Elastic-Net (PrediXcan) methods with reference transcriptomic panels.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>TWMR</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41467-019-10936-0">Paper</a></p>
+<p><a href="https://github.com/eleporcu/TWMR">GitHub</a></p></td>
+<td>MR integrating GWAS and eQTL data reveals genetic determinants of complex and clinical traits.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>FOCUS</td>
+<td>2019</td>
+<td><p><a href="https://doi.org/10.1038/s41588-019-0367-1">Paper</a></p>
+<p><a href="https://github.com/mancusolab/ma-focus">GitHub</a></p></td>
+<td>Software to fine-map transcriptome-wide association study statistics at genomic risk regions. The software outputs a credible set of genes to explain observed genomic risk.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>GSMR</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41467-017-02317-2">Paper</a></p>
+<p><a href="https://yanglab.westlake.edu.cn/software/gsmr/">Webpage</a></p></td>
+<td>Generalised Summary-data-based Mendelian Randomisation method that tests for a putative causal association between two phenotypes based on a multi-SNP model.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>S-MultiXcan</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41467-018-03621-1">Paper</a></p>
+<p><a href="https://github.com/hakyimlab/MetaXcan">GitHub</a></p></td>
+<td>It integrates summary statistics from multiple single-tissue transcriptome-wide association studies (TWAS) to identify genes whose expression is associated with complex traits.</td>
+<td>Python</td>
+</tr>
+<tr class="odd">
+<td>S-PrediXcan</td>
+<td>2018</td>
+<td><p><a href="https://doi.org/10.1038/s41467-018-03621-1">Paper</a></p>
+<p><a href="https://github.com/hakyimlab/MetaXcan">GitHub</a></p></td>
+<td>A method that seeks to capture the effects of gene expression variation on human phenotypes.</td>
+<td>Python</td>
+</tr>
+<tr class="even">
+<td>TWAS-aSPU</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1534/genetics.117.300270">Paper</a></p>
+<p><a href="https://wuchong.org/TWAS.html">Webpage</a></p></td>
+<td>Implements the so-called sum of powered score (SPU) which includes sum and SSU as special cases.</td>
+<td>R</td>
+</tr>
+<tr class="odd">
+<td>fQTL</td>
+<td>2017</td>
+<td><p><a href="https://doi.org/10.1101/107623">Paper</a></p>
+<p><a href="https://github.com/ypark/fqtl">GitHub</a></p></td>
+<td>A multi-tissue, multivariate model for mapping expression quantitative trait loci and predicting gene expression. Technically in pre-print but since 2017.</td>
+<td>R</td>
+</tr>
+<tr class="even">
+<td>SMR</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1038/ng.3538">Paper</a></p>
+<p><a href="https://yanglab.westlake.edu.cn/software/smr/#Overview">Webpage</a></p></td>
+<td>Integrates GWAS with eQTL to identify genes whose expression levels are associated with a complex trait because of pleiotropy.</td>
+<td>Exe</td>
+</tr>
+<tr class="odd">
+<td>FUSION</td>
+<td>2016</td>
+<td><p><a href="https://doi.org/10.1038/ng.3506">Paper</a></p>
+<p><a href="http://gusevlab.org/projects/fusion/">Webpage</a></p></td>
+<td>integrates gene expression measurements with summary association statistics from large-scale genome-wide association studies (GWAS) to identify genes whose cis-regulated expression is associated to complex traits.</td>
+<td>R</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/jacobknyspel\.github\.io\/");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Copyright 2024, Jacob Knyspel
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/jacobknyspel">
+      <i class="bi bi-github" role="img">
+</i> 
+    </a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="https://orcid.org/0000-0001-5600-4826">
+<p><i class="ai  ai-orcid"></i></p>
+</a>
+  </li>  
+    <li class="nav-item">
+    <a class="nav-link" href="mailto::jacob.knyspel@kcl.ac.uk">
+<p><i class="fa-solid fa-envelope" aria-label="envelope"></i></p>
+</a>
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

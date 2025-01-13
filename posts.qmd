@@ -1,6 +1,10 @@
 ---
-title: "Blog Posts"
+title: "Posts"
 listing:
   contents: posts
   categories: true
 ---
+
+::: callout-tip
+## This is where I occasionally post things related to the work I do, mostly so I don't forget them.
+:::

@@ -16,6 +16,8 @@ website:
         text: Home
       - href: publications.qmd
         text: Publications
+      - href: posts.qmd
+        text: Posts
       - href: https://github.com/jacobknyspel
         icon: github
       - href: https://orcid.org/0000-0001-5600-4826
@@ -47,6 +49,4 @@ format:
     pagetitle: "Jacob Knyspel"
     description-meta: "Jacob Knyspel"
     author-meta: "Jacob Knyspel"
-    license: CC BY
-    copyright: "Jacob Knyspel, 2024"
     site-url: https://jacobknyspel.github.io/
