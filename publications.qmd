@@ -3,16 +3,25 @@ title: "Publications"
 ---
 
 ::: callout-tip
-## Last updated: 30/10/2024
+## Last updated: 30/04/2025
 :::
 
-## Upcoming
+## 2025
 
 <ul class="fa-ul">
 
   <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
-    Procopio, F., Keser, E., **Knyspel, J.**, Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2025). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. *Manuscript submitted for publication*.<br>
+    Procopio, F., Keser, E., **Knyspel, J.**, Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2025). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. *Behavior Genetics*, *55*, 103-113. <https://doi.org/10.1007/s10519-025-10213-5><br>
+    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
+    [<span class="badge bg-secondary bg-link">Download PDF {{<fa file-pdf>}}</span>](https://link.springer.com/content/pdf/10.1007/s10519-025-10213-5.pdf)
     [<span class="badge bg-info bg-link">View Preregistration {{<ai osf>}}</span>](https://osf.io/5qb4m)
+  </li>
+  
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
+    **Knyspel, J.**, Morneau-Vaillancourt, G., & Eley, T. C. (2025). Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. *Behavior Genetics*, *55*, 1-11. <https://doi.org/10.1007/s10519-024-10204-y><br>
+    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
+    [<span class="badge bg-secondary bg-link">Download PDF {{<fa file-pdf>}}</span>](https://link.springer.com/content/pdf/10.1007/s10519-024-10204-y.pdf)
+    [<span class="badge bg-info bg-link">View Preregistration {{<ai osf>}}</span>](https://osf.io/emx8y)
   </li>
   
 </ul>
@@ -20,13 +29,6 @@ title: "Publications"
 ## 2024
 
 <ul class="fa-ul">
-
-  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
-    **Knyspel, J.**, Morneau-Vaillancourt, G., & Eley, T. C. (2024). Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. *Behavior Genetics*. <https://doi.org/10.1007/s10519-024-10204-y><br>
-    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
-    [<span class="badge bg-secondary bg-link">Download PDF {{<fa file-pdf>}}</span>](https://link.springer.com/content/pdf/10.1007/s10519-024-10204-y.pdf)
-    [<span class="badge bg-info bg-link">View Preregistration {{<ai osf>}}</span>](https://osf.io/emx8y)
-  </li>
   
   <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
     **Knyspel, J.** & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. *Intelligence*, *104*, 101833. <https://doi.org/10.1016/j.intell.2024.101833><br>

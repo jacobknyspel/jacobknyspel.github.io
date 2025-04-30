@@ -32,7 +32,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Last updated: 30/10/2024"
+    "text": "Last updated: 30/04/2025"
   },
   {
     "objectID": "posts/YYYY-MM-DD-test-post/index.html",
@@ -80,8 +80,8 @@
     "objectID": "publications.html#section",
     "href": "publications.html#section",
     "title": "Publications",
-    "section": "2024",
-    "text": "2024\n\n\n Knyspel, J., Morneau-Vaillancourt, G., & Eley, T. C. (2024). Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Behavior Genetics. https://doi.org/10.1007/s10519-024-10204-y Open Access  Download PDF  View Preregistration \n\n\n Knyspel, J. & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833 Open Access  Download PDF  View Preregistration \n\n\n Stantić, M., Knyspel, J., Gaches, A., Liu, Y., Bird, G., & Catmur, C. (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933 Open Access  Download PDF"
+    "section": "2025",
+    "text": "2025\n\n\n Procopio, F., Keser, E., Knyspel, J., Malanchini, M., Rimfeld, K., Allegrini, A., & Plomin, R. (2025). The genetic specificity of specific cognitive abilities after controlling for general cognitive ability. Behavior Genetics, 55, 103-113. https://doi.org/10.1007/s10519-025-10213-5 Open Access  Download PDF  View Preregistration \n\n\n Knyspel, J., Morneau-Vaillancourt, G., & Eley, T. C. (2025). Using bifactor twin modeling to assess the genetic and environmental dimensionality of adult ADHD symptoms. Behavior Genetics, 55, 1-11. https://doi.org/10.1007/s10519-024-10204-y Open Access  Download PDF  View Preregistration"
   },
   {
     "objectID": "index.html#about-me",
@@ -208,5 +208,12 @@
     "title": "GWAS SumStats Software",
     "section": "References",
     "text": "References\n\n\n Kontou, P. I., & Bagos, P. G. (2024). The goldmine of GWAS summary statistics: A systematic review of methods and tools. BioData Mining, 17(31). https://doi.org/10.1186/s13040-024-00385-x Open Access  Download PDF"
+  },
+  {
+    "objectID": "publications.html#section-1",
+    "href": "publications.html#section-1",
+    "title": "Publications",
+    "section": "2024",
+    "text": "2024\n\n\n Knyspel, J. & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. Intelligence, 104, 101833. https://doi.org/10.1016/j.intell.2024.101833 Open Access  Download PDF  View Preregistration \n\n\n Stantić, M., Knyspel, J., Gaches, A., Liu, Y., Bird, G., & Catmur, C. (2024). The Oxford Face Matching Test: Short-form alternative. Quarterly Journal of Experimental Psychology, 77(4), 893-897. https://doi.org/10.1177/17470218231182933 Open Access  Download PDF"
   }
 ]
