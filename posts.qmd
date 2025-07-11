@@ -2,7 +2,9 @@
 title: "Posts"
 listing:
   contents: posts
-  categories: true
+  type: grid
+  categories: false
+  sort: "date desc"
 ---
 
 ::: callout-tip

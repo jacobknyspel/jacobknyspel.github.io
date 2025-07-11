@@ -1,0 +1,21 @@
+---
+title: "2025 SGDP Seminar"
+# author:
+  # - name: Jacob Knyspel
+  #   url: https://jacobknyspel.github.io/
+  #   orcid: 0000-0001-5600-4826
+  #   affiliation: Social, Genetic & Developmental Psychiatry Centre, Kings College London
+date: 07-11-2025
+categories: [ptsd, genetics]
+# citation: 
+#   url: https://jacobknyspel.github.io/posts/YYYY-MM-DD-test-post/ 
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+Below is a recording of the 15 minute talk I gave at the SGDP centre on 10/07/2025 as part of their weekly seminar series. I discuss my first PhD project, which was an exploration of how gene-environment interactions in PTSD differ across traumatic experiences. Please forgive the audio quality.
+
+::: callout-tip
+## Feel free to reach out to me with any questions or for a copy of the slides!
+:::
+
+{{< video sgdp_seminar_20250710.mp4 >}}
