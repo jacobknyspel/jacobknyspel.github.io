@@ -11,7 +11,7 @@ categories: [software, genetics]
 #   url: https://jacobknyspel.github.io/posts/YYYY-MM-DD-test-post/ 
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 tbl-colwidths: [0,0,14,0,0]
-image: genome.png
+image: genome.jpg
 ---
 
 ## Background

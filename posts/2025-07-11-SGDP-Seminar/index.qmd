@@ -10,6 +10,7 @@ categories: [ptsd, genetics]
 # citation: 
 #   url: https://jacobknyspel.github.io/posts/YYYY-MM-DD-test-post/ 
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+image: sgdp-collage-thumbnail.webp
 ---
 
 Below is a recording of the 15 minute talk I gave at the SGDP centre on 10/07/2025 as part of their weekly seminar series. I discuss my first PhD project, which was an exploration of how gene-environment interactions in PTSD differ across traumatic experiences. Please forgive the audio quality.
