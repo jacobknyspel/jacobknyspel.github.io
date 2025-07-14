@@ -13,7 +13,7 @@ draft: true # setting this to `true` will prevent your post from appearing on yo
 image: twins.jpg
 ---
 
-In my 2024 paper "Comparing factor and network models of cognitive abilities using twin data", I used a novel network twin analysis to estimate genetic partial correlations among cognitive abilities. Below is a tutorial for running this analysis using the GFF example dataset from the umx package. There are two alternative approaches I outline here: a two-stage analysis and a one-stage analysis.
+In my 2024 paper "Comparing factor and network models of cognitive abilities using twin data", Robert Plomin and I used a novel network twin analysis to estimate genetic partial correlations among cognitive abilities. Below is a tutorial for running this analysis using the GFF example dataset from the umx package. There are two alternative approaches I outline here: a two-stage analysis and a one-stage analysis.
 
 <ul class="fa-ul">
   <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
@@ -28,6 +28,15 @@ In my 2024 paper "Comparing factor and network models of cognitive abilities usi
 ## Feel free to reach out to me with any questions you have or if you would like assistance with any project you are working on!
 :::
 
+TO DO:
+ - Combine two approaches into one and then the other... perform two-stage analysis in one half of the sample and then validate using one-stage analysis in the other half of the sample
+ 
+ - 1) Run a multivariate twin model on one half of the sample to estimate a genetic covariance matrix
+ - 2) Use that genetic covariance matrix as the input for a network analysis
+ - 3) Run a network twin model on the other half of the sample to cross-validate network structure
+ 
+THEN, IN THE OTHER HALF OF THE SAMPLE
+
 ## Setup
 
 ```{r}
@@ -41,57 +50,64 @@ library(umx)
 
 ```
 
+Give overview of dataset here
+
 ```{r}
 #| output: false
 
 # Load example data
 data(GFF)
 
+# Generate indices for 50/50 sample split
+set.seed(12345)
+ind <- sample(seq_len(nrow(GFF)), size = floor(0.5*nrow(GFF)))
+
+# Subset and split MZ and DZ data
+dzData1 <- subset(GFF[ind,], zyg_2grp == "DZ")
+mzData1 <- subset(GFF[ind,], zyg_2grp == "MZ")
+dzData2 <- subset(GFF[-ind,], zyg_2grp == "DZ")
+mzData2 <- subset(GFF[-ind,], zyg_2grp == "MZ")
+
 # Specify variables for analysis
 selDVs <- c("gff", "fc", "qol", "hap", "sat")
 
-# Subset MZ and DZ data
-dzData <- subset(GFF, zyg_2grp == "DZ")
-mzData <- subset(GFF, zyg_2grp == "MZ")
-
 ```
 
-## Two-stage approach
+## 1) Multivariate twin model
 
-The two-stage approach involves running a generic multivariate twin model to estimate a genetic covariance matrix and then use this matrix as the input for a subsequent network analysis using a package such as psychonetrics. This approach has the benefit of allowing you to use any network analysis package that accepts covariance matrices as inputs. It might also be more likely to work than the one-stage approach, although I haven't tested this.
-
+The first step involves running a generic multivariate twin model to estimate genetic and environmental covariance matrices. The `umxACEv()` function is a good option for this model. For the sake of simplicity, only an AE model is included here. In practice, it is important to compare ACE, AE, CE and E models to arrive at the best fitting one.
 
 ```{r}
 #| output: false
 
 # Run ACE model
-ACE <- umxACEv(selDVs = selDVs, dzData = dzData, mzData = mzData, sep = "_T")
+ACE <- umxACEv(selDVs = selDVs, dzData = dzData1, mzData = mzData1, sep = "_T")
 
-# Drop C components and run AE model
+# Reduce model to AE model
 AE <- umxModify(lastFit = ACE, update = ACE$top$C$labels, name = "AE")
 
 ```
 
-If the AE model is producing status codes 5 or 6, it is first worth re-running the model with `mxTryHard()` or using a different optimizer via `umx_set_optimizer()`. If this doesn't work, proceed to check if the model is locally identified.
+If your model is producing status codes 5 or 6, it is first worth re-running it with `mxTryHard()` or using a different optimizer via `umx_set_optimizer()`. If the model is still producing these status codes, we can check if it is locally identified.
 
 ```{r}
 #| output: false
 
-# Check if AE model is locally identified
+# Check if model is locally identified
 mxCheckIdentification(AE)$status
 
 ```
 
-If the model isn't locally identified it would benefit from being made simpler, perhaps by removing the variables with the smallest twin correlations one at a time.
+If the model is not locally identified, it would benefit from being made simpler, perhaps by removing the variables with the smallest twin correlations one at a time. Once we have an acceptable model, we can extract the genetic and non-shared environmental covariance matrices and perform some additional checks to ensure they are suitable for the next step.
 
 ```{r}
 #| output: false
 
-# Extract standardized AE matrices
+# Extract A and E matrices
 A <- AE$top$A$values
 E <- AE$top$E$values
 
-# Check if AE matrices are symmetric
+# Check if matrices are symmetric
 isSymmetric(A)
 isSymmetric(E)
 
@@ -101,76 +117,72 @@ sum(eigen(E)$values >= 0) > 0
 
 ```
 
-If a matrix is not symmetric or has any negative eigenvalues, this means it is not positive semi-definite, which can present a problem for subsequent analyses. If any of the matrices are not positive semi-definite, it is worth trying `umxACE()` instead of `umxACEv()`, although this function is more easily subject to status codes 5 and 6 and less likely to be locally identified.
+If a matrix is not symmetric or has any negative eigenvalues, this means it is not positive semi-definite, which can present a problem for network analysis. In this case, it is worth trying `umxACE()` instead of `umxACEv()`. This function will ensure that the matrices are positive semi-definite, although it is more easily subject to status codes 5 and 6. If we are happy with the matrices, we can then begin our network analysis. 
+
+## 2) Initial network analysis
+
+Here we will use the covariance matrices from step 1 to estimate network models sparsified using p-value thresholding and stepwise BIC selection. An alternative approach to sparsification here would be regularisation. First, we fit a saturated network model.
 
 ```{r}
 #| output: false
 
-# Run network model using A matrix as input
-networkA <- ggm(covs = A, nobs = nrow(GFF)) |>
-  runmodel(verbose = TRUE)
+# Run saturated network models
+networkA <- ggm(covs = A, nobs = length(ind)) |>
+  runmodel()
+networkE <- ggm(covs = E, nobs = length(ind)) |>
+  runmodel()
 
 ```
 
-If `runmodel()` gives a warning message that (1) the information matrix is not positive semi-definite, (2) parameters were estimated near to their bounds or (3) the model failed to converge, it is first worth trying a different optimizer or converting A to a correlation matrix and using that as input. If this doesn't work, it is worth proceeding to the next step anyway as sparsification might help to improve the performance of the model.
+If `runmodel()` gives us a warning message here that (1) the information matrix is not positive semi-definite, (2) parameters were estimated near to their bounds or (3) the model failed to converge, it is first worth trying a different optimizer. If this does not work, it is worth proceeding to the next step anyway, which is sparsifying the models. This can be enough to solve the issue.
 
 ```{r}
 #| output: false
 
-# Sparsify network model
+# Sparsify network models
 sparseA <- networkA |>
-  prune(verbose = TRUE) |>
-  stepup(verbose = TRUE)
-
-```
-
-If warning messages are still given after sparsification, the network model might also benefit from being made simpler by removing variables, perhaps by removing the least heritable variables one at a time. The warning message about the information matrix being not positive semi-definite might be a false flag, especially if no other warning messages are given, the model has plausible partial correlations (not equal to or approaching 1 or -1) and produces the same log-likelihood when run multiple times.
-
-```{r}
-#| output: false
-
-# Check log-likelihood of sparsified model (if running multiple times)
-sparseA@fitmeasures$logl
-
-```
-
-If the sparsified model produces no warning messages or you are confident that the warning messages can be ignored,
-
-```{r}
-#| output: false
-
-# Extract A network estimates
-omegaA <- getmatrix(sparseA, "omega")
-deltaA <- getmatrix(sparseA, "delta")
-
-# Plot A network
-qgraph(omegaA, labels = selDVs, layout = "spring")
-
-# Run network model using E matrix as input
-networkE <- ggm(covs = E, nobs = nrow(GFF)) |>
-  runmodel(verbose = TRUE)
-
-# Sparsify network model
+  prune() |>
+  stepup() |>
+  runmodel()
 sparseE <- networkE |>
-  prune(verbose = TRUE) |>
-  modelsearch(verbose = TRUE) |>
-  runmodel(verbose = TRUE)
+  prune() |>
+  stepup() |>
+  runmodel()
 
-# Check log-likelihood of sparsified model (if running multiple times)
+```
+
+If we are still receiving warning messages after sparsifying the models, they might benefit from being made simpler, perhaps by removing the least heritable variables one at a time. The warning message about the information matrix being not positive semi-definite might be a false flag, especially if no other warning messages are given, the model has plausible partial correlations (not equal to or approaching 1 or -1) and produces the same log-likelihood when run multiple times.
+
+```{r}
+#| output: false
+
+# Check log-likelihood of sparsified models
+sparseA@fitmeasures$logl
 sparseE@fitmeasures$logl
 
-# Extract E network estimates
+```
+
+When the sparsified model produces no warning messages or we are happy that the warning messages can be ignored, we can extract and plot our networks of partial correlations.
+
+```{r}
+#| output: true
+
+# Extract network model estimates
+omegaA <- getmatrix(sparseA, "omega")
+deltaA <- getmatrix(sparseA, "delta")
 omegaE <- getmatrix(sparseE, "omega")
 deltaE <- getmatrix(sparseE, "delta")
 
-# Plot A network
-qgraph(omegaE, labels = selDVs, layout = "spring")
+# Plot networks
+par(mfrow = c(1,2))
+qgraph(omegaA, labels = selDVs, layout = "spring", title = "A")
+qgraph(omegaE, labels = selDVs, layout = "spring", title = "E")
 
 ```
 
-## One-stage approach
+## 3) Network twin model
 
-This second option is a one-stage approach that involves running a multivariate twin model that specifically estimates genetic covariances as a network of partial correlations. This is the approach we used in Knyspel & Plomin (2024) and has the benefits of allowing for model fit statistics and bootstrapping.
+The third step is to estimate a unified network twin model that simultaneously models A and E as partial correlation matrices. We does this in the other half of the sample as a form of cross-validation, using the partial correlation values from step 2. Estimating a unified model like this has the benefits of allowing for model fit statistics to be calculated and bootstrapping to be performed. The model can be flexibly adapted to include a C component or to model only one of the components (e.g. A) as a partial correlation matrix if desired.
 
 ```{r}
 #| output: false
@@ -180,9 +192,8 @@ selVars <- xmu_twin_upgrade_selDvs2SelVars(selDVs, "_T", 2)
 nVar <- length(selDVs)
 
 # Create base components for network twin model
-networkAE <- xmu_make_TwinSuperModel("base", mzData, dzData, selDVs, sep = "_T")
+networkAE <- xmu_make_TwinSuperModel("base", mzData2, dzData2, selDVs, sep = "_T")
 
-# Add top components
 networkAE.top <- mxModel(networkAE$top,
                     
   # DZ twin similarity                  
@@ -200,11 +211,13 @@ networkAE.top <- mxModel(networkAE$top,
   umxMatrix("I", "Iden", nVar, nVar),
   
   # Additive genetic network
+  # Using results from step 2 as starting values and constraints
   umxMatrix("deltaA", "Diag", nVar, nVar, free = TRUE, values = deltaA),
   umxMatrix("omegaA", "Symm", nVar, nVar, free = omegaA != 0, values = omegaA),
   mxAlgebra(name = "A", deltaA %*% (solve(I-omegaA)) %*% deltaA),
   
   # Non-shared environmental network
+  # Using results from step 2 as starting values and constraints
   umxMatrix("deltaE", "Diag", nVar, nVar, free = TRUE, values = deltaE),
   umxMatrix("omegaE", "Symm", nVar, nVar, free = omegaE != 0, values = omegaE),
   mxAlgebra(name = "E", deltaE %*% (solve(I-omegaE)) %*% deltaE)
@@ -215,7 +228,7 @@ networkAE.top <- mxModel(networkAE$top,
 networkAE <- mxModel(networkAE, networkAE.top) |>
   mxTryHard()
 
-# Check if model is locally identified
+# Check model is locally identified
 mxCheckIdentification(networkAE)$status
 
 # Summarise model with fit statistics
@@ -237,13 +250,17 @@ deltaE2 <- networkAE$top$deltaE$values
 ## Comparing approaches
 
 ```{r}
-#| output: false
+#| output: true
 
 # Create function to calculate RMSD and r2 between symmetric matrices
 rmsd <- function(A,B) {
+  lowerA <- A[lower.tri(A)][A[lower.tri(A)] > 0]
+  lowerB <- B[lower.tri(B)][B[lower.tri(B)] > 0]
   list(
-    rmsd = sqrt(mean((A[lower.tri(A)]-B[lower.tri(B)])^2)),
-    r2 = cor(A[lower.tri(A)],B[lower.tri(B)])^2
+    A = lowerA,
+    B = lowerB,
+    RMSD = sqrt(mean((lowerA-lowerB)^2)),
+    r2 = cor(lowerA,lowerB)^2
   )
 }
 
@@ -253,7 +270,7 @@ rmsd(omegaE2, omegaE)
 
 ```
 
-## Notes
+## Session Info
 
 ```{r}
 
