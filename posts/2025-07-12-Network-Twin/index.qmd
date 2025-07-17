@@ -9,7 +9,7 @@ date: 07-12-2025
 categories: [twin modelling, genetics, network analysis]
 # citation: 
 #   url: https://jacobknyspel.github.io/posts/YYYY-MM-DD-test-post/ 
-draft: true # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
 image: twins.jpg
 ---
 
