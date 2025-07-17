@@ -109,6 +109,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <meta name="quarto:status" content="draft">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -175,8 +204,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#multivariate-twin-model" id="toc-multivariate-twin-model" class="nav-link" data-scroll-target="#multivariate-twin-model">1) Multivariate twin model</a></li>
   <li><a href="#initial-network-analysis" id="toc-initial-network-analysis" class="nav-link" data-scroll-target="#initial-network-analysis">2) Initial network analysis</a></li>
   <li><a href="#network-twin-model" id="toc-network-twin-model" class="nav-link" data-scroll-target="#network-twin-model">3) Network twin model</a></li>
-  <li><a href="#comparing-approaches" id="toc-comparing-approaches" class="nav-link" data-scroll-target="#comparing-approaches">Comparing approaches</a></li>
-  <li><a href="#notes" id="toc-notes" class="nav-link" data-scroll-target="#notes">Notes</a></li>
+  <li><a href="#extra-comparing-steps-2-and-3" id="toc-extra-comparing-steps-2-and-3" class="nav-link" data-scroll-target="#extra-comparing-steps-2-and-3">Extra) Comparing steps 2 and 3</a></li>
+  <li><a href="#session-info" id="toc-session-info" class="nav-link" data-scroll-target="#session-info">Session Info</a></li>
   </ul>
 </nav>
     </div>
@@ -189,6 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-categories">
     <div class="quarto-category">twin modelling</div>
     <div class="quarto-category">genetics</div>
+    <div class="quarto-category">network analysis</div>
   </div>
   </div>
 
@@ -212,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>In my 2024 paper “Comparing factor and network models of cognitive abilities using twin data”, Robert Plomin and I used a novel network twin analysis to estimate genetic partial correlations among cognitive abilities. Below is a tutorial for running this analysis using the GFF example dataset from the umx package. There are two alternative approaches I outline here: a two-stage analysis and a one-stage analysis.</p>
+<p>In my 2024 paper “Comparing factor and network models of cognitive abilities using twin data”, Robert Plomin and I used a novel network twin analysis to estimate genetic partial correlations among cognitive abilities. Below is a tutorial for running a similar analysis using the GFF example dataset from the umx package.</p>
 <ul class="fa-ul">
 <li class="li-pad">
 <span class="fa-li"><i class="fa-solid fa-file-pen"></i></span> <strong>Knyspel, J.</strong> &amp; Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. <em>Intelligence</em>, <em>104</em>, 101833. <a href="https://doi.org/10.1016/j.intell.2024.101833" class="uri">https://doi.org/10.1016/j.intell.2024.101833</a><br> <span class="badge bg-primary">Open Access <i class="ai  ai-open-access"></i></span> <a href="https://www.sciencedirect.com/science/article/pii/S0160289624000278/pdfft?md5=4fce9f2261c54e23fad5b161a8d215c5&amp;pid=1-s2.0-S0160289624000278-main.pdf"><span class="badge bg-secondary bg-link">Download PDF <i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i></span></a> <a href="https://osf.io/a4ewp"><span class="badge bg-info bg-link">View Preregistration <i class="ai  ai-osf"></i></span></a>
@@ -231,19 +261,12 @@ Feel free to reach out to me with any questions you have or if you would like as
 
 </div>
 </div>
-<p>TO DO: - Combine two approaches into one and then the other… perform two-stage analysis in one half of the sample and then validate using one-stage analysis in the other half of the sample</p>
-<ul>
-<li><ol type="1">
-<li>Run a multivariate twin model on one half of the sample to estimate a genetic covariance matrix</li>
-</ol></li>
-<li><ol start="2" type="1">
-<li>Use that genetic covariance matrix as the input for a network analysis</li>
-</ol></li>
-<li><ol start="3" type="1">
-<li>Run a network twin model on the other half of the sample to cross-validate network structure</li>
-</ol></li>
-</ul>
-<p>THEN, IN THE OTHER HALF OF THE SAMPLE</p>
+<p>Our analysis comprises three key steps:</p>
+<ol type="1">
+<li>Run a multivariate twin model on one half of the data to estimate genetic and environmental covariance matrices.</li>
+<li>Use those genetic covariance matrices as the input for initial network analyses.</li>
+<li>Run a unified network twin model on the other half of the data to cross-validate our network structures.</li>
+</ol>
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <div class="cell">
@@ -253,7 +276,7 @@ Feel free to reach out to me with any questions you have or if you would like as
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(OpenMx)</span>
 <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(umx)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Give overview of dataset here</p>
+<p>For this tutorial we will use the GFF dataset from the <code>umx</code> package. It includes five psychological measures: general family functioning (gff), family conflict (fc), quality of life (qol), general happiness (hap), and life satisfaction (sat). For information, see <code>?GFF</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load example data</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(GFF)</span>
@@ -274,7 +297,7 @@ Feel free to reach out to me with any questions you have or if you would like as
 </section>
 <section id="multivariate-twin-model" class="level2">
 <h2 class="anchored" data-anchor-id="multivariate-twin-model">1) Multivariate twin model</h2>
-<p>The first step involves running a generic multivariate twin model to estimate a genetic covariance matrix. The <code>umxACEv()</code> function is a good option for this model. For the sake of simplicity, only an AE model is included here. In practice, it is important to compare ACE, AE, CE and E models to arrive at the best fitting one.</p>
+<p>Our first step is to run a generic multivariate twin model to estimate genetic and environmental covariance matrices. The <code>umxACEv()</code> function is a good option for this model. For the sake of simplicity, only an AE model is included here. In practice, it is important to compare ACE, AE, CE and E models to arrive at the best fitting one.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run ACE model</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ACE <span class="ot">&lt;-</span> <span class="fu">umxACEv</span>(<span class="at">selDVs =</span> selDVs, <span class="at">dzData =</span> dzData1, <span class="at">mzData =</span> mzData1, <span class="at">sep =</span> <span class="st">"_T"</span>)</span>
@@ -282,12 +305,12 @@ Feel free to reach out to me with any questions you have or if you would like as
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce model to AE model</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>AE <span class="ot">&lt;-</span> <span class="fu">umxModify</span>(<span class="at">lastFit =</span> ACE, <span class="at">update =</span> ACE<span class="sc">$</span>top<span class="sc">$</span>C<span class="sc">$</span>labels, <span class="at">name =</span> <span class="st">"AE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If your model is producing status codes 5 or 6, it is first worth re-running it with <code>mxTryHard()</code> or using a different optimizer via <code>umx_set_optimizer()</code>. If the model is still producing these status codes, we can check if it is locally identified.</p>
+<p>If the model is producing status codes 5 or 6, it is first worth re-running it with <code>mxTryHard()</code> or using a different optimizer via <code>umx_set_optimizer()</code>. If it is still producing these status codes, we can check if it is locally identified.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if model is locally identified</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(AE)<span class="sc">$</span>status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If the model is not locally identified, it would benefit from being made simpler, perhaps by removing the variables with the smallest twin correlations one at a time. Once we have an acceptable model, we can extract the genetic and non-shared environmental covariance matrices and perform some additional checks to ensure they are suitable for subsequent network analyses.</p>
+<p>If the model is not locally identified, it would benefit from being made simpler, perhaps by removing the variables with the smallest twin correlations one at a time. Once we have an acceptable model, we can extract the genetic and non-shared environmental covariance matrices and perform some additional checks to ensure they are suitable for the next step.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract A and E matrices</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> AE<span class="sc">$</span>top<span class="sc">$</span>A<span class="sc">$</span>values</span>
@@ -301,11 +324,11 @@ Feel free to reach out to me with any questions you have or if you would like as
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">eigen</span>(A)<span class="sc">$</span>values <span class="sc">&gt;=</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="dv">0</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">eigen</span>(E)<span class="sc">$</span>values <span class="sc">&gt;=</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If a matrix is not symmetric or has any negative eigenvalues, this means it is not positive semi-definite, which can present a problem for subsequent analyses. In this case, it is worth trying <code>umxACE()</code> instead of <code>umxACEv()</code>. This function will ensure that the matrices are positive semi-definite, although it is more easily subject to status codes 5 and 6. If we are happy with the matrices, we can then begin our network analysis.</p>
+<p>If a matrix is not symmetric or has any negative eigenvalues, this means it is not positive semi-definite, which can present a problem for network analysis. In this case, it is worth trying <code>umxACE()</code> instead of <code>umxACEv()</code>. This function will ensure that the matrices are positive semi-definite, although it is more easily subject to status codes 5 and 6. If we are happy with the matrices, we can then begin our network analysis.</p>
 </section>
 <section id="initial-network-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="initial-network-analysis">2) Initial network analysis</h2>
-<p>Here we will use the covariance matrices from step 1 to estimate network models sparsified using p-value thresholding and stepwise BIC selection. A common alternative here would be regularisation. First, we fit a saturated network model.</p>
+<p>Here we will use the covariance matrices from step 1 to estimate network models sparsified using p-value thresholding and stepwise BIC selection. An alternative approach to sparsification here would be regularisation. First, we fit a saturated network model.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run saturated network models</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>networkA <span class="ot">&lt;-</span> <span class="fu">ggm</span>(<span class="at">covs =</span> A, <span class="at">nobs =</span> <span class="fu">length</span>(ind)) <span class="sc">|&gt;</span></span>
@@ -354,7 +377,7 @@ Feel free to reach out to me with any questions you have or if you would like as
 </section>
 <section id="network-twin-model" class="level2">
 <h2 class="anchored" data-anchor-id="network-twin-model">3) Network twin model</h2>
-<p>The third step is to estimate a unified network twin model that simultaneously models A and E as partial correlation matrices. We does this in the other half of the sample as a form of cross-validation, using the starting values and constraints from step 2. Estimating a unified model like this has the benefits of allowing for model fit statistics to be calculated and bootstrapping to be performed. The model can be flexibly adapted to include a C component or to model only one of the components (e.g.&nbsp;A) as a partial correlation matrix if desired.</p>
+<p>Our third and final step is to estimate a unified network twin model that simultaneously models A and E as partial correlation matrices. We does this in the other half of the sample as a form of cross-validation, using the partial correlation values from step 2. Estimating a unified model like this has the benefits of allowing for model fit statistics to be calculated and bootstrapping to be performed. The model can be flexibly adapted to include a C component or to model only one of the components (e.g.&nbsp;A) as a partial correlation matrix if desired.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify additional variables for model</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>selVars <span class="ot">&lt;-</span> <span class="fu">xmu_twin_upgrade_selDvs2SelVars</span>(selDVs, <span class="st">"_T"</span>, <span class="dv">2</span>)</span>
@@ -363,91 +386,207 @@ Feel free to reach out to me with any questions you have or if you would like as
 <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create base components for network twin model</span></span>
 <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>networkAE <span class="ot">&lt;-</span> <span class="fu">xmu_make_TwinSuperModel</span>(<span class="st">"base"</span>, mzData2, dzData2, selDVs, <span class="at">sep =</span> <span class="st">"_T"</span>)</span>
 <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>networkAE.top <span class="ot">&lt;-</span> <span class="fu">mxModel</span>(networkAE<span class="sc">$</span>top,</span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>                    </span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># DZ twin similarity                  </span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"dzAr"</span>, <span class="st">"Full"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="at">free =</span> <span class="cn">FALSE</span>, <span class="at">values =</span> <span class="fl">0.5</span>),</span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Combined covariances</span></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"AE"</span>, A <span class="sc">+</span> E),</span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"hA"</span>, dzAr <span class="sc">%x%</span> A),</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Expected covariances by zygosity</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"expCovMZ"</span>, <span class="fu">rbind</span>(<span class="fu">cbind</span>(AE,A), <span class="fu">cbind</span>(A,AE)), <span class="at">dimnames =</span> <span class="fu">list</span>(selVars, selVars)),</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"expCovDZ"</span>, <span class="fu">rbind</span>(<span class="fu">cbind</span>(AE,hA), <span class="fu">cbind</span>(hA,AE)), <span class="at">dimnames =</span> <span class="fu">list</span>(selVars, selVars)),</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identity matrix</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"I"</span>, <span class="st">"Iden"</span>, nVar, nVar),</span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Additive genetic network</span></span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Using results from step 2 as starting values</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"deltaA"</span>, <span class="st">"Diag"</span>, nVar, nVar, <span class="at">free =</span> <span class="cn">TRUE</span>, <span class="at">values =</span> deltaA),</span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"omegaA"</span>, <span class="st">"Symm"</span>, nVar, nVar, <span class="at">free =</span> omegaA <span class="sc">!=</span> <span class="dv">0</span>, <span class="at">values =</span> omegaA),</span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"A"</span>, deltaA <span class="sc">%*%</span> (<span class="fu">solve</span>(I<span class="sc">-</span>omegaA)) <span class="sc">%*%</span> deltaA),</span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Non-shared environmental network</span></span>
-<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Using results from step 2 as starting values</span></span>
-<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"deltaE"</span>, <span class="st">"Diag"</span>, nVar, nVar, <span class="at">free =</span> <span class="cn">TRUE</span>, <span class="at">values =</span> deltaE),</span>
-<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"omegaE"</span>, <span class="st">"Symm"</span>, nVar, nVar, <span class="at">free =</span> omegaE <span class="sc">!=</span> <span class="dv">0</span>, <span class="at">values =</span> omegaE),</span>
-<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"E"</span>, deltaE <span class="sc">%*%</span> (<span class="fu">solve</span>(I<span class="sc">-</span>omegaE)) <span class="sc">%*%</span> deltaE)</span>
-<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>                    </span>
-<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
-<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a>networkAE <span class="ot">&lt;-</span> <span class="fu">mxModel</span>(networkAE, networkAE.top) <span class="sc">|&gt;</span></span>
-<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxTryHard</span>()</span>
-<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if model is locally identified</span></span>
-<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(networkAE)<span class="sc">$</span>status</span>
-<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise model with fit statistics</span></span>
-<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(networkAE, <span class="at">refModels =</span> <span class="fu">mxRefModels</span>(networkAE, <span class="cn">TRUE</span>))</span>
-<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract A network estimates</span></span>
-<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a>omegaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaA<span class="sc">$</span>values</span>
-<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>deltaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>deltaA<span class="sc">$</span>values</span>
-<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot A network</span></span>
-<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaA2, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract E network estimates</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>omegaE2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaE<span class="sc">$</span>values</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>deltaE2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>deltaE<span class="sc">$</span>values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Built additional model components</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>networkAE.top <span class="ot">&lt;-</span> <span class="fu">mxModel</span>(networkAE<span class="sc">$</span>top,</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>  <span class="co"># DZ twin similarity                  </span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"dzAr"</span>, <span class="st">"Full"</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="at">free =</span> <span class="cn">FALSE</span>, <span class="at">values =</span> <span class="fl">0.5</span>),</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Combined covariances</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"AE"</span>, A <span class="sc">+</span> E),</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"hA"</span>, dzAr <span class="sc">%x%</span> A),</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Expected covariances by zygosity</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"expCovMZ"</span>, <span class="fu">rbind</span>(<span class="fu">cbind</span>(AE,A), <span class="fu">cbind</span>(A,AE)), <span class="at">dimnames =</span> <span class="fu">list</span>(selVars, selVars)),</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"expCovDZ"</span>, <span class="fu">rbind</span>(<span class="fu">cbind</span>(AE,hA), <span class="fu">cbind</span>(hA,AE)), <span class="at">dimnames =</span> <span class="fu">list</span>(selVars, selVars)),</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Identity matrix</span></span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"I"</span>, <span class="st">"Iden"</span>, nVar, nVar),</span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Additive genetic network</span></span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Using results from step 2 as starting values and constraints</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"deltaA"</span>, <span class="st">"Diag"</span>, nVar, nVar, <span class="at">free =</span> <span class="cn">TRUE</span>, <span class="at">values =</span> deltaA),</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"omegaA"</span>, <span class="st">"Symm"</span>, nVar, nVar, <span class="at">free =</span> omegaA <span class="sc">!=</span> <span class="dv">0</span>, <span class="at">values =</span> omegaA),</span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"A"</span>, deltaA <span class="sc">%*%</span> (<span class="fu">solve</span>(I<span class="sc">-</span>omegaA)) <span class="sc">%*%</span> deltaA),</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Non-shared environmental network</span></span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Using results from step 2 as starting values and constraints</span></span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"deltaE"</span>, <span class="st">"Diag"</span>, nVar, nVar, <span class="at">free =</span> <span class="cn">TRUE</span>, <span class="at">values =</span> deltaE),</span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"omegaE"</span>, <span class="st">"Symm"</span>, nVar, nVar, <span class="at">free =</span> omegaE <span class="sc">!=</span> <span class="dv">0</span>, <span class="at">values =</span> omegaE),</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"E"</span>, deltaE <span class="sc">%*%</span> (<span class="fu">solve</span>(I<span class="sc">-</span>omegaE)) <span class="sc">%*%</span> deltaE)</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>If you’re familiar with twin modelling, you might recognise that this model is almost identical to a typical multivariate model, such as the one used in step 1. The only difference is that the A and E covariances are estimated as <span class="math inline">\(\Delta(I-\Omega)^1\Delta\)</span>, where <span class="math inline">\(\Omega\)</span> is our matrix of partial correlations (i.e.&nbsp;our network) and <span class="math inline">\(\Delta\)</span> is a diagonal scaling matrix.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>networkAE <span class="ot">&lt;-</span> <span class="fu">mxModel</span>(networkAE, networkAE.top) <span class="sc">|&gt;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxTryHard</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>As with step 1, if the model is producing status codes 5 or 6, it is worth trying a different optimizer via <code>umx_set_optimizer()</code>. If it is failing to converge but has valid attempts, we can try more attempts via <code>mxTryHard(extraTries = N)</code> or again try a different optimizer. If the model is still facing problems, we should check if it is locally identified.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check model is locally identified</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(networkAE)<span class="sc">$</span>status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Model is locally identified</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+</div>
+<p>If the model is not locally identified, it would benefit from being made simpler, either by removing variables or removing C components if they have been included. Once we are happy with the model, we can extract and plot our networks of partial correlations, similar to step 2.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise model with fit statistics</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(networkAE, <span class="at">refModels =</span> <span class="fu">mxRefModels</span>(networkAE, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Running Saturated base with 130 parameters</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Running Independence base with 40 parameters</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Summary of base 
+ 
+free parameters:
+             name      matrix   row    col     Estimate  Std.Error A
+1  expMean_gff_T1 top.expMean means gff_T1  38.59010463 0.10758664  
+2   expMean_fc_T1 top.expMean means  fc_T1 -13.36688626 0.04914363  
+3  expMean_qol_T1 top.expMean means qol_T1   7.79648549 0.02341602  
+4  expMean_hap_T1 top.expMean means hap_T1  23.01763173 0.09787622  
+5  expMean_sat_T1 top.expMean means sat_T1  27.56934729 0.11466345  
+6     deltaA_r1c1  top.deltaA     1      1   2.38996534 0.16941191  
+7     deltaA_r2c2  top.deltaA     2      2   1.52239944 0.04542257  
+8     deltaA_r3c3  top.deltaA     3      3   0.42249919 0.04299013  
+9     deltaA_r4c4  top.deltaA     4      4   1.19669551 0.19787435  
+10    deltaA_r5c5  top.deltaA     5      5   1.64269882 0.15546657  
+11    omegaA_r2c1  top.omegaA     1      2   0.39934176 0.05343461  
+12    omegaA_r3c1  top.omegaA     1      3   0.22801253 0.12764957  
+13    omegaA_r3c2  top.omegaA     2      3   0.08942036 0.06840587  
+14    omegaA_r4c1  top.omegaA     1      4   0.26539636 0.10802537  
+15    omegaA_r4c2  top.omegaA     2      4  -0.07652559 0.08920932  
+16    omegaA_r4c3  top.omegaA     3      4   0.22627714 0.16201806  
+17    omegaA_r5c2  top.omegaA     2      5   0.08353542 0.05753107  
+18    omegaA_r5c3  top.omegaA     3      5   0.29041060 0.14710234  
+19    omegaA_r5c4  top.omegaA     4      5   0.61767242 0.08114828  
+20    deltaE_r1c1  top.deltaE     1      1   3.32098697 0.08473517  
+21    deltaE_r2c2  top.deltaE     2      2   1.12335464 0.03061927  
+22    deltaE_r3c3  top.deltaE     3      3   0.79080370 0.02173415  
+23    deltaE_r4c4  top.deltaE     4      4   2.71605543 0.08532173  
+24    deltaE_r5c5  top.deltaE     5      5   2.91617325 0.08425109  
+25    omegaE_r2c1  top.omegaE     1      2   0.14986390 0.03675147  
+26    omegaE_r3c1  top.omegaE     1      3   0.14269408 0.03682949  
+27    omegaE_r4c1  top.omegaE     1      4   0.03207536 0.03125440  
+28    omegaE_r4c2  top.omegaE     2      4   0.03399184 0.03102033  
+29    omegaE_r4c3  top.omegaE     3      4   0.16366779 0.04011893  
+30    omegaE_r5c3  top.omegaE     3      5   0.19448367 0.04072182  
+31    omegaE_r5c4  top.omegaE     4      5   0.63662792 0.02206175  
+
+Model Statistics: 
+               |  Parameters  |  Degrees of Freedom  |  Fit (-2lnL units)
+       Model:             31                  13160              62052.42
+   Saturated:            130                  13061              61857.59
+Independence:             40                  13151              66688.44
+Number of observations/statistics: 1593/13191
+
+chi-square:  χ² ( df=99 ) = 194.8301,  p = 3.12413e-08
+Information Criteria: 
+      |  df Penalty  |  Parameters Penalty  |  Sample-Size Adjusted
+AIC:       35732.42               62114.42                 62115.69
+BIC:      -34981.18               62281.00                 62182.51
+CFI: 0.9797863 
+TLI: 0.9816239   (also known as NNFI) 
+RMSEA:  0.02465048  [95% CI (0.01845002, 0.03066522)]
+Prob(RMSEA &lt;= 0.05): 1
+timestamp: 2025-07-17 11:54:46 
+Wall clock time: 0.5623829 secs 
+optimizer:  SLSQP 
+OpenMx version number: 2.22.7 
+Need help?  See help(mxSummary) </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract network model estimates</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>omegaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaA<span class="sc">$</span>values</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>deltaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>deltaA<span class="sc">$</span>values</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>omegaE2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaE<span class="sc">$</span>values</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>deltaE2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>deltaE<span class="sc">$</span>values</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot networks</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaA2, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"A"</span>)</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaE2, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"E"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
 </div>
 </section>
-<section id="comparing-approaches" class="level2">
-<h2 class="anchored" data-anchor-id="comparing-approaches">Comparing approaches</h2>
+<section id="extra-comparing-steps-2-and-3" class="level2">
+<h2 class="anchored" data-anchor-id="extra-comparing-steps-2-and-3">Extra) Comparing steps 2 and 3</h2>
+<p>Since we used cross-validation here, it would be useful for us to compare the consistency in results between our initial network analysis (step 2) and subsequent network twin model (step 3). The more consistent the results are across the two halves of the sample, the more confident we can be that our estimated networks are robust. There are many metrics we could use to assess consistency. Here I include root mean squared deviation (RMSD) and <span class="math inline">\(r^2\)</span> as two examples.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create function to calculate RMSD and r2 between symmetric matrices</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>rmsd <span class="ot">&lt;-</span> <span class="cf">function</span>(A,B) {</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">rmsd =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((A[<span class="fu">lower.tri</span>(A)]<span class="sc">-</span>B[<span class="fu">lower.tri</span>(B)])<span class="sc">^</span><span class="dv">2</span>)),</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">r2 =</span> <span class="fu">cor</span>(A[<span class="fu">lower.tri</span>(A)],B[<span class="fu">lower.tri</span>(B)])<span class="sc">^</span><span class="dv">2</span></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  )</span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RMSD and r2 between network estimates from two methods</span></span>
-<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaA2, omegaA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create function to calculate RMSD and r2 between symmetric matrices</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>rmsd <span class="ot">&lt;-</span> <span class="cf">function</span>(A,B) {</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  lowerA <span class="ot">&lt;-</span> A[<span class="fu">lower.tri</span>(A)][A[<span class="fu">lower.tri</span>(A)] <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  lowerB <span class="ot">&lt;-</span> B[<span class="fu">lower.tri</span>(B)][B[<span class="fu">lower.tri</span>(B)] <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">A =</span> lowerA,</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">B =</span> lowerB,</span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">RMSD =</span> <span class="fu">sqrt</span>(<span class="fu">mean</span>((lowerA<span class="sc">-</span>lowerB)<span class="sc">^</span><span class="dv">2</span>)),</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">r2 =</span> <span class="fu">cor</span>(lowerA,lowerB)<span class="sc">^</span><span class="dv">2</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RMSD and r2 between network estimates from two methods</span></span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaA2, omegaA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$rmsd
-[1] 0.05235615
+<pre><code>$A
+[1] 0.39934176 0.22801253 0.26539636 0.08942036 0.08353542 0.22627714 0.29041060
+[8] 0.61767242
+
+$B
+[1] 0.40582666 0.13180353 0.27225009 0.09637653 0.08150718 0.31540359 0.36767353
+[8] 0.56619175
+
+$RMSD
+[1] 0.05696605
 
 $r2
-[1] 0.929786</code></pre>
+[1] 0.878616</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaE2, omegaE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaE2, omegaE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>$rmsd
-[1] 0.03451259
+<pre><code>$A
+[1] 0.14986390 0.14269408 0.03207536 0.03399184 0.16366779 0.19448367 0.63662792
+
+$B
+[1] 0.15286517 0.12333334 0.09418465 0.06419384 0.14008567 0.21996795 0.56211580
+
+$RMSD
+[1] 0.04125044
 
 $r2
-[1] 0.9780989</code></pre>
+[1] 0.9799998</code></pre>
+</div>
+</div>
+<p>As we can see, the results of our non-shared environment networks are more consistent across samples than our genetic networks, although overall both perform well. Nice!</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Thanks for reading! Feel free to reach out to me if you have any questions
+</div>
+</div>
+<div class="callout-body-container callout-body">
+
 </div>
 </div>
 </section>
-<section id="notes" class="level2">
-<h2 class="anchored" data-anchor-id="notes">Notes</h2>
+<section id="session-info" class="level2">
+<h2 class="anchored" data-anchor-id="session-info">Session Info</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>R version 4.5.0 (2025-04-11)
 Platform: aarch64-apple-darwin20
