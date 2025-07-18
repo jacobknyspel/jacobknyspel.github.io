@@ -244,12 +244,20 @@ mxCheckIdentification(networkAE)$status
 
 ```
 
-If the model is not locally identified, it would benefit from being made simpler, either by removing variables or removing C components if they have been included. Once we are happy with the model, we can extract and plot our networks of partial correlations, similar to step 2.
+If the model is not locally identified, it would benefit from being made simpler, either by removing variables or removing C components if they have been included. Once we are happy with the model, we can first get the summary output, using `mxRefModels()` to give us model fit statistics.
 
 ```{r}
+#| output: true
 
 # Summarise model with fit statistics
 summary(networkAE, refModels = mxRefModels(networkAE, TRUE))
+
+```
+
+We can then extract and plot our networks of partial correlations, similar to step 2.
+
+```{r}
+#| output: true
 
 # Extract network model estimates
 omegaA2 <- networkAE$top$omegaA$values

@@ -455,7 +455,7 @@ Solution found</code></pre>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check model is locally identified</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(networkAE)<span class="sc">$</span>status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>If the model is not locally identified, it would benefit from being made simpler, either by removing variables or removing C components if they have been included. Once we are happy with the model, we can extract and plot our networks of partial correlations, similar to step 2.</p>
+<p>If the model is not locally identified, it would benefit from being made simpler, either by removing variables or removing C components if they have been included. Once we are happy with the model, we can first get the summary output, using <code>mxRefModels()</code> to give us model fit statistics.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise model with fit statistics</span></span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(networkAE, <span class="at">refModels =</span> <span class="fu">mxRefModels</span>(networkAE, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -518,12 +518,15 @@ CFI: 0.9797863
 TLI: 0.9816239   (also known as NNFI) 
 RMSEA:  0.02465048  [95% CI (0.01845002, 0.03066522)]
 Prob(RMSEA &lt;= 0.05): 1
-timestamp: 2025-07-17 12:15:22 
-Wall clock time: 0.563355 secs 
+timestamp: 2025-07-18 09:58:15 
+Wall clock time: 0.555613 secs 
 optimizer:  SLSQP 
 OpenMx version number: 2.22.7 
 Need help?  See help(mxSummary) </code></pre>
 </div>
+</div>
+<p>We can then extract and plot our networks of partial correlations, similar to step 2.</p>
+<div class="cell">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract network model estimates</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>omegaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaA<span class="sc">$</span>values</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>deltaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>deltaA<span class="sc">$</span>values</span>
@@ -537,7 +540,7 @@ Need help?  See help(mxSummary) </code></pre>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="index_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
