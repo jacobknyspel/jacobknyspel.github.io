@@ -6,6 +6,17 @@ title: "Publications"
 ## Last updated: 30/04/2025
 :::
 
+## Preprints
+
+<ul class="fa-ul">
+
+  <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
+    **Knyspel, J.**, Kakar, S., Carnegie, A., Kalsi, G., Meldrum. L., Smith, I., Bristow, S., Davies, M., Armour, C., Eley, T.C., Breen, G., Wong, C.C.Y., & Coleman, J.R.I. (2026). *Identifying differential interactions of traumatic experiences with genetic risk for posttraumatic stress disorder*. Research Square. <https://doi.org/10.21203/rs.3.rs-8320002/v1><br>
+    [<span class="badge bg-secondary bg-link">Download PDF {{<fa file-pdf>}}</span>](https://www.researchsquare.com/article/rs-8320002/v1.pdf)
+  </li>
+  
+</ul>
+
 ## 2025
 
 <ul class="fa-ul">

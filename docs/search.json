@@ -278,5 +278,12 @@
     "title": "A tutorial on running network twin analyses",
     "section": "Comparing steps 2 and 3",
     "text": "Comparing steps 2 and 3\nSince we used cross-validation here, it is useful for us to compare the consistency in results between our initial network analysis (step 2) and subsequent network twin model (step 3). The more consistent the results are across the two halves of the data, the more confident we can be that our estimated networks are robust. There are many metrics we could use to assess consistency. Here I include root mean squared deviation (RMSD) and \\(r^2\\) as two examples.\n\n# Create function to calculate RMSD and r2 between symmetric matrices\nrmsd &lt;- function(A,B) {\n  lowerA &lt;- A[lower.tri(A)][A[lower.tri(A)] &gt; 0]\n  lowerB &lt;- B[lower.tri(B)][B[lower.tri(B)] &gt; 0]\n  list(A = lowerA,\n       B = lowerB,\n       RMSD = sqrt(mean((lowerA-lowerB)^2)),\n       r2 = cor(lowerA,lowerB)^2)\n}\n\n# Calculate RMSD and r2 between network estimates from two methods\nrmsd(omegaA2, omegaA)\n\n$A\n[1] 0.39934176 0.22801253 0.26539636 0.08942036 0.08353542 0.22627714 0.29041060\n[8] 0.61767242\n\n$B\n[1] 0.40582666 0.13180353 0.27225009 0.09637653 0.08150718 0.31540359 0.36767353\n[8] 0.56619175\n\n$RMSD\n[1] 0.05696605\n\n$r2\n[1] 0.878616\n\nrmsd(omegaE2, omegaE)\n\n$A\n[1] 0.14986390 0.14269408 0.03207536 0.03399184 0.16366779 0.19448367 0.63662792\n\n$B\n[1] 0.15286517 0.12333334 0.09418465 0.06419384 0.14008567 0.21996795 0.56211580\n\n$RMSD\n[1] 0.04125044\n\n$r2\n[1] 0.9799998\n\n\nAs we can see, the results of our non-shared environment networks are more consistent than our genetic networks, although overall both perform well. Nice!\n\n\n\n\n\n\nThanks for reading! Feel free to reach out to me if you have any questions"
+  },
+  {
+    "objectID": "publications.html#preprints",
+    "href": "publications.html#preprints",
+    "title": "Publications",
+    "section": "Preprints",
+    "text": "Preprints\n\n\n Knyspel, J., Kakar, S., Carnegie, A., Kalsi, G., Meldrum. L., Smith, I., Bristow, S., Davies, M., Armour, C., Eley, T.C., Breen, G., Wong, C.C.Y., & Coleman, J.R.I. (2026). Identifying differential interactions of traumatic experiences with genetic risk for posttraumatic stress disorder. Research Square. https://doi.org/10.21203/rs.3.rs-8320002/v1 Download PDF"
   }
 ]
