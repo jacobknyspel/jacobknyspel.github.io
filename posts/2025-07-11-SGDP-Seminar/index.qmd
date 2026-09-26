@@ -15,7 +15,7 @@ image: sgdp-collage-thumbnail.webp
 
 Below is a recording of the 15 minute talk I gave at the SGDP centre on 10/07/2025 as part of their weekly seminar series. I discuss my first PhD project, which was an exploration of how gene-environment interactions in PTSD differ across traumatic experiences. Please forgive the audio quality.
 
-::: callout-tip
+::: callout-note
 ## Feel free to reach out to me with any questions or for a copy of the slides!
 :::
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.10.18">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,16 @@
 
 <title>Jacob Knyspel</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -24,8 +30,9 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 /* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +43,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -67,15 +74,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../images/favicon.png" rel="icon" type="image/png">
-<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-3010caf4dbbb607b0ce5f26109e6323b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-e88ecad0e7b036d1309d47c8bcda99eb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/all.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/academicons-1.9.2/size.css" rel="stylesheet">
 <link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
@@ -109,7 +117,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -122,7 +130,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -141,15 +149,15 @@ window.Quarto = {
 <link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../images/logo.png" alt="" class="navbar-logo">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title"><strong>Jacob Knyspel</strong>, BSc, MSc, MRes, GMBPsS</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -244,16 +252,16 @@ window.Quarto = {
 <p>In my 2024 paper “Comparing factor and network models of cognitive abilities using twin data”, Robert Plomin and I used a novel network twin analysis to estimate genetic partial correlations among cognitive abilities. Below is a tutorial for running a similar analysis using the GFF example dataset from the umx package.</p>
 <ul class="fa-ul">
 <li class="li-pad">
-<span class="fa-li"><i class="fa-solid fa-file-pen"></i></span> <strong>Knyspel, J.</strong> &amp; Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. <em>Intelligence</em>, <em>104</em>, 101833. <a href="https://doi.org/10.1016/j.intell.2024.101833" class="uri">https://doi.org/10.1016/j.intell.2024.101833</a><br> <span class="badge bg-primary">Open Access <i class="ai  ai-open-access"></i></span> <a href="https://www.sciencedirect.com/science/article/pii/S0160289624000278/pdfft?md5=4fce9f2261c54e23fad5b161a8d215c5&amp;pid=1-s2.0-S0160289624000278-main.pdf"><span class="badge bg-secondary bg-link">Download PDF <i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i></span></a> <a href="https://osf.io/a4ewp"><span class="badge bg-info bg-link">View Preregistration <i class="ai  ai-osf"></i></span></a>
+<span class="fa-li"><i class="fa-solid fa-file-pen"></i></span> <strong>Knyspel, J.</strong> &amp; Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. <em>Intelligence</em>, <em>104</em>, 101833. <a href="https://doi.org/10.1016/j.intell.2024.101833" class="uri">https://doi.org/10.1016/j.intell.2024.101833</a><br> <span class="badge bg-success">Open Access <i class="ai  ai-open-access"></i></span> <a href="https://www.sciencedirect.com/science/article/pii/S0160289624000278/pdfft?md5=4fce9f2261c54e23fad5b161a8d215c5&amp;pid=1-s2.0-S0160289624000278-main.pdf"><span class="badge bg-info bg-link">Download PDF <i class="fa-solid fa-file-pdf" aria-label="file-pdf"></i></span></a> <a href="https://osf.io/a4ewp"><span class="badge bg-info bg-link">View Preregistration <i class="ai  ai-osf"></i></span></a>
 </li>
 </ul>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-note callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Feel free to reach out to me with any queries you have!
+<span class="screen-reader-only">Note</span>Feel free to reach out to me with any queries you have!
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -269,15 +277,15 @@ Feel free to reach out to me with any queries you have!
 <section id="setup" class="level2">
 <h2 class="anchored" data-anchor-id="setup">Setup</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required packages</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load required packages</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(psychonetrics)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(qgraph)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(OpenMx)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(umx)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(umx)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>For this tutorial we will use the GFF dataset from the <code>umx</code> package. It includes five variables: general family functioning (gff), family conflict (fc), quality of life (qol), general happiness (hap), and life satisfaction (sat). For information, see <code>?GFF</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load example data</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load example data</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(GFF)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate indices for 50/50 sample split</span></span>
@@ -291,27 +299,27 @@ Feel free to reach out to me with any queries you have!
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>mzData2 <span class="ot">&lt;-</span> <span class="fu">subset</span>(GFF[<span class="sc">-</span>ind,], zyg_2grp <span class="sc">==</span> <span class="st">"MZ"</span>)</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify variables for analysis</span></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>selDVs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"gff"</span>, <span class="st">"fc"</span>, <span class="st">"qol"</span>, <span class="st">"hap"</span>, <span class="st">"sat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>selDVs <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"gff"</span>, <span class="st">"fc"</span>, <span class="st">"qol"</span>, <span class="st">"hap"</span>, <span class="st">"sat"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="multivariate-twin-model" class="level2">
 <h2 class="anchored" data-anchor-id="multivariate-twin-model">1) Multivariate twin model</h2>
 <p>Our first step is to run a generic multivariate twin model to estimate genetic and environmental covariance matrices. The <code>umxACEv()</code> function is a good option for this model. For the sake of simplicity, only an AE model is included here. In practice, it is important to compare ACE, AE, CE and E models to arrive at the best fitting one.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run ACE model</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run ACE model</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ACE <span class="ot">&lt;-</span> <span class="fu">umxACEv</span>(<span class="at">selDVs =</span> selDVs, <span class="at">dzData =</span> dzData1, <span class="at">mzData =</span> mzData1, <span class="at">sep =</span> <span class="st">"_T"</span>)</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Reduce model to AE model</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>AE <span class="ot">&lt;-</span> <span class="fu">umxModify</span>(<span class="at">lastFit =</span> ACE, <span class="at">update =</span> ACE<span class="sc">$</span>top<span class="sc">$</span>C<span class="sc">$</span>labels, <span class="at">name =</span> <span class="st">"AE"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>AE <span class="ot">&lt;-</span> <span class="fu">umxModify</span>(<span class="at">lastFit =</span> ACE, <span class="at">update =</span> ACE<span class="sc">$</span>top<span class="sc">$</span>C<span class="sc">$</span>labels, <span class="at">name =</span> <span class="st">"AE"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If the model is producing status codes 5 or 6, it is first worth re-running it with <code>mxTryHard()</code> or using a different optimizer via <code>umx_set_optimizer()</code>. If it is still producing these status codes, we can check if it is locally identified.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if model is locally identified</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(AE)<span class="sc">$</span>status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if model is locally identified</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(AE)<span class="sc">$</span>status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If the model is not locally identified, it would benefit from being made simpler, perhaps by removing the variables with the smallest twin correlations one at a time. Once we have an acceptable model, we can extract the genetic and non-shared environmental covariance matrices and perform some additional checks to ensure they are suitable for the next step.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract A and E matrices</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract A and E matrices</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>A <span class="ot">&lt;-</span> AE<span class="sc">$</span>top<span class="sc">$</span>A<span class="sc">$</span>values</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>E <span class="ot">&lt;-</span> AE<span class="sc">$</span>top<span class="sc">$</span>E<span class="sc">$</span>values</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -321,7 +329,7 @@ Feel free to reach out to me with any queries you have!
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Check if eigenvalues are non-negative</span></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">eigen</span>(A)<span class="sc">$</span>values <span class="sc">&gt;=</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="dv">0</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">eigen</span>(E)<span class="sc">$</span>values <span class="sc">&gt;=</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="fu">sum</span>(<span class="fu">eigen</span>(E)<span class="sc">$</span>values <span class="sc">&gt;=</span> <span class="dv">0</span>) <span class="sc">&gt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If a matrix is not symmetric or has any negative eigenvalues, this means it is not positive semi-definite, which will present a problem for network analysis. In this case, it is worth trying <code>umxACE()</code> instead of <code>umxACEv()</code>. This function will ensure that the matrices are positive semi-definite, although it is more easily subject to status codes 5 and 6. If we are happy with the matrices, we can then begin our network analysis.</p>
 </section>
@@ -329,15 +337,15 @@ Feel free to reach out to me with any queries you have!
 <h2 class="anchored" data-anchor-id="initial-network-analysis">2) Initial network analysis</h2>
 <p>Here we will use the covariance matrices from step 1 to estimate network models sparsified using p-value thresholding and stepwise BIC selection. An alternative approach to sparsification here would be regularisation. First, we fit a saturated network model.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run saturated network models</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run saturated network models</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>networkA <span class="ot">&lt;-</span> <span class="fu">ggm</span>(<span class="at">covs =</span> A, <span class="at">nobs =</span> <span class="fu">length</span>(ind)) <span class="sc">|&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">runmodel</span>()</span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>networkE <span class="ot">&lt;-</span> <span class="fu">ggm</span>(<span class="at">covs =</span> E, <span class="at">nobs =</span> <span class="fu">length</span>(ind)) <span class="sc">|&gt;</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">runmodel</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">runmodel</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If <code>runmodel()</code> gives us a warning message here that (1) the information matrix is not positive semi-definite, (2) parameters were estimated near to their bounds or (3) the model failed to converge, it is first worth trying a different optimizer (see <code>?runmodel</code>). If this does not work, it is worth proceeding to the next step anyway, which is sparsifying the models. This can be enough to solve the issue.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sparsify network models</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sparsify network models</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>sparseA <span class="ot">&lt;-</span> networkA <span class="sc">|&gt;</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prune</span>() <span class="sc">|&gt;</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stepup</span>() <span class="sc">|&gt;</span></span>
@@ -345,17 +353,17 @@ Feel free to reach out to me with any queries you have!
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>sparseE <span class="ot">&lt;-</span> networkE <span class="sc">|&gt;</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">prune</span>() <span class="sc">|&gt;</span></span>
 <span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">stepup</span>() <span class="sc">|&gt;</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">runmodel</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">runmodel</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If we are still receiving warning messages after sparsifying the models, they might benefit from being made simpler, perhaps by removing the least heritable variables one at a time. The warning message about the information matrix being not positive semi-definite might occasionally be a false flag, especially if no other warning messages are given, the model has plausible partial correlations (not equal to or approaching 1 or -1) and produces the same log-likelihood when run multiple times.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check log-likelihood of sparsified models</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check log-likelihood of sparsified models</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>sparseA<span class="sc">@</span>fitmeasures<span class="sc">$</span>logl</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sparseE<span class="sc">@</span>fitmeasures<span class="sc">$</span>logl</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>sparseE<span class="sc">@</span>fitmeasures<span class="sc">$</span>logl</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>When the sparsified model produces no warning messages or we are happy that the warning messages can be ignored, we can extract and plot our networks of partial correlations.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract network model estimates</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract network model estimates</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>omegaA <span class="ot">&lt;-</span> <span class="fu">getmatrix</span>(sparseA, <span class="st">"omega"</span>)</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>deltaA <span class="ot">&lt;-</span> <span class="fu">getmatrix</span>(sparseA, <span class="st">"delta"</span>)</span>
 <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>omegaE <span class="ot">&lt;-</span> <span class="fu">getmatrix</span>(sparseE, <span class="st">"omega"</span>)</span>
@@ -364,7 +372,7 @@ Feel free to reach out to me with any queries you have!
 <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot networks</span></span>
 <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
 <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaA, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"A"</span>)</span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaE, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"E"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaE, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"E"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -378,7 +386,7 @@ Feel free to reach out to me with any queries you have!
 <h2 class="anchored" data-anchor-id="network-twin-model">3) Network twin model</h2>
 <p>Our third and final step is to estimate a unified network twin model that simultaneously models A and E as partial correlation matrices. We does this in the other half of the sample as a form of cross-validation, using the partial correlation values from step 2. Estimating a unified model like this has the benefits of allowing for model fit statistics to be calculated and bootstrapping to be performed. The model can be flexibly adapted to include a C component or to model only one of the components (e.g.&nbsp;A) as a partial correlation matrix if desired.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify additional variables for model</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Specify additional variables for model</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>selVars <span class="ot">&lt;-</span> <span class="fu">xmu_twin_upgrade_selDvs2SelVars</span>(selDVs, <span class="st">"_T"</span>, <span class="dv">2</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>nVar <span class="ot">&lt;-</span> <span class="fu">length</span>(selDVs)</span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
@@ -414,13 +422,13 @@ Feel free to reach out to me with any queries you have!
 <span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">umxMatrix</span>(<span class="st">"omegaE"</span>, <span class="st">"Symm"</span>, nVar, nVar, <span class="at">free =</span> omegaE <span class="sc">!=</span> <span class="dv">0</span>, <span class="at">values =</span> omegaE),</span>
 <span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxAlgebra</span>(<span class="at">name =</span> <span class="st">"E"</span>, deltaE <span class="sc">%*%</span> (<span class="fu">solve</span>(I<span class="sc">-</span>omegaE)) <span class="sc">%*%</span> deltaE)</span>
 <span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a>                    </span>
-<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If you’re familiar with twin modelling, you might recognise that this model is almost identical to a typical multivariate model, such as the one used in step 1. The only difference is that the A and E covariances are estimated as <span class="math inline">\(\Delta(I-\Omega)^1\Delta\)</span>, where <span class="math inline">\(\Omega\)</span> is our matrix of partial correlations (i.e.&nbsp;our network) and <span class="math inline">\(\Delta\)</span> is a diagonal scaling matrix.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Run model</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>networkAE <span class="ot">&lt;-</span> <span class="fu">mxModel</span>(networkAE, networkAE.top) <span class="sc">|&gt;</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxTryHard</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mxTryHard</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Running base with 31 parameters</code></pre>
 </div>
@@ -447,18 +455,18 @@ Solution found</code></pre>
 <pre><code> Start values from best fit:</code></pre>
 </div>
 <div class="cell-output cell-output-stderr">
-<pre><code>38.5901046282982,-13.3668862571515,7.79648548997818,23.0176317324942,27.5693472922932,2.3899653420867,1.52239944488783,0.422499190051456,1.19669551190486,1.6426988234192,0.399341758597834,0.228012532206816,0.0894203608933922,0.265396356210378,-0.0765255904052195,0.226277141928524,0.0835354165144468,0.2904105960134,0.617672418713217,3.32098697034475,1.12335463995123,0.79080370482218,2.71605543224306,2.916173253324,0.149863900290934,0.142694075534241,0.0320753643951324,0.0339918408374545,0.163667794780947,0.194483670327578,0.636627915320457</code></pre>
+<pre><code>38.5901046281947,-13.3668862570112,7.79648548994266,23.0176317324418,27.5693472919895,2.38996534872769,1.52239944272721,0.422499190506829,1.19669552926976,1.64269883627262,0.39934176219765,0.228012533732158,0.0894203618433841,0.265396352212346,-0.0765255916373465,0.226277141396336,0.0835354159976336,0.290410599993413,0.617672415926445,3.32098697077141,1.12335463955197,0.790803704590172,2.71605542478006,2.91617324869452,0.149863898840118,0.142694076041443,0.032075364929139,0.0339918416722267,0.163667794806667,0.194483669334481,0.636627915919676</code></pre>
 </div>
 </div>
 <p>As with step 1, if the model is producing status codes 5 or 6, it is worth trying a different optimizer via <code>umx_set_optimizer()</code>. If it is failing to converge but has valid attempts, we can try more attempts (see <code>?mxTryHard</code>) or again try a different optimizer. If the model is still facing problems, we should check if it is locally identified.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check model is locally identified</span></span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(networkAE)<span class="sc">$</span>status</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Check model is locally identified</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mxCheckIdentification</span>(networkAE)<span class="sc">$</span>status</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If the model is not locally identified, it would benefit from being made simpler, either by removing variables or removing C components if they have been included. Once we are happy with the model, we can first get the summary output, using <code>mxRefModels()</code> to give us model fit statistics.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise model with fit statistics</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(networkAE, <span class="at">refModels =</span> <span class="fu">mxRefModels</span>(networkAE, <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Summarise model with fit statistics</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(networkAE, <span class="at">refModels =</span> <span class="fu">mxRefModels</span>(networkAE, <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Running Saturated base with 130 parameters</code></pre>
 </div>
@@ -470,37 +478,37 @@ Solution found</code></pre>
  
 free parameters:
              name      matrix   row    col     Estimate  Std.Error A
-1  expMean_gff_T1 top.expMean means gff_T1  38.59010463 0.10758664  
-2   expMean_fc_T1 top.expMean means  fc_T1 -13.36688626 0.04914363  
-3  expMean_qol_T1 top.expMean means qol_T1   7.79648549 0.02341602  
-4  expMean_hap_T1 top.expMean means hap_T1  23.01763173 0.09787622  
-5  expMean_sat_T1 top.expMean means sat_T1  27.56934729 0.11466345  
-6     deltaA_r1c1  top.deltaA     1      1   2.38996534 0.16941191  
-7     deltaA_r2c2  top.deltaA     2      2   1.52239944 0.04542257  
-8     deltaA_r3c3  top.deltaA     3      3   0.42249919 0.04299013  
-9     deltaA_r4c4  top.deltaA     4      4   1.19669551 0.19787435  
-10    deltaA_r5c5  top.deltaA     5      5   1.64269882 0.15546657  
-11    omegaA_r2c1  top.omegaA     1      2   0.39934176 0.05343461  
-12    omegaA_r3c1  top.omegaA     1      3   0.22801253 0.12764957  
-13    omegaA_r3c2  top.omegaA     2      3   0.08942036 0.06840587  
-14    omegaA_r4c1  top.omegaA     1      4   0.26539636 0.10802537  
-15    omegaA_r4c2  top.omegaA     2      4  -0.07652559 0.08920932  
-16    omegaA_r4c3  top.omegaA     3      4   0.22627714 0.16201806  
-17    omegaA_r5c2  top.omegaA     2      5   0.08353542 0.05753107  
-18    omegaA_r5c3  top.omegaA     3      5   0.29041060 0.14710234  
-19    omegaA_r5c4  top.omegaA     4      5   0.61767242 0.08114828  
-20    deltaE_r1c1  top.deltaE     1      1   3.32098697 0.08473517  
-21    deltaE_r2c2  top.deltaE     2      2   1.12335464 0.03061927  
-22    deltaE_r3c3  top.deltaE     3      3   0.79080370 0.02173415  
-23    deltaE_r4c4  top.deltaE     4      4   2.71605543 0.08532173  
-24    deltaE_r5c5  top.deltaE     5      5   2.91617325 0.08425109  
-25    omegaE_r2c1  top.omegaE     1      2   0.14986390 0.03675147  
-26    omegaE_r3c1  top.omegaE     1      3   0.14269408 0.03682949  
-27    omegaE_r4c1  top.omegaE     1      4   0.03207536 0.03125440  
-28    omegaE_r4c2  top.omegaE     2      4   0.03399184 0.03102033  
-29    omegaE_r4c3  top.omegaE     3      4   0.16366779 0.04011893  
-30    omegaE_r5c3  top.omegaE     3      5   0.19448367 0.04072182  
-31    omegaE_r5c4  top.omegaE     4      5   0.63662792 0.02206175  
+1  expMean_gff_T1 top.expMean means gff_T1  38.59010463 0.10758702  
+2   expMean_fc_T1 top.expMean means  fc_T1 -13.36688626 0.04914368  
+3  expMean_qol_T1 top.expMean means qol_T1   7.79648549 0.02341601  
+4  expMean_hap_T1 top.expMean means hap_T1  23.01763173 0.09787634  
+5  expMean_sat_T1 top.expMean means sat_T1  27.56934729 0.11466312  
+6     deltaA_r1c1  top.deltaA     1      1   2.38996535 0.16900450  
+7     deltaA_r2c2  top.deltaA     2      2   1.52239944 0.04536544  
+8     deltaA_r3c3  top.deltaA     3      3   0.42249919 0.04282491  
+9     deltaA_r4c4  top.deltaA     4      4   1.19669553 0.19364539  
+10    deltaA_r5c5  top.deltaA     5      5   1.64269884 0.15480281  
+11    omegaA_r2c1  top.omegaA     1      2   0.39934176 0.05322580  
+12    omegaA_r3c1  top.omegaA     1      3   0.22801253 0.12455262  
+13    omegaA_r3c2  top.omegaA     2      3   0.08942036 0.06776484  
+14    omegaA_r4c1  top.omegaA     1      4   0.26539635 0.10673317  
+15    omegaA_r4c2  top.omegaA     2      4  -0.07652559 0.08832357  
+16    omegaA_r4c3  top.omegaA     3      4   0.22627714 0.15646751  
+17    omegaA_r5c2  top.omegaA     2      5   0.08353542 0.05727106  
+18    omegaA_r5c3  top.omegaA     3      5   0.29041060 0.14302700  
+19    omegaA_r5c4  top.omegaA     4      5   0.61767242 0.08075301  
+20    deltaE_r1c1  top.deltaE     1      1   3.32098697 0.08468591  
+21    deltaE_r2c2  top.deltaE     2      2   1.12335464 0.03061494  
+22    deltaE_r3c3  top.deltaE     3      3   0.79080370 0.02167803  
+23    deltaE_r4c4  top.deltaE     4      4   2.71605542 0.08428092  
+24    deltaE_r5c5  top.deltaE     5      5   2.91617325 0.08403574  
+25    omegaE_r2c1  top.omegaE     1      2   0.14986390 0.03672170  
+26    omegaE_r3c1  top.omegaE     1      3   0.14269408 0.03659149  
+27    omegaE_r4c1  top.omegaE     1      4   0.03207536 0.03109626  
+28    omegaE_r4c2  top.omegaE     2      4   0.03399184 0.03096975  
+29    omegaE_r4c3  top.omegaE     3      4   0.16366779 0.03933480  
+30    omegaE_r5c3  top.omegaE     3      5   0.19448367 0.04016259  
+31    omegaE_r5c4  top.omegaE     4      5   0.63662792 0.02200461  
 
 Model Statistics: 
                |  Parameters  |  Degrees of Freedom  |  Fit (-2lnL units)
@@ -518,16 +526,16 @@ CFI: 0.9797863
 TLI: 0.9816239   (also known as NNFI) 
 RMSEA:  0.02465048  [95% CI (0.01845002, 0.03066522)]
 Prob(RMSEA &lt;= 0.05): 1
-timestamp: 2025-07-18 09:58:15 
-Wall clock time: 0.555613 secs 
+timestamp: 2026-09-26 17:54:52 
+Wall clock time: 0.5721259 secs 
 optimizer:  SLSQP 
-OpenMx version number: 2.22.7 
+OpenMx version number: 2.22.10 
 Need help?  See help(mxSummary) </code></pre>
 </div>
 </div>
 <p>We can then extract and plot our networks of partial correlations, similar to step 2.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract network model estimates</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract network model estimates</span></span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>omegaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaA<span class="sc">$</span>values</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>deltaA2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>deltaA<span class="sc">$</span>values</span>
 <span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>omegaE2 <span class="ot">&lt;-</span> networkAE<span class="sc">$</span>top<span class="sc">$</span>omegaE<span class="sc">$</span>values</span>
@@ -536,7 +544,7 @@ Need help?  See help(mxSummary) </code></pre>
 <span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot networks</span></span>
 <span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">2</span>))</span>
 <span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaA2, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"A"</span>)</span>
-<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaE2, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"E"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a><span class="fu">qgraph</span>(omegaE2, <span class="at">labels =</span> selDVs, <span class="at">layout =</span> <span class="st">"spring"</span>, <span class="at">title =</span> <span class="st">"E"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">
@@ -550,7 +558,7 @@ Need help?  See help(mxSummary) </code></pre>
 <h2 class="anchored" data-anchor-id="comparing-steps-2-and-3">Comparing steps 2 and 3</h2>
 <p>Since we used cross-validation here, it is useful for us to compare the consistency in results between our initial network analysis (step 2) and subsequent network twin model (step 3). The more consistent the results are across the two halves of the data, the more confident we can be that our estimated networks are robust. There are many metrics we could use to assess consistency. Here I include root mean squared deviation (RMSD) and <span class="math inline">\(r^2\)</span> as two examples.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create function to calculate RMSD and r2 between symmetric matrices</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create function to calculate RMSD and r2 between symmetric matrices</span></span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>rmsd <span class="ot">&lt;-</span> <span class="cf">function</span>(A,B) {</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  lowerA <span class="ot">&lt;-</span> A[<span class="fu">lower.tri</span>(A)][A[<span class="fu">lower.tri</span>(A)] <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
 <span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  lowerB <span class="ot">&lt;-</span> B[<span class="fu">lower.tri</span>(B)][B[<span class="fu">lower.tri</span>(B)] <span class="sc">&gt;</span> <span class="dv">0</span>]</span>
@@ -561,29 +569,29 @@ Need help?  See help(mxSummary) </code></pre>
 <span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>}</span>
 <span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate RMSD and r2 between network estimates from two methods</span></span>
-<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaA2, omegaA)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaA2, omegaA)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$A
-[1] 0.39934176 0.22801253 0.26539636 0.08942036 0.08353542 0.22627714 0.29041060
+[1] 0.39934176 0.22801253 0.26539635 0.08942036 0.08353542 0.22627714 0.29041060
 [8] 0.61767242
 
 $B
-[1] 0.40582666 0.13180353 0.27225009 0.09637653 0.08150718 0.31540359 0.36767353
-[8] 0.56619175
+[1] 0.40582667 0.13180352 0.27225008 0.09637653 0.08150717 0.31540361 0.36767354
+[8] 0.56619174
 
 $RMSD
-[1] 0.05696605
+[1] 0.05696606
 
 $r2
 [1] 0.878616</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaE2, omegaE)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rmsd</span>(omegaE2, omegaE)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$A
 [1] 0.14986390 0.14269408 0.03207536 0.03399184 0.16366779 0.19448367 0.63662792
 
 $B
-[1] 0.15286517 0.12333334 0.09418465 0.06419384 0.14008567 0.21996795 0.56211580
+[1] 0.15286517 0.12333335 0.09418465 0.06419384 0.14008566 0.21996795 0.56211580
 
 $RMSD
 [1] 0.04125044
@@ -593,13 +601,13 @@ $r2
 </div>
 </div>
 <p>As we can see, the results of our non-shared environment networks are more consistent than our genetic networks, although overall both perform well. Nice!</p>
-<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout callout-style-default callout-tip callout-empty-content callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Thanks for reading! Feel free to reach out to me if you have any questions
+<span class="screen-reader-only">Tip</span>Thanks for reading! Feel free to reach out to me if you have any questions
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -610,14 +618,14 @@ Thanks for reading! Feel free to reach out to me if you have any questions
 <section id="session-info" class="level2">
 <h2 class="anchored" data-anchor-id="session-info">Session Info</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.5.0 (2025-04-11)
+<pre><code>R version 4.5.2 (2025-10-31)
 Platform: aarch64-apple-darwin20
-Running under: macOS Sequoia 15.5
+Running under: macOS Tahoe 26.6.2
 
 Matrix products: default
-BLAS:   /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRblas.0.dylib 
+BLAS:   /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib 
 LAPACK: /Library/Frameworks/R.framework/Versions/4.5-arm64/Resources/lib/libRlapack.dylib;  LAPACK version 3.12.1
 
 locale:
@@ -630,46 +638,46 @@ attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 other attached packages:
-[1] umx_4.21.0           OpenMx_2.22.7        qgraph_1.9.8        
-[4] psychonetrics_0.13.1
+[1] umx_4.60.0           OpenMx_2.22.10       qgraph_1.9.8        
+[4] psychonetrics_0.15.2
 
 loaded via a namespace (and not attached):
-  [1] Rdpack_2.6.4        mnormt_2.1.1        pbapply_1.7-2      
-  [4] gridExtra_2.3       fdrtool_1.2.18      rlang_1.1.6        
-  [7] magrittr_2.0.3      compiler_4.5.0      mgcv_1.9-1         
- [10] png_0.1-8           systemfonts_1.2.3   vctrs_0.6.5        
- [13] reshape2_1.4.4      IsingSampler_0.2.4  combinat_0.0-8     
- [16] quadprog_1.5-8      stringr_1.5.1       pkgconfig_2.0.3    
- [19] crayon_1.5.3        fastmap_1.2.0       backports_1.5.0    
- [22] pbivnorm_0.6.0      rmarkdown_2.29      pracma_2.4.4       
- [25] nloptr_2.2.1        purrr_1.0.4         xfun_0.52          
- [28] jsonlite_2.0.0      jpeg_0.1-11         psych_2.5.3        
- [31] parallel_4.5.0      lavaan_0.6-19       cluster_2.1.8.1    
- [34] R6_2.6.1            stringi_1.8.7       RColorBrewer_1.1-3 
- [37] boot_1.3-31         rpart_4.1.24        numDeriv_2016.8-1.1
- [40] Rcpp_1.0.14         iterators_1.0.14    knitr_1.50         
- [43] base64enc_0.1-3     polycor_0.8-1       Matrix_1.7-3       
- [46] splines_4.5.0       nnet_7.3-20         igraph_2.1.4       
- [49] tidyselect_1.2.1    rstudioapi_0.17.1   abind_1.4-8        
- [52] yaml_2.3.10         MuMIn_1.48.11       codetools_0.2-20   
- [55] admisc_0.38         lattice_0.22-6      tibble_3.2.1       
- [58] plyr_1.8.9          evaluate_1.0.3      foreign_0.8-90     
- [61] RcppParallel_5.1.10 xml2_1.3.8          pillar_1.10.2      
- [64] DiagrammeR_1.0.11   checkmate_2.3.2     foreach_1.5.2      
- [67] stats4_4.5.0        reformulas_0.4.1    generics_0.1.4     
- [70] VCA_1.5.1           ggplot2_3.5.2       scales_1.4.0       
- [73] minqa_1.2.8         xtable_1.8-4        gtools_3.9.5       
- [76] glue_1.8.0          Hmisc_5.2-3         tools_4.5.0        
- [79] data.table_1.17.4   lme4_1.1-37         visNetwork_2.1.2   
- [82] cowplot_1.1.3       grid_4.5.0          tidyr_1.3.1        
- [85] rbibutils_2.3       colorspace_2.1-1    nlme_3.1-168       
- [88] GA_3.2.4            htmlTable_2.4.3     Formula_1.2-5      
- [91] cli_3.6.5           kableExtra_1.4.0    textshaping_1.0.1  
- [94] optimx_2025-4.9     viridisLite_0.4.2   svglite_2.2.1      
- [97] dplyr_1.1.4         corpcor_1.6.10      glasso_1.11        
-[100] gtable_0.3.6        digest_0.6.37       htmlwidgets_1.6.4  
-[103] farver_2.1.2        htmltools_0.5.8.1   lifecycle_1.0.4    
-[106] MASS_7.3-65        </code></pre>
+  [1] Rdpack_2.6.6          mnormt_2.1.2          pbapply_1.7-4        
+  [4] gridExtra_2.3         fdrtool_1.2.18        rlang_1.2.0          
+  [7] magrittr_2.0.5        otel_0.2.0            compiler_4.5.2       
+ [10] mgcv_1.9-3            systemfonts_1.3.2     png_0.1-8            
+ [13] vctrs_0.7.3           reshape2_1.4.5        IsingSampler_0.2.4   
+ [16] combinat_0.0-8        quadprog_1.5-8        stringr_1.6.0        
+ [19] pkgconfig_2.0.3       crayon_1.5.3          fastmap_1.2.0        
+ [22] backports_1.5.0       pbivnorm_0.6.0        rmarkdown_2.31       
+ [25] pracma_2.4.6          nloptr_2.2.1          purrr_1.2.2          
+ [28] xfun_0.57             jsonlite_2.0.0        jpeg_0.1-11          
+ [31] psych_2.6.1           parallel_4.5.2        lavaan_0.6-21        
+ [34] cluster_2.1.8.1       R6_2.6.1              stringi_1.8.7        
+ [37] RColorBrewer_1.1-3    boot_1.3-32           rpart_4.1.24         
+ [40] numDeriv_2016.8-1.1   Rcpp_1.1.1            iterators_1.0.14     
+ [43] knitr_1.51            base64enc_0.1-6       polycor_0.8-2        
+ [46] Matrix_1.7-4          splines_4.5.2         nnet_7.3-20          
+ [49] igraph_2.3.0          tidyselect_1.2.1      rstudioapi_0.18.0    
+ [52] abind_1.4-8           yaml_2.3.12           MuMIn_1.48.11        
+ [55] codetools_0.2-20      admisc_0.39           lattice_0.22-7       
+ [58] tibble_3.3.1          plyr_1.8.9            S7_0.2.2             
+ [61] evaluate_1.0.5        foreign_0.8-90        RcppParallel_5.1.11-1
+ [64] xml2_1.5.1            pillar_1.11.1         DiagrammeR_1.0.11    
+ [67] checkmate_2.3.4       foreach_1.5.2         stats4_4.5.2         
+ [70] reformulas_0.4.4      generics_0.1.4        VCA_1.5.2            
+ [73] ggplot2_4.0.3         scales_1.4.0          minqa_1.2.8          
+ [76] xtable_1.8-4          gtools_3.9.5          glue_1.8.1           
+ [79] Hmisc_5.2-5           tools_4.5.2           data.table_1.18.2.1  
+ [82] lme4_1.1-38           visNetwork_2.1.4      cowplot_1.2.0        
+ [85] grid_4.5.2            tidyr_1.3.2           rbibutils_2.4.1      
+ [88] colorspace_2.1-2      nlme_3.1-168          GA_3.2.5             
+ [91] htmlTable_2.4.3       Formula_1.2-5         cli_3.6.6            
+ [94] textshaping_1.0.4     kableExtra_1.4.0      optimx_2025-4.9      
+ [97] viridisLite_0.4.3     svglite_2.2.2         dplyr_1.2.1          
+[100] corpcor_1.6.10        glasso_1.11           gtable_0.3.6         
+[103] digest_0.6.39         htmlwidgets_1.6.4     farver_2.1.2         
+[106] htmltools_0.5.9       lifecycle_1.0.5       MASS_7.3-65          </code></pre>
 </div>
 </div>
 
@@ -678,236 +686,243 @@ loaded via a namespace (and not attached):
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/jacobknyspel\.github\.io\/");
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/jacobknyspel\.github\.io\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -915,192 +930,168 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Copyright 2024, Jacob Knyspel
+ Copyright 2026, Jacob Knyspel
   </li>  
 </ul>
     </div>   

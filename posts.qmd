@@ -7,6 +7,6 @@ listing:
   sort: "date desc"
 ---
 
-::: callout-tip
+::: callout-note
 ## This is where I occasionally post things related to the work I do, mostly so I don't forget them.
 :::

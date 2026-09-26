@@ -8,8 +8,8 @@ website:
   title: Jacob Knyspel
   search: true
   navbar:
-    title: false
-    logo: images/logo.png
+    title: <strong>Jacob Knyspel</strong>, BSc, MSc, MRes, GMBPsS
+    #logo: images/logo.png
     pinned: true
     right:
       - href: index.qmd
@@ -27,7 +27,7 @@ website:
   page-footer:
     background: light
     left:
-      - "Copyright 2024, Jacob Knyspel"
+      - "Copyright 2026, Jacob Knyspel"
     right:
       - href: https://github.com/jacobknyspel
         icon: github
@@ -39,9 +39,10 @@ website:
 format:
   html:
     theme:
-      - minty
+      - morph
       - styles.scss
-    mainfont: Nunito
+    mainfont: Averia Serif Libre
+    fontcolor: "#4b5782"
     css: styles.css
     toc: true
     page-layout: full

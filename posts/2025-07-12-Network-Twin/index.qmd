@@ -18,13 +18,13 @@ In my 2024 paper "Comparing factor and network models of cognitive abilities usi
 <ul class="fa-ul">
   <li class="li-pad"><span class="fa-li"><i class="fa-solid fa-file-pen"></i></span>
     **Knyspel, J.** & Plomin, R. (2024). Comparing factor and network models of cognitive abilities using twin data. *Intelligence*, *104*, 101833. <https://doi.org/10.1016/j.intell.2024.101833><br>
-    <span class="badge bg-primary">Open Access {{<ai open-access>}}</span>
-    [<span class="badge bg-secondary bg-link">Download PDF {{<fa file-pdf>}}</span>](https://www.sciencedirect.com/science/article/pii/S0160289624000278/pdfft?md5=4fce9f2261c54e23fad5b161a8d215c5&pid=1-s2.0-S0160289624000278-main.pdf)
+    <span class="badge bg-success">Open Access {{<ai open-access>}}</span>
+    [<span class="badge bg-info bg-link">Download PDF {{<fa file-pdf>}}</span>](https://www.sciencedirect.com/science/article/pii/S0160289624000278/pdfft?md5=4fce9f2261c54e23fad5b161a8d215c5&pid=1-s2.0-S0160289624000278-main.pdf)
     [<span class="badge bg-info bg-link">View Preregistration {{<ai osf>}}</span>](https://osf.io/a4ewp)
   </li>
 </ul>
 
-::: callout-tip
+::: callout-note
 ## Feel free to reach out to me with any queries you have!
 :::
 
