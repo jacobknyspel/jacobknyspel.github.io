@@ -1,6 +1,6 @@
 ---
 title: "Jacob Knyspel"
-subtitle: "King's College London"
+subtitle: "PhD Student in Psychiatric Genetics"
 image: images/headshot.jpg
 toc: false
 about: 
@@ -9,9 +9,9 @@ about:
 
 ## About me
 
-Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My area of research is the genetics of PTSD. I'm especially interested in exploring the relationship between genetics, specific traumatic experiences and specific PTSD symptoms. In my research I use a combination of genomic and family-based methods.
+Hi! 👋 I'm a PhD student at King's College London, funded by a studentship from the [KCL MRC DTP](https://kcl-mrcdtp.com/). My PhD is about post-traumatic stress disorder (PTSD). I'm interested in why some people are at greater risk of PTSD than others, even in response to the same traumatic experiences. Genetics is one of the many pieces of this puzzle. Differences in our DNA can influence how our brains and bodies respond to stress, contributing to our individual risk of developing PTSD (even if this contribution is only small). In my research I look at the complex relationships between genetics, trauma, and PTSD symptoms using cutting edge statistical methods from genetics and psychology.
 
-Alongside my studies I work as a graduate teaching assistant at King's College London and previously worked as a tutor for [The Brilliant Club](https://thebrilliantclub.org/).
+Alongside my studies I work as a graduate teaching assistant at King's College London and have previously worked as a tutor for [The Brilliant Club](https://thebrilliantclub.org/).
 
 ## Education
 
